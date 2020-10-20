@@ -1,13 +1,8 @@
 <p align="center"><img src="https://github.com/roy-marquez/sipnie/blob/master/public/assets/img/sipnie-logo_01_350.png" width="250"> <p/>
 
-<div align="center">
 # Sistema de Información del Programa Nacional de Informática Educativa
-<div/>
+
 ----
-
-
-
-SIPNIE: Sistema de Información del Programa Nacional de Informatica Educativa - MEP - Costa Rica
 
 ## Elaborado con Laravel
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
