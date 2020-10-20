@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/roy-marquez/sipnie/blob/master/public/assets/img/sipnie-logo_01_350.png width="400">
+<p align="center"><img src="https://github.com/roy-marquez/sipnie/blob/master/public/assets/img/sipnie-logo_01_350.png" width="400">
 
 <p  align="center">![Logo del proyecto](https://github.com/roy-marquez/sipnie/blob/master/public/assets/img/sipnie-logo_01_350.png "Sipnie MEP Costa Rica") <p/>
 ---
