@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/roy-marquez/sipnie/blob/master/public/assets/img/sipnie-logo_01_350.png" width="300">
+<p align="center"><img src="https://github.com/roy-marquez/sipnie/blob/master/public/assets/img/sipnie-logo_01_350.png" width="250">
 <p/>
 
 ----
