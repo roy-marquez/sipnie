@@ -1,6 +1,6 @@
 <p align="center"><img src="https://github.com/roy-marquez/sipnie/blob/master/public/assets/img/sipnie-logo_01_350.png" width="250"> <p/>
-
-# Sistema de Información del Programa Nacional de Informática Educativa
+<h1 align="center"> Sistema de Información <h1/>
+<h1 align="center"> Programa Nacional de Informática Educativa <h1>
 
 ----
 
