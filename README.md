@@ -1,3 +1,5 @@
+![Logo del proyecto](https://github.com/roy-marquez/sipnie/blob/master/public/assets/img/sipnie-logo_01_350.png "Sipnie MEP Costa Rica")
+
 ## sipnie
 TFG SIPNIE: Sistema de Información del Programa Nacional de Informatica Educativa - MEP - Costa Rica
 
