@@ -3,8 +3,10 @@
 
 @section('title', 'Inicio')
 
+{{--@section('plugins.SweetAlert2', true)--}}
+
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Inicio</h1>
 @stop
 
 {{--@section('content')--}}
@@ -198,8 +200,12 @@
     </div>
 @stop
 
-
-
 @section('js')
-    <script> console.log('Hi!'); </script>
+    <script>
+        Swal.fire(
+            'Bienvenido!',
+            'Estas dentro!',
+            'success'
+        )
+    </script>
 @stop
