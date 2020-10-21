@@ -20330,6 +20330,9 @@ html.maximized-card {
   height: 100vh;
   -ms-flex-pack: center;
   justify-content: center;
+    background-image: url('../img/bg-sipnie.svg');
+    background-repeat: repeat-y;
+    background-size: cover;
 }
 
 .login-box,

@@ -45,8 +45,7 @@ return [
     |
     */
 
-//    'logo' => '<b>Sipnie</b>',
-    'logo' => 'Sipnie',
+    'logo' => '<span style="font-weight:800; margin-left: 0.5rem">Sipnie<span/>',
     'logo_img' => 'assets/img/icon-sipnie_m.png',
 //    'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_class' => 'brand-image elevation-2',
@@ -103,12 +102,12 @@ return [
     |
     */
 
-    'classes_auth_card' => 'card-outline card-primary',
+    'classes_auth_card' => 'card-outline card-success',
     'classes_auth_header' => '',
     'classes_auth_body' => '',
     'classes_auth_footer' => '',
     'classes_auth_icon' => '',
-    'classes_auth_btn' => 'btn-flat btn-primary',
+    'classes_auth_btn' => 'btn btn-flat btn-success elevation-2',
 
     /*
     |--------------------------------------------------------------------------
@@ -123,12 +122,14 @@ return [
     */
 
     'classes_body' => '',
-    'classes_brand' => '',
+//    'classes_brand' => 'bg-white',
+    'classes_brand' => 'bg-success',
     'classes_brand_text' => '',
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
+    'classes_sidebar' => 'sidebar-dark-success elevation-4',
+//    'classes_sidebar' => 'sidebar-light-primary elevation-4',
     'classes_sidebar_nav' => '',
     'classes_topnav' => 'navbar-white navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
@@ -154,7 +155,7 @@ return [
     'sidebar_scrollbar_theme' => 'os-theme-light',
     'sidebar_scrollbar_auto_hide' => 'l',
     'sidebar_nav_accordion' => true,
-    'sidebar_nav_animation_speed' => 300,
+    'sidebar_nav_animation_speed' => 250,
 
     /*
     |--------------------------------------------------------------------------
@@ -168,8 +169,8 @@ return [
     |
     */
 
-    'right_sidebar' => false,
-    'right_sidebar_icon' => 'fas fa-cogs',
+    'right_sidebar' => true,
+    'right_sidebar_icon' => 'fas fa-cog',
     'right_sidebar_theme' => 'dark',
     'right_sidebar_slide' => true,
     'right_sidebar_push' => true,
@@ -233,22 +234,24 @@ return [
     */
 
     'menu' => [
+        //        MENU SUPERIOR
         [
-            'text' => 'search',
+            'text' => 'buscar',
             'search' => true,
             'topnav' => true,
         ],
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'text' => 'Link Test',
+            'url' => '#',
+            'icon' => 'fas fa-link',
+            'topnav' => true,
+//
         ],
+        //        MENU LATERAL
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'text' => 'Inicio',
+            'route'  => 'home',
+            'icon'  => 'far fas fa-home'
         ],
         ['header' => 'account_settings'],
         [
@@ -261,59 +264,136 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
+        ['header' => 'MÓDULOS'],
         [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => ' Colegios',
+            'icon'    => 'far fas fa-school',
+            'icon_color' => 'cyan',
             'submenu' => [
                 [
-                    'text' => 'level_one',
+                    'text' => 'Administrar Colegio(s)',
                     'url'  => '#',
+                    'icon'    => 'far fas fa-list-alt',
+                    'icon_color' => 'cyan',
+//                    'can' => 'admin-colegios'
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
+                    'text' => ' Crear Colegio',
                     'url'  => '#',
+                    'icon'    => 'far fas fa-plus-square',
+                    'icon_color' => 'cyan',
                 ],
             ],
         ],
-        ['header' => 'labels'],
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
+            'text'    => ' Usuarios',
+            'icon'    => 'far fas fa-users-cog',
             'icon_color' => 'yellow',
-            'url'        => '#',
+            'submenu' => [
+                [
+                    'text' => 'Administrar Usuarios',
+                    'url'  => '#',
+                    'icon'    => 'far fas fa-users',
+                    'icon_color' => 'yellow',
+                ],
+                [
+                    'text' => ' Agregar Usuarios',
+                    'url'  => '#',
+                    'icon'    => 'far fas fa-user-cog',
+                    'icon_color' => 'yellow',
+                ],
+            ],
         ],
         [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
+            'text'    => ' Inventario',
+            'icon'    => 'far fas fa-boxes',
+            'icon_color' => 'green',
+            'submenu' => [
+                [
+                    'text' => 'Administrar Equipos',
+                    'url'  => '#',
+                    'icon'    => 'far fas fa-laptop-house',
+                    'icon_color' => 'green',
+                ],
+                [
+                    'text' => ' Agregar Equipo',
+                    'url'  => '#',
+                    'icon'    => 'far fas fa-laptop-medical',
+                    'icon_color' => 'green',
+                ],
+            ],
+        ],
+        [
+            'text'    => ' Reservas',
+            'icon'    => 'far fas fa-calendar-alt',
+            'icon_color' => 'pink',
+            'label'       => 5,
+            'label_color' => 'success',
+            'submenu' => [
+                [
+                    'text' => 'Administrar Reservas',
+                    'url'  => '#',
+                    'icon'    => 'far fas fa-calendar-check',
+                    'icon_color' => 'pink',
+                ],
+                [
+                    'text' => 'Confirmar Reserva',
+                    'url'  => '#',
+                    'icon'    => 'far fas fa-calendar-plus',
+                    'icon_color' => 'pink',
+                ],
+            ],
+        ],
+        [
+            'text'    => ' Préstamos',
+            'icon'    => 'fas fa-hand-holding',
+            'icon_color' => 'orange',
+            'submenu' => [
+                [
+                    'text' => 'Administrar Préstamos',
+                    'url'  => '#',
+                    'icon'    => 'fas fa-hand-holding-medical',
+                    'icon_color' => 'orange',
+                ],
+                [
+                    'text' => 'Devolver Activos',
+                    'url'  => '#',
+                    'icon'    => 'far fas fa-hand-holding-heart',
+                    'icon_color' => 'orange',
+                ],
+            ],
+        ],
+        [
+            'text'    => ' Reportes',
+            'icon'    => 'far fa-file-pdf',
+            'icon_color' => 'red',
+            'submenu' => [
+                [
+                    'text' => 'Estadísticas',
+                    'url'  => '#',
+                    'icon' => 'fas fa-chart-bar',
+                    'icon_color' => 'red',
+                ],
+                [
+                    'text' => 'De Inventario',
+                    'url'  => '#',
+                    'icon'  => 'fas fa-clipboard-list',
+                    'icon_color' => 'red',
+                ],
+            ],
+        ],
+        ['header' => 'DOCUMENTACIÓN'],
+        [
+            'text' => 'Manuales',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-book',
+            'icon_color' => 'teal',
+        ],
+        [
+            'text' => 'Videos',
+            'url'  => '#',
+            'icon' => 'fab fa-youtube',
+            'icon_color' => 'red',
         ],
     ],
 

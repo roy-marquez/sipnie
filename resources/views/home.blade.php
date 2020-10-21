@@ -29,7 +29,9 @@
 {{--</div>--}}
 {{--@endsection--}}
 
-
+@section('css')
+    <link rel="stylesheet" href="/assets/css/style.css">
+@stop
 
 @section('content')
 
@@ -194,14 +196,9 @@
                 vel odio?</p>
         </div>
     </div>
-
-
-
 @stop
 
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
+
 
 @section('js')
     <script> console.log('Hi!'); </script>
