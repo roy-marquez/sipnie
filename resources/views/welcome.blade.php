@@ -7,7 +7,6 @@
         <title>Sipnie</title>
 
         <!-- Fonts -->
-{{--        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">--}}
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;800&display=swap" rel="stylesheet">
 
         <!-- Styles -->
@@ -30,9 +29,7 @@
             @endif
 
             <div class="content">
-                <div class="logo">
-{{--                    logo--}}
-                </div>
+                <div class="logo"> </div>
                 <div class="title m-b-md">
                     Sistema de Información <br/>
                     Programa Nacional de Informática Educativa.
@@ -40,7 +37,8 @@
                 @if (Route::has('login'))
                     <div class="links">
                         @auth
-                            <a href="{{ url('/home') }}">Home</a>
+                            <a href="{{ url('/home') }}">Inicio</a>
+                            <a href="{{ route('register') }}">Manual</a>
                         @else
                             <a href="{{ route('login') }}">Login</a>
 
@@ -53,7 +51,6 @@
                             @endif
                         @endauth
                     </div>
-
                 @endif
             </div>
         </div>

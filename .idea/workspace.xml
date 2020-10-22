@@ -19,10 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29d368dc-6383-489c-ade9-7d99ec409566" name="Default Changelist" comment="Editado menu de navegación lateral, superior y avatar usuario">
+    <list default="true" id="29d368dc-6383-489c-ade9-7d99ec409566" name="Default Changelist" comment="Se agregó y configuro los plugins">
+      <change afterPath="$PROJECT_DIR$/resources/views/manual.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminlte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +154,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1j50TJ9zPn0wrnmpGmazSBYwr16" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -192,7 +196,9 @@
       <workItem from="1603128566591" duration="25582000" />
       <workItem from="1603187127308" duration="25000" />
       <workItem from="1603187809503" duration="1282000" />
-      <workItem from="1603227455763" duration="31036000" />
+      <workItem from="1603227455763" duration="33026000" />
+      <workItem from="1603304391754" duration="1209000" />
+      <workItem from="1603338165272" duration="1690000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1603181361459</created>
@@ -208,7 +214,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603253611500</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Se agrego y configuro los plugins">
+      <created>1603278450554</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603278450554</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Se agregó y configuro los plugins">
+      <created>1603279064533</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603279064533</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,11 +244,14 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
     <MESSAGE value="Editado menu de navegación lateral, superior y avatar usuario" />
-    <option name="LAST_COMMIT_MESSAGE" value="Editado menu de navegación lateral, superior y avatar usuario" />
+    <MESSAGE value="Se agrego y configuro los plugins" />
+    <MESSAGE value="Se agregó y configuro los plugins" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregó y configuro los plugins" />
   </component>
   <component name="WindowStateProjectService">
     <state x="385" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603152556796">
@@ -243,10 +266,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="170" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1603179228057" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1603253673842">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1603279365750">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1603253673842" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1603279365750" />
     <state x="761" y="431" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1603180891946">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
