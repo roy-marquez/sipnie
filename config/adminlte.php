@@ -46,7 +46,7 @@ return [
     */
 
     'logo' => '<span style="font-weight:800; margin-left: 0.5rem">Sipnie<span/>',
-    'logo_img' => 'assets/img/icon-sipnie_m.png',
+    'logo_img' => 'images/icon-sipnie_m.png',
 //    'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_class' => 'brand-image elevation-2',
     'logo_img_xl' => null,
@@ -274,16 +274,17 @@ return [
             'submenu' => [
                 [
                     'text' => 'Administrar Colegio(s)',
-                    'url'  => '#',
+                    'route'  => 'colegios',
                     'icon'    => 'far fas fa-list-alt',
                     'icon_color' => 'cyan',
 //                    'can' => 'admin-colegios'
                 ],
                 [
                     'text' => ' Crear Colegio',
-                    'url'  => '#',
+                    'route'  => 'crear_colegio',
                     'icon'    => 'far fas fa-plus-square',
                     'icon_color' => 'cyan',
+//                    'can' => 'create_colegio'
                 ],
             ],
         ],
@@ -294,7 +295,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Administrar Usuarios',
-                    'url'  => '#',
+                    'route'  => 'usuarios',
                     'icon'    => 'far fas fa-users',
                     'icon_color' => 'yellow',
                 ],
@@ -313,7 +314,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Administrar Equipos',
-                    'url'  => '#',
+                    'route'  => 'inventario',
                     'icon'    => 'far fas fa-laptop-house',
                     'icon_color' => 'green',
                 ],
@@ -321,6 +322,12 @@ return [
                     'text' => ' Agregar Equipo',
                     'url'  => '#',
                     'icon'    => 'far fas fa-laptop-medical',
+                    'icon_color' => 'green',
+                ],
+                [
+                    'text' => ' Categorias Equipo',
+                    'route'  => 'categorias',
+                    'icon'    => 'fas fa-caret-down"',
                     'icon_color' => 'green',
                 ],
             ],

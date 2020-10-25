@@ -1,201 +1,75 @@
-{{--@extends('layouts.app')--}}
+
 @extends('adminlte::page')
 
 @section('title', 'Inicio')
-
-{{--@section('plugins.SweetAlert2', true)--}}
 
 @section('content_header')
     <h1>Inicio</h1>
 @stop
 
-{{--@section('content')--}}
-{{--<div class="container">--}}
-{{--    <div class="row justify-content-center">--}}
-{{--        <div class="col-md-8">--}}
-{{--            <div class="card">--}}
-{{--                <div class="card-header">{{ __('Dashboard') }}</div>--}}
-
-{{--                <div class="card-body">--}}
-{{--                    @if (session('status'))--}}
-{{--                        <div class="alert alert-success" role="alert">--}}
-{{--                            {{ session('status') }}--}}
-{{--                        </div>--}}
-{{--                    @endif--}}
-
-{{--                    {{ __('You are logged in!') }}--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div>--}}
-{{--@endsection--}}
-
-@section('css')
-    <link rel="stylesheet" href="/assets/css/style.css">
-@stop
-
 @section('content')
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">{{ __('Dashboard') }}</div>
 
-    <div class="card">
-        <div class="card-header">
-            <h1 class="card-title">
-                Welcome to this beautiful admin panel.
-            </h1>
-        </div>
+                    <div class="card-body">
+                        @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
 
-        <div class="card-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci architecto aspernatur atque blanditiis culpa
-                cupiditate deleniti dolore ducimus enim eos, et optio, quidem quisquam sapiente suscipit totam. Accusantium,
-                perferendis.
-            </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam beatae cum delectus doloribus, et, eum fuga
-                incidunt neque nihil non nulla obcaecati officiis quasi sed tenetur vel veniam veritatis vitae.</p>
-            <p>Dolor eum,
-                maxime. Ex incidunt inventore nam, natus nisi provident repellat repudiandae vitae! Ab, animi cumque eum id,
-                incidunt, ipsam magnam modi non obcaecati possimus provident quibusdam ut. Deleniti, dignissimos.</p>
-            <p>
-                Consectetur dolore error harum mollitia nemo quaerat quibusdam quo suscipit ut? Accusantium architecto autem
-                earum et, incidunt minus nemo non officiis possimus quae quasi quo ratione reiciendis reprehenderit soluta
-                totam.</p>
-            <p>A consequuntur laboriosam quae rem vitae voluptatem. Commodi, dolor nobis? Aliquid atque
-                consequatur delectus, doloremque eligendi explicabo id ipsum iure natus possimus qui quia, quos rem similique
-                sint unde, voluptates.</p>
+                        {{ __('You are logged in!') }}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="card">
-        <div class="card-header">
-            <h1 class="card-title">
-                Welcome to this beautiful admin panel.
-            </h1>
-        </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h1 class="card-title">
+                            Bienvenido al panel de administración.
+                        </h1>
+                    </div>
 
-        <div class="card-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet
-                ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore
-                doloribus!</p>
-            <p>Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum
-                vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</p>
-            <p>Tenetur quod quidem in voluptatem corporis dolorum dicta sit pariatur porro quaerat autem ipsam odit quam beatae
-                tempora quibusdam illum! Modi velit odio nam nulla unde amet odit pariatur at!</p>
-            <p>Consequatur rerum amet fuga expedita sunt et tempora saepe? Iusto nihil explicabo perferendis quos provident
-                delectus ducimus necessitatibus reiciendis optio tempora unde earum doloremque commodi laudantium ad nulla
-                vel odio?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci architecto aspernatur atque blanditiis culpa
-                cupiditate deleniti dolore ducimus enim eos, et optio, quidem quisquam sapiente suscipit totam. Accusantium,
-                perferendis.
-            </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam beatae cum delectus doloribus, et, eum fuga
-                incidunt neque nihil non nulla obcaecati officiis quasi sed tenetur vel veniam veritatis vitae.</p>
-            <p>Dolor eum,
-                maxime. Ex incidunt inventore nam, natus nisi provident repellat repudiandae vitae! Ab, animi cumque eum id,
-                incidunt, ipsam magnam modi non obcaecati possimus provident quibusdam ut. Deleniti, dignissimos.</p>
-            <p>
-                Consectetur dolore error harum mollitia nemo quaerat quibusdam quo suscipit ut? Accusantium architecto autem
-                earum et, incidunt minus nemo non officiis possimus quae quasi quo ratione reiciendis reprehenderit soluta
-                totam.</p>
-            <p>A consequuntur laboriosam quae rem vitae voluptatem. Commodi, dolor nobis? Aliquid atque
-                consequatur delectus, doloremque eligendi explicabo id ipsum iure natus possimus qui quia, quos rem similique
-                sint unde, voluptates.</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-header">
-            <h1 class="card-title">
-                Greatest Card Ever.
-            </h1>
-        </div>
-
-        <div class="card-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet
-                ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore
-                doloribus!</p>
-            <p>Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum
-                vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</p>
-            <p>Tenetur quod quidem in voluptatem corporis dolorum dicta sit pariatur porro quaerat autem ipsam odit quam beatae
-                tempora quibusdam illum! Modi velit odio nam nulla unde amet odit pariatur at!</p>
-            <p>Consequatur rerum amet fuga expedita sunt et tempora saepe? Iusto nihil explicabo perferendis quos provident
-                delectus ducimus necessitatibus reiciendis optio tempora unde earum doloremque commodi laudantium ad nulla
-                vel odio?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci architecto aspernatur atque blanditiis culpa
-                cupiditate deleniti dolore ducimus enim eos, et optio, quidem quisquam sapiente suscipit totam. Accusantium,
-                perferendis.
-            </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam beatae cum delectus doloribus, et, eum fuga
-                incidunt neque nihil non nulla obcaecati officiis quasi sed tenetur vel veniam veritatis vitae.</p>
-            <p>Dolor eum,
-                maxime. Ex incidunt inventore nam, natus nisi provident repellat repudiandae vitae! Ab, animi cumque eum id,
-                incidunt, ipsam magnam modi non obcaecati possimus provident quibusdam ut. Deleniti, dignissimos.</p>
-            <p>
-                Consectetur dolore error harum mollitia nemo quaerat quibusdam quo suscipit ut? Accusantium architecto autem
-                earum et, incidunt minus nemo non officiis possimus quae quasi quo ratione reiciendis reprehenderit soluta
-                totam.</p>
-            <p>A consequuntur laboriosam quae rem vitae voluptatem. Commodi, dolor nobis? Aliquid atque
-                consequatur delectus, doloremque eligendi explicabo id ipsum iure natus possimus qui quia, quos rem similique
-                sint unde, voluptates.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci architecto aspernatur atque blanditiis culpa
-                cupiditate deleniti dolore ducimus enim eos, et optio, quidem quisquam sapiente suscipit totam. Accusantium,
-                perferendis.
-            </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam beatae cum delectus doloribus, et, eum fuga
-                incidunt neque nihil non nulla obcaecati officiis quasi sed tenetur vel veniam veritatis vitae.</p>
-            <p>Dolor eum,
-                maxime. Ex incidunt inventore nam, natus nisi provident repellat repudiandae vitae! Ab, animi cumque eum id,
-                incidunt, ipsam magnam modi non obcaecati possimus provident quibusdam ut. Deleniti, dignissimos.</p>
-            <p>
-                Consectetur dolore error harum mollitia nemo quaerat quibusdam quo suscipit ut? Accusantium architecto autem
-                earum et, incidunt minus nemo non officiis possimus quae quasi quo ratione reiciendis reprehenderit soluta
-                totam.</p>
-            <p>A consequuntur laboriosam quae rem vitae voluptatem. Commodi, dolor nobis? Aliquid atque
-                consequatur delectus, doloremque eligendi explicabo id ipsum iure natus possimus qui quia, quos rem similique
-                sint unde, voluptates.</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-header">
-            Another card
-        </div>
-        <div class="card-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet
-                ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore
-                doloribus!</p>
-            <p>Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum
-                vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</p>
-            <p>Tenetur quod quidem in voluptatem corporis dolorum dicta sit pariatur porro quaerat autem ipsam odit quam beatae
-                tempora quibusdam illum! Modi velit odio nam nulla unde amet odit pariatur at!</p>
-            <p>Consequatur rerum amet fuga expedita sunt et tempora saepe? Iusto nihil explicabo perferendis quos provident
-                delectus ducimus necessitatibus reiciendis optio tempora unde earum doloremque commodi laudantium ad nulla
-                vel odio?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci architecto aspernatur atque blanditiis culpa
-                cupiditate deleniti dolore ducimus enim eos, et optio, quidem quisquam sapiente suscipit totam. Accusantium,
-                perferendis.
-            </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam beatae cum delectus doloribus, et, eum fuga
-                incidunt neque nihil non nulla obcaecati officiis quasi sed tenetur vel veniam veritatis vitae.</p>
-            <p>Dolor eum,
-                maxime. Ex incidunt inventore nam, natus nisi provident repellat repudiandae vitae! Ab, animi cumque eum id,
-                incidunt, ipsam magnam modi non obcaecati possimus provident quibusdam ut. Deleniti, dignissimos.</p>
-            <p>
-                Consectetur dolore error harum mollitia nemo quaerat quibusdam quo suscipit ut? Accusantium architecto autem
-                earum et, incidunt minus nemo non officiis possimus quae quasi quo ratione reiciendis reprehenderit soluta
-                totam.</p>
-            <p>A consequuntur laboriosam quae rem vitae voluptatem. Commodi, dolor nobis? Aliquid atque
-                consequatur delectus, doloremque eligendi explicabo id ipsum iure natus possimus qui quia, quos rem similique
-                sint unde, voluptates.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet
-                ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore
-                doloribus!</p>
-            <p>Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum
-                vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</p>
-            <p>Tenetur quod quidem in voluptatem corporis dolorum dicta sit pariatur porro quaerat autem ipsam odit quam beatae
-                tempora quibusdam illum! Modi velit odio nam nulla unde amet odit pariatur at!</p>
-            <p>Consequatur rerum amet fuga expedita sunt et tempora saepe? Iusto nihil explicabo perferendis quos provident
-                delectus ducimus necessitatibus reiciendis optio tempora unde earum doloremque commodi laudantium ad nulla
-                vel odio?</p>
+                    <div class="card-body">
+                        <p> En la actualidad uno de los objetivos principales del PNIE es el proveer recurso
+                            humano y tecnológico (equipo informático, dispositivos, mobiliario, etc.) que apoye
+                            el funcionamiento de los Colegios públicos que operan bajo el modelo de
+                            “Innovación Educativa”. (Dirección de Recursos Tecnológicos en Educación MEP,
+                            2018).
+                        </p>
+                        <p> También denominados “Colegios de Innovación Educativa” asentados en las
+                            distintas regiones del país. El recurso humano asignado a cada colegio depende de
+                            la población estudiantil. Usualmente consta de un Ingeniero Analista de Sistemas y
+                            un docente de Informática Educativa. (Consejo Superior de Educación, 2006).
+                        </p>
+                        <p> A enero de 2020 suman un total de 94 colegios los participantes del programa. El
+                            listado completo de estas instituciones educativas se puede observar en los Anexos
+                            del informe, en el Anexo 1. Laboratorios para la enseñanza de informática,
+                            laboratorios para la enseñanza de inglés conversacional, tabletas, pantallas LED,
+                            drones, entre otros, forman parte del equipamiento físico facilitado por el programa.
+                        </p>
+                        <p> El PNIE gira recursos a las Juntas Administrativas de cada Colegio y estas bajo las
+                            directrices y recomendaciones del PNIE en coordinación con su personal y la
+                            Dirección de cada colegio ejecuta los presupuestos asignados. Por medio de
+                            licitaciones públicas se adquieren los equipos.
+                        </p>
+                        <p> Estos equipos quedan a disposición de los docentes académicos, docentes de artes
+                            y docentes técnicos para que, en conjunto con docentes de informática los soliciten
+                            prestados a los ingenieros analistas encargados en los colegios para de su
+                            resguardo y sean utilizados en diversas e innovadoras actividades de aprendizaje.
+                            Que hayan sido previamente coordinadas con el profesor de informática educativa.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 @stop

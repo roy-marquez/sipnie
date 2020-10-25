@@ -10,7 +10,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;800&display=swap" rel="stylesheet">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('/assets/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
+        <link rel="shortcut icon" href="{{ asset('favicons/favicon.ico') }}">
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -28,14 +29,14 @@
                 </div>
             @endif
 
-            <div class="content">
+            <div class="content" >
                 <div class="logo"> </div>
                 <div class="title m-b-md">
                     Sistema de Información <br/>
                     Programa Nacional de Informática Educativa.
-                </div>
+                </div >
                 @if (Route::has('login'))
-                    <div class="links">
+                    <div class="links center">
                         @auth
                             <a href="{{ url('/home') }}">Inicio</a>
                             <a href="{{ route('register') }}">Manual</a>
@@ -47,7 +48,7 @@
                             @endif
 
                             @if (Route::has('register'))
-                                <a href="{{ route('register') }}">Manual</a>
+                                <a href="{{ route('login') }}">Manual</a>
                             @endif
                         @endauth
                     </div>

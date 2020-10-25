@@ -7,3 +7,118 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+//Variables RMS
+
+//colores
+$first-color-light: #76d275;
+$first-color: #43a047;
+$first-color-dark:#00701a;
+
+$second-color-light: #62727b;
+$second-color: #37474f;
+$second-color-dark:#102027;
+
+//Estilos personalizados de RMS
+html, body {
+    background-color: #fff;
+    background-image: url('../images/bg-sipnie.svg');
+    background-repeat: repeat-y;
+    background-size: cover;
+    color: $second-color;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    height: 100vh;
+    margin: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.center {
+    text-align: center;
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.links > a {
+    //color: forestgreen;
+    color: $first-color;
+    padding: 0 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.links > a:hover {
+    color: $first-color-dark;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+.logo {
+    background-image: url('../images/sipnie-logo_01_350.png');
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.error-image{
+    height: 250px;
+    width: 600px;
+}
+
+.error-image--400 {
+    background: no-repeat center/contain url('../images/400.svg');
+    height: 250px;
+    width: 600px;
+}
+
+.error-image--401 {
+    background: no-repeat center/contain url('../images/401.svg');
+    height: 250px;
+    width: 600px;
+}
+
+.error-image--403 {
+    background: no-repeat center/contain url('../images/403.svg');
+    height: 500px;
+    width: 300px;
+}
+
+.error-image--404 {
+    background: no-repeat center/contain url('../images/404.svg');
+    height: 250px;
+    width: 600px;
+}
+.error-image--500 {
+    background: no-repeat center/contain url('../images/500.svg');
+    height: 250px;
+    width: 600px;
+}
+

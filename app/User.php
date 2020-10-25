@@ -39,8 +39,12 @@ class User extends Authenticatable
 
     //devuelve la ruta de la imagen del usuario
     public function adminlte_image(){
-//        return 'https://picsum.photos/300/300';
-        return 'https://source.unsplash.com/300x300/?people,face';
+        if(!isset($_SESSION['user_image_num']))
+            $_SESSION['user_image_num'] = rand(1,99);
+//        return 'https://picsum.photos/300/300?people';
+//        return 'https://source.unsplash.com/300x300/?people,face';
+//        return 'https://randomuser.me/api/portraits/men/99.jpg';
+        return 'https://randomuser.me/api/portraits/men/'.$_SESSION['user_image_num'].'.jpg';
     }
 
     //devuelve la descripción (rol) del usuario
