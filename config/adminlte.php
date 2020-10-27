@@ -314,20 +314,20 @@ return [
             'submenu' => [
                 [
                     'text' => 'Administrar Equipos',
-                    'route'  => 'inventario',
-                    'icon'    => 'far fas fa-laptop-house',
+                    'route' => 'inventario',
+                    'icon'  => 'far fas fa-laptop-house',
                     'icon_color' => 'green',
                 ],
                 [
                     'text' => ' Agregar Equipo',
                     'url'  => '#',
-                    'icon'    => 'far fas fa-laptop-medical',
+                    'icon' => 'far fas fa-laptop-medical',
                     'icon_color' => 'green',
                 ],
                 [
                     'text' => ' Categorias Equipo',
-                    'route'  => 'categorias',
-                    'icon'    => 'fas fa-caret-down"',
+                    'route' => 'categorias',
+                    'icon' => 'far fas fa-list',
                     'icon_color' => 'green',
                 ],
             ],
@@ -336,7 +336,7 @@ return [
             'text'    => ' Reservas',
             'icon'    => 'far fas fa-calendar-alt',
             'icon_color' => 'pink',
-            'label'       => 5,
+            'label' => 5,
             'label_color' => 'success',
             'submenu' => [
                 [
