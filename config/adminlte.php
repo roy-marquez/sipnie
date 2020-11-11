@@ -457,10 +457,28 @@ return [
                     'location' => 'vendor/datatables/js/dataTables.bootstrap4.min.js',
                 ],
                 [
+                    'type' => 'js',
+                    'asset' => true,
+//                    'location' => '//cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js',
+                    'location' => 'vendor/datatables/js/dataTables.responsive.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+//                    'location' => '//cdn.datatables.net/responsive/2.2.6/js/responsive.bootstrap4.min.js',
+                    'location' => 'vendor/datatables/js/responsive.bootstrap4.min.js',
+                ],
+                [
                     'type' => 'css',
                     'asset' => true,
 //                    'location' => '//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css',
                     'location' => 'vendor/datatables/css/dataTables.bootstrap4.min.css',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+//                    'location' => '//cdn.datatables.net/responsive/2.2.6/css/responsive.bootstrap4.min.css',
+                    'location' => 'vendor/datatables/css/responsive.bootstrap4.min.css',
                 ],
             ],
         ],

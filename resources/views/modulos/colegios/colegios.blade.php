@@ -2,6 +2,10 @@
 
 @section('title', 'Colegios')
 
+@section('css')
+{{--<link rel="stylesheet" href="{{ asset('vendor/datatables/css/responsive.bootstrap4.min.css') }} ">--}}
+/*<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.bootstrap4.min.css"/>*/
+@endsection
 @section('content_header')
     <h1>Modulo - Colegios</h1>
 @stop
@@ -76,34 +80,14 @@
                     <td>'urlescudo'</td>
                     <td>2</td>
                 </tr>
-
-                <tfoot>
-                <tr>
-                    <th>Id</th>
-                    <th>Nombre</th>
-                    <th>Alias</th>
-                    <th>Código</th>
-                    <th>Tipo</th>
-                    <th>matricula</th>
-                    <th>Director</th>
-                    <th>Teléfono</th>
-                    <th>Distrito</th>
-                    <th>Dirección</th>
-                    <th>DRE</th>
-                    <th>Circuito</th>
-                    <th>Web</th>
-                    <th>Facebook</th>
-                    <th>Estado</th>
-                    <th>Escudo</th>
-                    <th>Sipnie.Admin</th>
-                </tr>
-                </tfoot>
             </table>
         </div>
     </div>
 @endsection
 
 @section('js')
+{{--    <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>--}}
+{{--    <script src="https://cdn.datatables.net/responsive/2.2.6/js/responsive.bootstrap4.min.js"></script>--}}
     <script>
         Swal.fire(
             'Colegios!',
@@ -115,13 +99,17 @@
         $(function () {
             // $('#colegios').DataTable() // activa todas las opciones...
             $('#colegios').DataTable({
-                'paging'      : true,   // paginado
-                'lengthChange': false,  // cantidad de registros por pagina
-                'searching'   : false,  // campo de búsqueda
-                'ordering'    : true,   // columnas con ordenamiento
-                'info'        : true,   // información de registros, abajo izquierda
-                'autoWidth'   : true    // ancho auto de columnas
+                // 'paging'      : true,   // paginado
+                // 'lengthChange': true,  // cantidad de registros por pagina
+                // 'searching'   : true,  // campo de búsqueda
+                // 'ordering'    : true,   // columnas con ordenamiento
+                // 'info'        : true,   // información de registros, abajo izquierda
+                'autoWidth'   : false,  // ancho auto de columnas, set false cuando se agregan los cdn responsive
+                'responsive'  : true,   // hacer la datatable responsive
+                language       : {
+                    url: '/vendor/datatables-plugins/translations/spanish.json'
+                }
             })
-        })
+        });
     </script>
 @stop

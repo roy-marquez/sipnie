@@ -10916,6 +10916,12 @@ body {
   margin: 0;
 }
 
+.bg-sipnie {
+  background-image: url(/images/bg-sipnie.svg?065f07602d1db560942703e25a24a3cd) !important;
+  background-repeat: repeat-y !important;
+  background-size: cover !important;
+}
+
 .full-height {
   height: 100vh;
 }

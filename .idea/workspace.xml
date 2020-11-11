@@ -19,24 +19,92 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29d368dc-6383-489c-ade9-7d99ec409566" name="Default Changelist" comment="Implementación de paginas de error. Migración, modelo y controlador de categorías e ítems.">
-      <change afterPath="$PROJECT_DIR$/app/colegios.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/colegios_materias.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lecciones.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/marcas.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/materias.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/modelos.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_195659_create_modelos_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_195747_create_marcas_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_203354_create_materias_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_203504_create_colegios_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_204322_create_colegios_materias_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_204553_create_lecciones_table.php" afterDir="false" />
+    <list default="true" id="29d368dc-6383-489c-ade9-7d99ec409566" name="Default Changelist" comment="configuración parcial de tablas de base de datos">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Canton.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Clasificacion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Conectividad.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Dia.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Distrito.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Estado.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Estado_colegio.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Estado_usuario.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Horario.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Leccion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Log.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Operacion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Permiso.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Provincia.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Role.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Sala.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/TipoDocIdentidad.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Ubicacion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Uso.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_11_000000_create_tipos_doc_identidad_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_12_000001_create_roles_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_12_000009_create_estados_usuarios_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_12_000010_create_permisos_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_12_000015_create_roles_permisos_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_12_000020_create_users_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000003_create_usos_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000004_create_condiciones_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000005_create_estados_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000006_create_clasificaciones_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000610_create_dias_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000620_create_provincias_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000621_create_cantones_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000622_create_distritos_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000623_create_conectividades_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000624_create_estados_colegios_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000625_create_horarios_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000701_create_ubicaciones_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000711_create_salas_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_03_000002_create_operaciones_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_03_063922_create_colegios_horarios_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_03_165034_create_logs_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_05_045634_create_users_colegios_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/data/cantones.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/data/conectividades.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/data/distritos.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/data/materias.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/data/provincias.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/adminlte/dist/img/bg-sipnie.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/datatables-plugins/translations/spanish.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/datatables-plugins/translations/spanish.lang" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/datatables/css/responsive.bootstrap4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/datatables/css/responsive.bootstrap4.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/datatables/js/dataTables.responsive.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/datatables/js/dataTables.responsive.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/datatables/js/responsive.bootstrap4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/datatables/js/responsive.bootstrap4.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Item.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Item.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Categoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Categoria.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/colegios.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Colegio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/colegios_materias.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Colegio_materia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lecciones.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Condicion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/marcas.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Marca.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/materias.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Materia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modelos.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modelo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminlte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_24_210553_create_categorias_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_24_210553_create_categorias_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_031323_create_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_031323_create_items_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_12_000000_create_password_resets_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_24_210553_create_categorias_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000100_create_categorias_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_031323_create_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000800_create_items_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_195659_create_modelos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000002_create_modelos_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_195747_create_marcas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000001_create_marcas_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_203354_create_materias_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000600_create_materias_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_203504_create_colegios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000700_create_colegios_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_204322_create_colegios_materias_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_204322_create_colegios_materias_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_204553_create_lecciones_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000710_create_lecciones_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/adminlte/dist/css/adminlte.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/adminlte/dist/css/adminlte.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/modulos/colegios/colegios.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/colegios/colegios.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/modulos/usuarios/usuarios.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/usuarios/usuarios.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,25 +243,28 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql.8&#10;mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/modulos/inventario" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/vendor/datatables-plugins/translations" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\sipnie\resources\views\modulos\inventario" />
-      <recent name="C:\laragon\www\sipnie\resources\views\errors" />
-      <recent name="C:\laragon\www\sipnie\resources\views\modulos\usuarios" />
-      <recent name="C:\laragon\www\sipnie\resources\views\modulos\colegios" />
-      <recent name="C:\laragon\www\sipnie\resources\views\modulos" />
+      <recent name="C:\laragon\www\sipnie\public\vendor\datatables-plugins\translations" />
+      <recent name="C:\laragon\www\sipnie\resources\views\layouts" />
+      <recent name="C:\laragon\www\sipnie\public\vendor\datatables\css" />
+      <recent name="C:\laragon\www\sipnie\public\vendor\datatables\js" />
+      <recent name="C:\laragon\www\sipnie\public\vendor\adminlte\dist\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\sipnie\database\migrations\data" />
       <recent name="C:\laragon\www\sipnie\resources\images" />
       <recent name="C:\laragon\www\sipnie\resources\views\modulos\colegios" />
       <recent name="C:\laragon\www\sipnie\public\assets" />
@@ -228,6 +299,21 @@
       <workItem from="1603665750143" duration="2802000" />
       <workItem from="1603728699480" duration="2883000" />
       <workItem from="1603741398251" duration="1127000" />
+      <workItem from="1603837312300" duration="279000" />
+      <workItem from="1603880197281" duration="2267000" />
+      <workItem from="1603953612762" duration="11718000" />
+      <workItem from="1603968174322" duration="238000" />
+      <workItem from="1603968425832" duration="534000" />
+      <workItem from="1603968972610" duration="17157000" />
+      <workItem from="1604118287220" duration="6278000" />
+      <workItem from="1604159106477" duration="29053000" />
+      <workItem from="1604369198795" duration="15732000" />
+      <workItem from="1604419945798" duration="25103000" />
+      <workItem from="1604512303008" duration="902000" />
+      <workItem from="1604544786433" duration="12705000" />
+      <workItem from="1604732616574" duration="7220000" />
+      <workItem from="1604803247906" duration="4694000" />
+      <workItem from="1605079279560" duration="169000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1603181361459</created>
@@ -271,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603605010427</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="configuración parcial de tablas de base de datos">
+      <created>1603837386674</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1603837386674</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,29 +390,50 @@
     <MESSAGE value="Se agregó y configuro los plugins" />
     <MESSAGE value="pre-configuración de laravel mix" />
     <MESSAGE value="Implementación de paginas de error. Migración, modelo y controlador de categorías e ítems." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementación de paginas de error. Migración, modelo y controlador de categorías e ítems." />
+    <MESSAGE value="configuración parcial de tablas de base de datos" />
+    <option name="LAST_COMMIT_MESSAGE" value="configuración parcial de tablas de base de datos" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="586" y="203" key="#Inspections" timestamp="1603880687063">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="586" y="203" key="#Inspections/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1603880687063" />
     <state x="714" y="349" key="#Notifications" timestamp="1603340102438">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="714" y="349" key="#Notifications/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1603340102438" />
-    <state x="385" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603152556796">
+    <state x="552" y="183" width="1071" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604119457323">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="385" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1603152556796" />
+    <state x="552" y="183" width="1071" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604119457323" />
+    <state x="385" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604820170511">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="385" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604820170511" />
+    <state x="640" y="457" width="530" height="449" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604546331903">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="640" y="457" width="530" height="449" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604546331903" />
     <state x="92" y="92" width="1736" height="866" key="DiffContextDialog" timestamp="1603181427482">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="92" y="92" width="1736" height="866" key="DiffContextDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1603181427482" />
-    <state x="461" y="170" key="SettingsEditor" timestamp="1603501247197">
+    <state x="740" y="266" key="FileChooserDialogImpl" timestamp="1604819182097">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="461" y="170" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1603501247197" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1603605088727">
+    <state x="740" y="266" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604819182097" />
+    <state x="208" y="178" width="1194" height="710" key="SettingsEditor" timestamp="1604375416404">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1603605088727" />
+    <state x="208" y="178" width="1194" height="710" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604375416404" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1603837395794">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1603837395794" />
+    <state x="859" y="394" width="293" height="261" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1604119408740">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="859" y="394" width="293" height="261" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604119408740" />
     <state x="667" y="81" width="585" height="888" key="find.popup" timestamp="1603354220951">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -332,9 +446,20 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1603274442676" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1603523515886">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1604451282328">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1603523515886" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604451282328" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/database/migrations/2020_10_25_000710_create_lecciones_table.php</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -78,27 +78,6 @@
                     <td>2</td>
                 </tr>
 
-                <tfoot>
-                <tr>
-                    <th>Id</th>
-                    <th>Nombre</th>
-                    <th>Alias</th>
-                    <th>Código</th>
-                    <th>Tipo</th>
-                    <th>matricula</th>
-                    <th>Director</th>
-                    <th>Teléfono</th>
-                    <th>Distrito</th>
-                    <th>Dirección</th>
-                    <th>DRE</th>
-                    <th>Circuito</th>
-                    <th>Web</th>
-                    <th>Facebook</th>
-                    <th>Estado</th>
-                    <th>Escudo</th>
-                    <th>Sipnie.Admin</th>
-                </tr>
-                </tfoot>
             </table>
         </div>
     </div>
@@ -115,12 +94,16 @@
     <script>
         $(function () {
             $('#usuarios').DataTable({
-                'paging'      : true,
-                'lengthChange': false,
-                'searching'   : false,
-                'ordering'    : true,
-                'info'        : true,
-                'autoWidth'   : false
+                // 'paging'      : true,
+                // 'lengthChange': false,
+                // 'searching'   : false,
+                // 'ordering'    : true,
+                // 'info'        : true,
+                'autoWidth'   : false,
+                'responsive'  : true,
+                language       : {
+                    url: '/vendor/datatables-plugins/translations/spanish.json'
+                }
             })
         })
     </script>

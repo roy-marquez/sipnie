@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateColegiosMateriasTable extends Migration
+class CreateColegiosHorariosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ class CreateColegiosMateriasTable extends Migration
      */
     public function up()
     {
-        Schema::create('colegios_materias', function (Blueprint $table) {
-            $table->integerIncrements('id');
+        Schema::create('colegios_horarios', function (Blueprint $table) {
+            $table->tinyIncrements('id');
 
             $table->unsignedSmallInteger('colegio_id');
             $table->foreign('colegio_id')->references('id')->on('colegios')
                 ->onDelete('cascade')->onUpdate('cascade');
 
-            $table->unsignedSmallInteger('materia_id');
-            $table->foreign('materia_id')->references('id')->on('materias')
+            $table->unsignedTinyInteger('horario_id');
+            $table->foreign('horario_id')->references('id')->on('horarios')
                 ->onDelete('cascade')->onUpdate('cascade');
 
         });
@@ -34,6 +34,7 @@ class CreateColegiosMateriasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('colegios_materias');
+        //
+        Schema::dropIfExists('colegios_horarios');
     }
 }
