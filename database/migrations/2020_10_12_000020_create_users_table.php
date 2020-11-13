@@ -49,9 +49,9 @@ class CreateUsersTable extends Migration
             ['name' => 'dev', 'email' => 'dev@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
             ['name' => 'admin', 'email' => 'admin@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
             ['name' => 'ingeniero.pnie', 'email' => 'ingeniero.pnie@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
-            ['name' => 'docente-pnie', 'email' => 'docente.pnie@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
-            ['name' => 'docente-cole', 'email' => 'docente.cole@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
-            ['name' => 'admin-cole', 'email' => 'admin.cole@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
+            ['name' => 'docente.pnie', 'email' => 'docente.pnie@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
+            ['name' => 'docente.cole', 'email' => 'docente.cole@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
+            ['name' => 'admin.cole', 'email' => 'admin.cole@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
         ]);
     }
 
