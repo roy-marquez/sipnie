@@ -19,12 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29d368dc-6383-489c-ade9-7d99ec409566" name="Default Changelist" comment="actualización de las migraciones">
-      <change afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
+    <list default="true" id="29d368dc-6383-489c-ade9-7d99ec409566" name="Default Changelist" comment="creación del seeder de usuarios">
+      <change afterPath="$PROJECT_DIR$/app/EstadoReserva.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ReservaActivo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ReservaActivoDetalle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_13_000010_create_estados_reservas_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_13_000020_create_reservas_activos_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_13_212014_reservas_activos_detalles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_12_000020_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_12_000020_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/modulos/colegios/colegios.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/colegios/colegios.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000800_create_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000800_create_items_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +238,9 @@
       <workItem from="1604803247906" duration="4694000" />
       <workItem from="1605079279560" duration="702000" />
       <workItem from="1605082579813" duration="8000" />
-      <workItem from="1605228471094" duration="6307000" />
+      <workItem from="1605228471094" duration="6588000" />
+      <workItem from="1605279689416" duration="604000" />
+      <workItem from="1605317835458" duration="9055000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1603181361459</created>
@@ -293,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605079567784</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="creación del seeder de usuarios">
+      <created>1605249654128</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1605249654128</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +333,8 @@
     <MESSAGE value="Implementación de paginas de error. Migración, modelo y controlador de categorías e ítems." />
     <MESSAGE value="configuración parcial de tablas de base de datos" />
     <MESSAGE value="actualización de las migraciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="actualización de las migraciones" />
+    <MESSAGE value="creación del seeder de usuarios" />
+    <option name="LAST_COMMIT_MESSAGE" value="creación del seeder de usuarios" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="203" key="#Inspections" timestamp="1603880687063">
@@ -348,22 +361,26 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="92" y="92" width="1736" height="866" key="DiffContextDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1603181427482" />
-    <state x="740" y="266" key="FileChooserDialogImpl" timestamp="1604819182097">
+    <state x="740" y="266" key="FileChooserDialogImpl" timestamp="1605320700921">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="740" y="266" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604819182097" />
+    <state x="740" y="266" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605320700921" />
     <state x="208" y="178" width="1194" height="710" key="SettingsEditor" timestamp="1604375416404">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="208" y="178" width="1194" height="710" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604375416404" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605079647009">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605249658380">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605079647009" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605249658380" />
     <state x="859" y="394" width="293" height="261" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1604119408740">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="859" y="394" width="293" height="261" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604119408740" />
+    <state x="2311" y="0" width="1168" height="1010" maximized="true" key="dock-window-1" timestamp="1605320588053">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2311" y="0" width="1168" height="1010" maximized="true" key="dock-window-1/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605320588053" />
     <state x="667" y="81" width="585" height="888" key="find.popup" timestamp="1603354220951">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

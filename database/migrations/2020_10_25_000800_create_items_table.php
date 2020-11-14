@@ -62,7 +62,7 @@ class CreateItemsTable extends Migration
             $table->string('foto_ruta')->nullable()->comment('Foto del articulo');
 
             $table->unsignedInteger('ubicacion_id')->nullable()->comment('id de la ubicación del item: aula, laboratorio, etc.');
-            $table->foreign('ubicacion_id')->references('id')->on('ubicaciones')->onDelete('set null');
+            $table->foreign('ubicacion_id')->references('id')->on('ubicaciones')->onUpdate('cascate')->onDelete('set null');
 
             $table->timestamp('creado_en')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('actualizado_en')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
