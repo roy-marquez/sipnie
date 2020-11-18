@@ -21,6 +21,7 @@ class CreateItemsTable extends Migration
             $table->unsignedInteger('modelo_id')->comment('Modelo del item, referenciado a una marca');
             $table->foreign('modelo_id')->references('id')->on('modelos');
 
+
             $table->unsignedTinyInteger('categoria_id')->nullable()->comment('Ejemplo: laptop, tableta, etc.');
             $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('set null');
 
@@ -36,8 +37,14 @@ class CreateItemsTable extends Migration
             $table->string('serie', 100)
                 ->comment('Identificador único del fabricante');
 
-            $table->string('registro', 50)
-                ->comment('Registro:tomo, folio, asiento. En libro de actas del colegio');
+            $table->unsignedSmallInteger('registro_tomo')->nullable()
+                ->comment('Registro:tomo En libro de actas del colegio');
+
+            $table->unsignedSmallInteger('registro_folio')->nullable()
+                ->comment('Registro:folio. En libro de actas del colegio');
+
+            $table->unsignedSmallInteger('registro_asiento')->nullable()
+                ->comment('Registro:asiento. En libro de actas del colegio');
 
             $table->text('nota')->nullable()
                 ->comment('Observación especial sobre el articulo');
@@ -62,13 +69,13 @@ class CreateItemsTable extends Migration
             $table->string('foto_ruta')->nullable()->comment('Foto del articulo');
 
             $table->unsignedInteger('ubicacion_id')->nullable()->comment('id de la ubicación del item: aula, laboratorio, etc.');
-            $table->foreign('ubicacion_id')->references('id')->on('ubicaciones')->onUpdate('cascate')->onDelete('set null');
+            $table->foreign('ubicacion_id')->references('id')->on('ubicaciones')->onUpdate('cascade')->onDelete('set null');
 
             $table->timestamp('creado_en')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('actualizado_en')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
 
-        //DB::unprepared("ALTER TABLE 'items' CHANGE  `item_num`  `item_num` INT( 6 ) UNSIGNED ZEROFILL NOT NULL DEFAULT '1';");
+        DB::raw("ALTER TABLE 'items' CHANGE  `item_num`  `item_num` INT( 6 ) UNSIGNED ZEROFILL NOT NULL DEFAULT '1';");
     }
 
     /**

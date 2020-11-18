@@ -20,7 +20,12 @@ class CreateModelosTable extends Migration
             $table->foreign('marca_id')->references('id')->on('marcas');
 
             $table->string('modelo',50);
-            $table->text('descripcion')->nullable();
+
+            $table->string('linea',50)
+                ->comment('Linea comercial de la marca: Por ejemplo una impresora: Marca=Epson, Linea=EcoTank');
+
+            $table->text('descripcion')->nullable()
+                ->comment('características adicionales, ficha técnica, referencias manuales, etc.');
             $table->timestamps();
         });
     }

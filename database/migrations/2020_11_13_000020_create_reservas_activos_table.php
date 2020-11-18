@@ -14,8 +14,8 @@ class CreateReservasActivosTable extends Migration
     public function up()
     {
         Schema::create('reservas_activos', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedInteger('usuario_id')->nullable()->comment('usuario que genera la reserva');
+            $table->integerIncrements('id');
+            $table->unsignedBigInteger('usuario_id')->nullable()->comment('usuario que genera la reserva');
             $table->foreign('usuario_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('set null');
             $table->unsignedSmallInteger('colegio_id')->nullable()->comment('colegio dueño del activo');
             $table->foreign('colegio_id')->references('id')->on('colegios')->onUpdate('cascade')->onDelete('set null');

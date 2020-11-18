@@ -19,15 +19,33 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29d368dc-6383-489c-ade9-7d99ec409566" name="Default Changelist" comment="creación del seeder de usuarios">
-      <change afterPath="$PROJECT_DIR$/app/EstadoReserva.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ReservaActivo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ReservaActivoDetalle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_13_000010_create_estados_reservas_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_13_000020_create_reservas_activos_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_13_212014_reservas_activos_detalles.php" afterDir="false" />
+    <list default="true" id="29d368dc-6383-489c-ade9-7d99ec409566" name="Default Changelist" comment="creación de tablas de reservas">
+      <change afterPath="$PROJECT_DIR$/app/EstadoPrestamo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ReporteInterno.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ReporteNacional.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ReservaSala.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ReservaSalaLeccion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/prestamo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/ReservaSalaFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_13_000011_create_estados_prestamos_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_16_064416_create_prestamos_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_17_191134_create_reservas_salas_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_17_191450_create_reserva_sala_lecciones_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_18_010626_create_reportes_internos_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_18_010804_create_reportes_nacionales_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/data/marcas.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/ReservaSalaSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Categoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Categoria.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/EstadoReserva.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/EstadoReserva.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Item.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Item.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_12_000020_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_12_000020_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000001_create_marcas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000001_create_marcas_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000002_create_modelos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000002_create_modelos_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000800_create_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000800_create_items_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_13_000020_create_reservas_activos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_13_000020_create_reservas_activos_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_13_212014_reservas_activos_detalles.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_13_212014_reservas_activos_detalles.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +188,7 @@
     <property name="DatabaseDriversLRU" value="mysql.8&#10;mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/vendor/datatables-plugins/translations" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fast_eloquent" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -179,19 +197,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\sipnie\public\vendor\datatables-plugins\translations" />
-      <recent name="C:\laragon\www\sipnie\resources\views\layouts" />
-      <recent name="C:\laragon\www\sipnie\public\vendor\datatables\css" />
-      <recent name="C:\laragon\www\sipnie\public\vendor\datatables\js" />
-      <recent name="C:\laragon\www\sipnie\public\vendor\adminlte\dist\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\sipnie\storage\app\public\assets\system" />
       <recent name="C:\laragon\www\sipnie\database\migrations\data" />
       <recent name="C:\laragon\www\sipnie\resources\images" />
       <recent name="C:\laragon\www\sipnie\resources\views\modulos\colegios" />
       <recent name="C:\laragon\www\sipnie\public\assets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\sipnie\app" />
+      <recent name="C:\laragon\www\sipnie\database\migrations" />
+      <recent name="C:\laragon\www\sipnie\database\migrations\data" />
+      <recent name="C:\laragon\www\sipnie\public\vendor\datatables-plugins\translations" />
+      <recent name="C:\laragon\www\sipnie\resources\views\layouts" />
     </key>
   </component>
   <component name="RunManager">
@@ -240,7 +258,10 @@
       <workItem from="1605082579813" duration="8000" />
       <workItem from="1605228471094" duration="6588000" />
       <workItem from="1605279689416" duration="604000" />
-      <workItem from="1605317835458" duration="9055000" />
+      <workItem from="1605317835458" duration="12476000" />
+      <workItem from="1605500933905" duration="14739000" />
+      <workItem from="1605574789296" duration="3542000" />
+      <workItem from="1605657486810" duration="17071000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1603181361459</created>
@@ -305,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605249654128</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="creación de tablas de reservas">
+      <created>1605342543271</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1605342543271</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +362,8 @@
     <MESSAGE value="configuración parcial de tablas de base de datos" />
     <MESSAGE value="actualización de las migraciones" />
     <MESSAGE value="creación del seeder de usuarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="creación del seeder de usuarios" />
+    <MESSAGE value="creación de tablas de reservas" />
+    <option name="LAST_COMMIT_MESSAGE" value="creación de tablas de reservas" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="203" key="#Inspections" timestamp="1603880687063">
@@ -353,34 +382,38 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="385" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604820170511" />
-    <state x="640" y="457" width="530" height="449" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604546331903">
+    <state x="640" y="457" width="530" height="449" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605671039519">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="640" y="457" width="530" height="449" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604546331903" />
+    <state x="640" y="457" width="530" height="449" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605671039519" />
     <state x="92" y="92" width="1736" height="866" key="DiffContextDialog" timestamp="1603181427482">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="92" y="92" width="1736" height="866" key="DiffContextDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1603181427482" />
-    <state x="740" y="266" key="FileChooserDialogImpl" timestamp="1605320700921">
+    <state x="740" y="266" key="FileChooserDialogImpl" timestamp="1605691515613">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="740" y="266" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605320700921" />
+    <state x="740" y="266" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605691515613" />
     <state x="208" y="178" width="1194" height="710" key="SettingsEditor" timestamp="1604375416404">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="208" y="178" width="1194" height="710" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604375416404" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605249658380">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605342548833">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605249658380" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605342548833" />
     <state x="859" y="394" width="293" height="261" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1604119408740">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="859" y="394" width="293" height="261" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604119408740" />
-    <state x="2311" y="0" width="1168" height="1010" maximized="true" key="dock-window-1" timestamp="1605320588053">
+    <state x="540" y="179" key="com.intellij.database.dbimport.ImportDialog" timestamp="1605664094412">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="540" y="179" key="com.intellij.database.dbimport.ImportDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605664094412" />
+    <state x="2382" y="0" width="974" height="1010" key="dock-window-1" timestamp="1605598660099">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state x="2311" y="0" width="1168" height="1010" maximized="true" key="dock-window-1/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605320588053" />
+    <state x="2382" y="0" width="974" height="1010" key="dock-window-1/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605598660099" />
     <state x="667" y="81" width="585" height="888" key="find.popup" timestamp="1603354220951">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

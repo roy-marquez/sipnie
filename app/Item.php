@@ -11,4 +11,14 @@ class Item extends Model
     {
         return str_pad($this->item_num,6, '0', STR_PAD_LEFT);
     }
+
+    public function categoria()
+    {
+        return $this->belongsTo(Categoria::class );
+    }
+
+    public function colegio()
+    {
+        return $this->belongsTo(Colegio::class);
+    }
 }

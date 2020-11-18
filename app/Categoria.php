@@ -8,4 +8,9 @@ class Categoria extends Model
 {
     //asociar modelo Categoria con la tabla 'categorias'
     protected $table = 'categorias';
+
+    public function items()
+    {
+        return $this->hasMany(Item::class);
+    }
 }

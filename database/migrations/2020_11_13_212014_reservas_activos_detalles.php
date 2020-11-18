@@ -15,6 +15,14 @@ class ReservasActivosDetalles extends Migration
     {
         Schema::create('reservas_activos_detalles', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('reservas_activos_id');
+            $table->foreign('reservas_activos_id')->references('id')->on('reservas_activos');
+
+            $table->unsignedBigInteger('item_id');
+            $table->foreign('item_id')->references('id')->on('items')->onUpdate('cascade')->onDelete('cascade');
+
+            $table->unsignedInteger('leccion_id')->comment('lección en que estará reservado el articulo');
+            $table->foreign('leccion_id')->references('id')->on('lecciones')->onUpdate('cascade')->onDelete('cascade');
 
             $table->timestamps();
         });
