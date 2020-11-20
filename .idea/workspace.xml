@@ -19,33 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29d368dc-6383-489c-ade9-7d99ec409566" name="Default Changelist" comment="creación de tablas de reservas">
-      <change afterPath="$PROJECT_DIR$/app/EstadoPrestamo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ReporteInterno.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ReporteNacional.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ReservaSala.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ReservaSalaLeccion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/prestamo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/ReservaSalaFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_13_000011_create_estados_prestamos_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_16_064416_create_prestamos_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_17_191134_create_reservas_salas_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_17_191450_create_reserva_sala_lecciones_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_18_010626_create_reportes_internos_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_18_010804_create_reportes_nacionales_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/data/marcas.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/ReservaSalaSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="29d368dc-6383-489c-ade9-7d99ec409566" name="Default Changelist" comment="modelos y migraciones de reservas items, reservas salas, reportes internos y reportes nacionales">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Categoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Categoria.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/EstadoReserva.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/EstadoReserva.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Item.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Item.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_12_000020_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_12_000020_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000001_create_marcas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000001_create_marcas_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000002_create_modelos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000002_create_modelos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000800_create_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000800_create_items_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_13_000020_create_reservas_activos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_13_000020_create_reservas_activos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_13_212014_reservas_activos_detalles.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_13_212014_reservas_activos_detalles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000006_create_clasificaciones_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000006_create_clasificaciones_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_17_191450_create_reserva_sala_lecciones_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_17_191450_create_reserva_sala_lecciones_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,7 +239,9 @@
       <workItem from="1605317835458" duration="12476000" />
       <workItem from="1605500933905" duration="14739000" />
       <workItem from="1605574789296" duration="3542000" />
-      <workItem from="1605657486810" duration="17071000" />
+      <workItem from="1605657486810" duration="17259000" />
+      <workItem from="1605764103349" duration="1243000" />
+      <workItem from="1605809867928" duration="4640000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1603181361459</created>
@@ -333,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605342543271</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="modelos y migraciones de reservas items, reservas salas, reportes internos y reportes nacionales">
+      <created>1605692978314</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1605692978314</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,7 +350,8 @@
     <MESSAGE value="actualización de las migraciones" />
     <MESSAGE value="creación del seeder de usuarios" />
     <MESSAGE value="creación de tablas de reservas" />
-    <option name="LAST_COMMIT_MESSAGE" value="creación de tablas de reservas" />
+    <MESSAGE value="modelos y migraciones de reservas items, reservas salas, reportes internos y reportes nacionales" />
+    <option name="LAST_COMMIT_MESSAGE" value="modelos y migraciones de reservas items, reservas salas, reportes internos y reportes nacionales" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="203" key="#Inspections" timestamp="1603880687063">
@@ -398,10 +386,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="208" y="178" width="1194" height="710" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1604375416404" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605342548833">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605692991248">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605342548833" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1605692991248" />
     <state x="859" y="394" width="293" height="261" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1604119408740">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

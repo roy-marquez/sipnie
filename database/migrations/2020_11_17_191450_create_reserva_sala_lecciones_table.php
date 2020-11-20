@@ -35,6 +35,6 @@ class CreateReservaSalaLeccionesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reserva_sala_leccions');
+        Schema::dropIfExists('reserva_sala_lecciones');
     }
 }

@@ -21,7 +21,8 @@ class CreateClasificacionesTable extends Migration
         DB::table('clasificaciones')->insert([
             ['clasificacion' => 'Académico Diurno'],
             ['clasificacion' => 'Colegio Técnico Profesional (C.T.P)'],
-            ['clasificacion' => 'Experimental Bilingüe']
+            ['clasificacion' => 'Experimental Bilingüe'],
+            ['clasificacion' => 'Colegio Artístico']
         ]);
     }
 
