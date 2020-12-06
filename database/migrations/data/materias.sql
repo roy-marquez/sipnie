@@ -19,18 +19,23 @@ INSERT INTO `materias` ( `materia`) VALUES
 	('artes plásticas'),
 	('biología'),
 	('ciencias'),
+	('computación'),
 	('cultura indígena'),
+	('educación ambiental'),
 	('educación cívica'),
 	('educación física'),
+	('educación hogar'),
 	('educación musical'),
 	('educación religiosa'),
 	('español'),
 	('estudios sociales'),
 	('filosofía'),
 	('física'),
+	('gestión empresarial'),
 	('idioma francés'),
 	('idioma indígena'),
-	('idioma inglés'),
+	('idioma inglés académico'),
+	('idioma inglés conversacional'),
 	('idioma inglés - listening/speaking'),
 	('idioma inglés - reading/writing'),
 	('idioma italiano'),
@@ -40,7 +45,16 @@ INSERT INTO `materias` ( `materia`) VALUES
 	('orientación y guía'),
 	('psicología'),
 	('química'),
-	('vida cotidiana');
+	('vida cotidiana'),
+	('taller exp. informática'),
+	('taller exp. contabilidad'),
+	('taller exp. cocina internacional'),
+	('taller exp. indefinido'),
+	('taller exp. inglés conversacional'),
+	('tec. contabilidad'),
+	('tec. diseño digital'),
+	('tec. turismo');
+
 /*!40000 ALTER TABLE `materias` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
