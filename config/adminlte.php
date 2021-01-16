@@ -88,7 +88,7 @@ return [
     'layout_boxed' => null,
     'layout_fixed_sidebar' => true,
     'layout_fixed_navbar' => true,
-    'layout_fixed_footer' => null,
+    'layout_fixed_footer' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -169,11 +169,11 @@ return [
     |
     */
 
-    'right_sidebar' => true,
+    'right_sidebar' => false,
     'right_sidebar_icon' => 'fas fa-cog',
     'right_sidebar_theme' => 'dark',
-    'right_sidebar_slide' => true,
-    'right_sidebar_push' => true,
+    'right_sidebar_slide' => false,
+    'right_sidebar_push' => false,
     'right_sidebar_scrollbar_theme' => 'os-theme-light',
     'right_sidebar_scrollbar_auto_hide' => 'l',
 
@@ -275,13 +275,14 @@ return [
                 [
                     'text' => 'Administrar Colegio(s)',
                     'route'  => 'colegios',
+//                    'route'  => 'home',
                     'icon'    => 'far fas fa-list-alt',
                     'icon_color' => 'cyan',
 //                    'can' => 'admin-colegios'
                 ],
                 [
                     'text' => ' Crear Colegio',
-                    'route'  => 'crear_colegio',
+                    'route'  => 'home',
                     'icon'    => 'far fas fa-plus-square',
                     'icon_color' => 'cyan',
 //                    'can' => 'create_colegio'
@@ -510,7 +511,7 @@ return [
             ],
         ],
         'Sweetalert2' => [
-            'active' => true,
+            'active' => false,
             'files' => [
                 [
                     'type' => 'js',

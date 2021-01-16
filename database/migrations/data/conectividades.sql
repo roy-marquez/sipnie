@@ -11,9 +11,9 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
--- Dumping data for table sipnie_db.materias: ~22 rows (approximately)
 /*!40000 ALTER TABLE `conectividades` DISABLE KEYS */;
 INSERT INTO `conectividades` ( `tipo_conexion`,`velocidad_max_mbps` ) VALUES
+	('Indefinida', 0),
 	('Fibra óptica', 10),
 	('Fibra óptica', 20),
 	('Fibra óptica', 45),

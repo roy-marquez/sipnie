@@ -17,3 +17,9 @@ mix.js('resources/js/app.js', 'public/js')
         processCssUrls: true
     });
 ;
+
+mix.browserSync('http://sipnie.test/');
+
+if(mix.inProduction()){
+    mix.version();
+}

@@ -11,7 +11,7 @@
     <div class="card">
         <div class="card-header">
             <h1 class="card-title">
-                Tabla de Categorias
+                Tabla de Inventario
             </h1>
         </div>
 
@@ -97,17 +97,18 @@
             'success'
         )
     </script>
-    <script>
-        $(function () {
-            // $('#colegios').DataTable() // activa todas las opciones...
-            $('#colegios').DataTable({
-                'paging'      : true,   // paginado
-                'lengthChange': false,  // cantidad de registros por pagina
-                'searching'   : false,  // campo de búsqueda
-                'ordering'    : true,   // columnas con ordenamiento
-                'info'        : true,   // información de registros, abajo izquierda
-                'autoWidth'   : true    // ancho auto de columnas
-            })
-        })
-    </script>
+{{--    <script>--}}
+{{--        $(function () {--}}
+{{--            // $('#colegios').DataTable() // activa todas las opciones...--}}
+{{--            $('#colegios').DataTable({--}}
+{{--                'paging'      : true,   // paginado--}}
+{{--                'lengthChange': false,  // cantidad de registros por pagina--}}
+{{--                'searching'   : false,  // campo de búsqueda--}}
+{{--                'ordering'    : true,   // columnas con ordenamiento--}}
+{{--                'info'        : true,   // información de registros, abajo izquierda--}}
+{{--                'autoWidth'   : true    // ancho auto de columnas--}}
+{{--            })--}}
+{{--        })--}}
+{{--    </script>--}}
+    @include('modulos.partials.datatables-config')
 @stop

@@ -8,7 +8,6 @@
 @import '~bootstrap/scss/bootstrap';
 
 //Variables RMS
-
 //colores
 $first-color-light: #76d275;
 $first-color: #43a047;
@@ -67,6 +66,10 @@ html, body {
     font-weight: 800;
     font-size: 2rem;
     text-align: center;
+}
+
+.header{
+    font-family: 'Poppins', sans-serif;
 }
 
 .links > a {
@@ -128,4 +131,16 @@ html, body {
     height: 250px;
     width: 600px;
 }
+.escudo-thumb {
+    height: 50px;
+    max-height: 50px;
+    max-width: 50px;
+    width: 50px;
+}
 
+.fab {
+   font-size: larger;
+}
+.fab:hover {
+    font-size: x-large;
+}

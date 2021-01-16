@@ -21,21 +21,23 @@ class CreateColegiosTable extends Migration
             $table->unsignedTinyInteger('clasificacion_id')->nullable();
             $table->foreign('clasificacion_id')->references('id')->on('clasificaciones')->onDelete('set null');
 
-            $table->integer('cedula_juridica')->nullable()
+            $table->unsignedBigInteger('cedula_juridica')->nullable()
                 ->comment('10 dígitos, sin cero al inicio ni guiones');
             $table->unsignedInteger('matricula')->nullable()->comment('cantidad de alumnos del colegio');
             $table->string('director')->nullable()->comment('nombre del director actual del colegio');
             $table->string('telefono')->nullable()
                 ->comment('telefono oficial del colegio en formato 6 dígitos sin guiones xxxxxxxx');
+            $table->string('email')->nullable()
+                ->comment('email oficial del colegio, email mep');
 
             $table->unsignedTinyInteger('provincia_id')->nullable();
-            $table->foreign('provincia_id')->references('id')->on('provincias')->onDelete('set null');
+            $table->foreign('provincia_id')->references('id')->on('provincias');
 
             $table->unsignedSmallInteger('canton_id')->nullable();
-            $table->foreign('canton_id')->references('id')->on('cantones')->onDelete('set null');
+            $table->foreign('canton_id')->references('id')->on('cantones');
 
             $table->unsignedMediumInteger('distrito_id')->nullable();
-            $table->foreign('distrito_id')->references('id')->on('distritos')->onDelete('set null');
+            $table->foreign('distrito_id')->references('id')->on('distritos');
 
             $table->string('localizacion')->nullable()->comment('localización, otras señas adicionales');
             $table->string('dre')->nullable()
@@ -57,6 +59,10 @@ class CreateColegiosTable extends Migration
             $table->timestamp('creado_en')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('actualizado_en')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
+
+        // Insertar colegios a la base de datos,
+        // requiere la existencia previa de las tabla 'colegios'
+        DB::unprepared(file_get_contents(base_path('database/migrations/data/colegios.sql')));
     }
 
     /**

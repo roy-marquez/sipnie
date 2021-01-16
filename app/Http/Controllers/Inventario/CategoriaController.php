@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Inventario;
 
 use App\Http\Controllers\Controller;
 
-use App\Categoria;
+use App\models\Categoria;
 use Illuminate\Http\Request;
 
 class CategoriaController extends Controller
