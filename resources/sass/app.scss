@@ -17,6 +17,10 @@ $second-color-light: #62727b;
 $second-color: #37474f;
 $second-color-dark:#102027;
 
+//error images sizes
+$error-img-y: 250px;
+$error-img-x: 600px;
+
 //Estilos personalizados de RMS
 html, body {
     background-color: #fff;
@@ -26,7 +30,7 @@ html, body {
     color: $second-color;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    height: 100vh;
+    height: 95vh;
     margin: 0;
 }
 
@@ -64,12 +68,14 @@ html, body {
 .title {
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
 }
 
 .header{
     font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
 }
 
 .links > a {
@@ -92,44 +98,51 @@ html, body {
 
 .logo {
     background-image: url('../images/sipnie-logo_01_350.png');
-    height: 250px;
+    background-size: contain;
+    height: 200px;
+    width: auto;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
 }
 
 .error-image{
-    height: 250px;
-    width: 600px;
+    height: $error-img-y;
+    width: $error-img-x;
 }
 
 .error-image--400 {
     background: no-repeat center/contain url('../images/400.svg');
-    height: 250px;
-    width: 600px;
+    height: $error-img-y;
+    width: $error-img-y;
 }
 
 .error-image--401 {
     background: no-repeat center/contain url('../images/401.svg');
-    height: 250px;
-    width: 600px;
+    height: $error-img-y;
+    width: $error-img-x;
 }
 
 .error-image--403 {
     background: no-repeat center/contain url('../images/403.svg');
-    height: 500px;
-    width: 300px;
+    height: $error-img-x;
+    width: $error-img-y;
 }
 
 .error-image--404 {
     background: no-repeat center/contain url('../images/404.svg');
-    height: 250px;
-    width: 600px;
+    height: $error-img-y;
+    width: $error-img-x;
+}
+.error-image--419 {
+    background: no-repeat center/contain url('../images/419.svg');
+    height: $error-img-y;
+    width: $error-img-x;
 }
 .error-image--500 {
     background: no-repeat center/contain url('../images/500.svg');
-    height: 250px;
-    width: 600px;
+    height: $error-img-y;
+    width: $error-img-y;
 }
 .escudo-thumb {
     height: 50px;

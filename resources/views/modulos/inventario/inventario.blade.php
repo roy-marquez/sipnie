@@ -3,24 +3,38 @@
 @section('title', 'Colegios')
 
 @section('content_header')
-    <h1>Modulo -> Inventario -> Categorías</h1>
+    <h1 class="header">Inventario</h1>
 @stop
 
 @section('content')
-
     <div class="card">
         <div class="card-header">
             <h1 class="card-title">
-                Tabla de Inventario
+                Inventario
             </h1>
         </div>
 
         <div class="card-body">
-            <table id="Categorias" class="table table-bordered table-striped">
+            <table id="dt" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                     <th>Id</th>
                     <th>Nombre</th>
+                    <th>Alias</th>
+                    <th>Código</th>
+                    <th>Tipo</th>
+                    <th>matricula</th>
+                    <th>Director</th>
+                    <th>Teléfono</th>
+                    <th>Distrito</th>
+                    <th>Dirección</th>
+                    <th>DRE</th>
+                    <th>Circuito</th>
+                    <th>Web</th>
+                    <th>Facebook</th>
+                    <th>Estado</th>
+                    <th>Escudo</th>
+                    <th>Sipnie.Admin</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -62,53 +76,11 @@
                     <td>'urlescudo'</td>
                     <td>2</td>
                 </tr>
-
-                <tfoot>
-                <tr>
-                    <th>Id</th>
-                    <th>Nombre</th>
-                    <th>Alias</th>
-                    <th>Código</th>
-                    <th>Tipo</th>
-                    <th>matricula</th>
-                    <th>Director</th>
-                    <th>Teléfono</th>
-                    <th>Distrito</th>
-                    <th>Dirección</th>
-                    <th>DRE</th>
-                    <th>Circuito</th>
-                    <th>Web</th>
-                    <th>Facebook</th>
-                    <th>Estado</th>
-                    <th>Escudo</th>
-                    <th>Sipnie.Admin</th>
-                </tr>
-                </tfoot>
             </table>
         </div>
     </div>
 @endsection
 
 @section('js')
-    <script>
-        Swal.fire(
-            'Colegios!',
-            'Un módulo cool cool cool!',
-            'success'
-        )
-    </script>
-{{--    <script>--}}
-{{--        $(function () {--}}
-{{--            // $('#colegios').DataTable() // activa todas las opciones...--}}
-{{--            $('#colegios').DataTable({--}}
-{{--                'paging'      : true,   // paginado--}}
-{{--                'lengthChange': false,  // cantidad de registros por pagina--}}
-{{--                'searching'   : false,  // campo de búsqueda--}}
-{{--                'ordering'    : true,   // columnas con ordenamiento--}}
-{{--                'info'        : true,   // información de registros, abajo izquierda--}}
-{{--                'autoWidth'   : true    // ancho auto de columnas--}}
-{{--            })--}}
-{{--        })--}}
-{{--    </script>--}}
-    @include('modulos.partials.datatables-config')
-@stop
+    @include('modulos/partials/datatables-config')
+@endsection

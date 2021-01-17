@@ -11027,7 +11027,7 @@ body {
   color: #37474f;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  height: 100vh;
+  height: 95vh;
   margin: 0;
 }
 
@@ -11064,12 +11064,14 @@ body {
 .title {
   font-family: "Poppins", sans-serif;
   font-weight: 800;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
 .header {
   font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
 }
 
 .links > a {
@@ -11092,7 +11094,9 @@ body {
 
 .logo {
   background-image: url(/images/sipnie-logo_01_350.png?a1702afa29528a2b7d021323062abc9e);
-  height: 250px;
+  background-size: contain;
+  height: 200px;
+  width: auto;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
@@ -11106,7 +11110,7 @@ body {
 .error-image--400 {
   background: no-repeat center/contain url(/images/400.svg?03c1152bf62606b0c010c0d4e2205664);
   height: 250px;
-  width: 600px;
+  width: 250px;
 }
 
 .error-image--401 {
@@ -11117,8 +11121,8 @@ body {
 
 .error-image--403 {
   background: no-repeat center/contain url(/images/403.svg?59b188e355c36d72eb092e5e118833ca);
-  height: 500px;
-  width: 300px;
+  height: 600px;
+  width: 250px;
 }
 
 .error-image--404 {
@@ -11127,10 +11131,16 @@ body {
   width: 600px;
 }
 
+.error-image--419 {
+  background: no-repeat center/contain url(/images/419.svg?f445fe614e8e44cdba13a5f7c0832526);
+  height: 250px;
+  width: 600px;
+}
+
 .error-image--500 {
   background: no-repeat center/contain url(/images/500.svg?b0cc928c5146c836467806a7d8b2e87d);
   height: 250px;
-  width: 600px;
+  width: 250px;
 }
 
 .escudo-thumb {

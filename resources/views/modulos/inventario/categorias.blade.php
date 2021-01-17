@@ -1,10 +1,12 @@
 @extends('adminlte::page')
-
 @section('title', 'Categorías')
 
-@section('content_header')
-    <h1>Modulo >> Inventario >> Categorías</h1>
-@stop
+{{--@section('content_header')--}}
+{{--    <h1>Categorías</h1>--}}
+{{--@stop--}}
+@section('css')
+    /*<link rel="stylesheet" href="/css/app.css">*/
+@endsection
 
 @section('content')
     <nav aria-label="breadcrumb">
@@ -14,14 +16,14 @@
             <li class="breadcrumb-item active" aria-current="page">Categorías</li>
         </ol>
     </nav>
-    <div class="card">
+    <div class="card shadow">
         <div class="card-header">
-            <h1 class="card-title">
-                Tabla de Categorías
-            </h1>
+{{--            <h1 class="text-capitalize">--}}
+                Categorías
+{{--            </h1>--}}
         </div>
         <div class="card-body">
-            <table id="categorias" class="table table-bordered table-striped">
+            <table id="dt" class="table table-bordered table-striped">
                 <thead>
                 <tr>
 {{--                    <th>Id</th>--}}
@@ -47,17 +49,6 @@
 @endsection
 
 @section('js')
-    <script>
-        $(function () {
-            // $('#colegios').DataTable() // activa todas las opciones...
-            $('#categorias').DataTable({
-                'paging'      : true,   // paginado
-                'lengthChange': false,  // cantidad de registros por pagina
-                'searching'   : true,  // campo de búsqueda
-                'ordering'    : true,   // columnas con ordenamiento
-                'info'        : true,   // información de registros, abajo izquierda
-                'autoWidth'   : true    // ancho auto de columnas
-            })
-        })
-    </script>
+{{--    configuracion de datatable--}}
+    @include('modulos/partials/datatables-config')
 @stop

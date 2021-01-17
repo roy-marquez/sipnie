@@ -12,26 +12,25 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// PANTALLA PORTADA
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('/');
 
+// RUTAS DE AUTENTICACION
 Auth::routes();
 
+// INICIO PARA USUARIO AUTENTICADO
 Route::get('/home', 'HomeController@index')->name('home');
 
 //MODULO DE COLEGIOS
-//Route::get('/colegios/colegios', function () {
-//    return view('modulos.colegios.colegios');
-//})->name('colegios');
-//
-//Route::get('/colegios/crear_colegio', function () {
-//    return view('modulos.colegios.crear_colegio');
-//})->name('crear_colegio');
-//Route::resource('colegios','Modulos\Colegios\ColegioController');
-Route::get('modulos/colegios','Modulos\Colegios\ColegioController@index')->name('colegios');
-Route::get('modulos/colegios/{colegio}','Modulos\Colegios\ColegioController@show')->name('colegios.show');
+Route::get('modulos/colegios','Modulos\Colegios\ColegioController@index')->name('colegios'); //LISTA
+Route::get('modulos/colegios/crear','Modulos\Colegios\ColegioController@create')->name('colegios.create'); //LISTA
+Route::get('modulos/colegios/{colegio}/editar','Modulos\Colegios\ColegioController@edit')->name('colegios.edit');
+Route::patch('modulos/colegios/{colegio}','Modulos\Colegios\ColegioController@edit')->name('colegios.update');
+Route::delete('modulos/colegios/{colegio}','Modulos\Colegios\ColegioController@destroy')->name('colegios.destroy');
+Route::post('modulos/colegios','Modulos\Colegios\ColegioController@store')->name('colegios.store');
+Route::get('modulos/colegios/{colegio}','Modulos\Colegios\ColegioController@show')->name('colegios.show');//LISTA
 
 //MODULO DE USUARIOS
 Route::get('/usuarios/usuarios', function () {
@@ -43,7 +42,8 @@ Route::get('/modulos/inventario/inventario', function () {
     return view('modulos.inventario.inventario');
 })->name('inventario');
 
-Route::get('modulos/inventario/categorias','Inventario\CategoriaController@categorias')->name('categorias');
+Route::get('modulos/inventario/categorias','Modulos\Inventario\CategoriaController@categorias')
+    ->name('categorias');
 
 //MODULO DE RESERVAS
 Route::get('/reservas', function () {
@@ -60,5 +60,3 @@ Route::get('/reportes', function () {
     return view('modulos.reportes');
 })->name('reportes');
 
-//LEVANTAR ERRORES
-//Route::get('/home', 'HomeController@index')->name('home');

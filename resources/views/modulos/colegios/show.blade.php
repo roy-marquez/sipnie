@@ -6,14 +6,21 @@
     <h1>Ficha del Colegio</h1>
 @endsection
 
+@section('css')
+
+    @endsection
+
+
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-10 col-lg-6 mx-auto">
+            <div class="col-12 col-sm-10 col-lg-8 mx-auto">
                 <div class="bg-white shadow p-4 rounded">
                     <h2 class="text-secondary"> {{ $colegio->nombre }} </h2>
                     <hr>
-                    <img class="img-fluid" src="/storage/images/escudos/{{$colegio->escudo_ruta}}" alt="Escudo de {{ $colegio->nombre }}">
+{{--                    <div class="d-flex align-items-center">--}}
+                    <img class="img-fluid mx-auto d-block" src="/storage/images/escudos/{{$colegio->escudo_ruta}}" alt="Escudo de {{ $colegio->nombre }}">
+{{--                    </div>--}}
                     <h2 class="text-secondary">Datos</h2>
                     <hr>
                     <p><strong>Código:</strong>  {{ $colegio->codigo}}</p>

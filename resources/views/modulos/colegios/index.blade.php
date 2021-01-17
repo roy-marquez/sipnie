@@ -7,7 +7,7 @@
 @endsection
 
 @section('content_header')
-    <h1>Modulo - Colegios</h1>
+    <h1 class="header">Colegios</h1>
 @endsection
 
 @section('content')
@@ -29,7 +29,7 @@
 {{--                    <th>Clasificación</th>--}}
                     <th>matricula</th>
                     <th>E-mail</th>
-                    <th>Web</th>
+                    <th class="text-truncate">Web</th>
                     <th>Facebook</th>
 {{--                    <th>Director</th>--}}
 {{--                    <th>Teléfono</th>--}}
@@ -57,7 +57,7 @@
 {{--                    <td>{{ $colegio->clasificacion_id }}</td>--}}
                     <td>{{ $colegio->matricula }}</td>
                     <td><a href="mailto://{{ $colegio->email }}">{{ $colegio->email }}</a></td>
-                    <td><a href="{{ $colegio->web }}" target="_blank">{{ $colegio->web}}</a></td>
+                    <td><a href="{{ $colegio->web }}" target="_blank"> <i class="fas fa-globe"></i> Ir a la Web</a></td>
                     <td><a href="{{ $colegio->facebook }}" target="_blank"><i class="fab fa-facebook-square"></i></a></td>
 {{--                    <td>Técnico Académico</td>--}}
 {{--                    <td>948</td>--}}
@@ -81,6 +81,7 @@
                         <td> sin datos </td>
                         <td> sin datos </td>
                         <td> sin datos </td>
+                        <td> sin datos </td>
                     </tr>
                 @endforelse
 
@@ -90,31 +91,12 @@
 @endsection
 
 @section('js')
-{{--    <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>--}}
-{{--    <script src="https://cdn.datatables.net/responsive/2.2.6/js/responsive.bootstrap4.min.js"></script>--}}
-    <script>
-        Swal.fire(
-            'Colegios!',
-            'Un módulo cool cool cool!',
-            'success'
-        )
-    </script>
 {{--    <script>--}}
-{{--        $(function () {--}}
-{{--            // $('#colegios').DataTable() // activa todas las opciones...--}}
-{{--            $('#colegios').DataTable({--}}
-{{--                // 'paging'      : true,   // paginado--}}
-{{--                // 'lengthChange': true,  // cantidad de registros por pagina--}}
-{{--                // 'searching'   : true,  // campo de búsqueda--}}
-{{--                // 'ordering'    : true,   // columnas con ordenamiento--}}
-{{--                // 'info'        : true,   // información de registros, abajo izquierda--}}
-{{--                'autoWidth'   : false,  // ancho auto de columnas, set false cuando se agregan los cdn responsive--}}
-{{--                'responsive'  : true,   // hacer la datatable responsive--}}
-{{--                language       : {--}}
-{{--                    url: '/vendor/datatables-plugins/translations/spanish.json' // traducción al español--}}
-{{--                }--}}
-{{--            })--}}
-{{--        });--}}
+{{--        Swal.fire(--}}
+{{--            'Colegios!',--}}
+{{--            'Un módulo cool cool cool!',--}}
+{{--            'success'--}}
+{{--        )--}}
 {{--    </script>--}}
     @include('modulos/partials/datatables-config')
 

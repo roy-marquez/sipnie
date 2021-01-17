@@ -8,6 +8,6 @@
     <div class="error-image--404"> </div>
     <div class="title m-b-md">
         Oops! Error 404<br/>
-        No encontramos la página...<br/>
+        No esta la página...<br/>
     </div>
 @endsection

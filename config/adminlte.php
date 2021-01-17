@@ -235,37 +235,37 @@ return [
 
     'menu' => [
         //        MENU SUPERIOR
-        [
-            'text' => 'buscar',
-            'search' => true,
-            'topnav_right' => true,
-            'url' => '',
-            'method' => 'post',
-        ],
-        [
-            'text' => 'Link Test',
-            'url' => '#',
-            'icon' => 'fas fa-link',
-            'topnav' => true,
-//
-        ],
+//        [
+//            'text' => 'buscar',
+//            'search' => false,
+//            'topnav_right' => true,
+//            'url' => '',
+//            'method' => 'post',
+//        ],
+//        [
+//            'text' => 'Link Test',
+//            'url' => '#',
+//            'icon' => 'fas fa-link',
+//            'topnav' => true,
+////
+//        ],
         //        MENU LATERAL
         [
-            'text' => 'Inicio',
+            'text' => 'INICIO',
             'route'  => 'home',
             'icon'  => 'far fas fa-home'
         ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
+//        ['header' => 'account_settings'],
+//        [
+//            'text' => 'profile',
+//            'url'  => 'admin/settings',
+//            'icon' => 'fas fa-fw fa-user',
+//        ],
+//        [
+//            'text' => 'change_password',
+//            'url'  => 'admin/settings',
+//            'icon' => 'fas fa-fw fa-lock',
+//        ],
         ['header' => 'MÓDULOS'],
         [
             'text'    => ' Colegios',
@@ -282,7 +282,7 @@ return [
                 ],
                 [
                     'text' => ' Crear Colegio',
-                    'route'  => 'home',
+                    'route'  => 'colegios.create',
                     'icon'    => 'far fas fa-plus-square',
                     'icon_color' => 'cyan',
 //                    'can' => 'create_colegio'
@@ -326,7 +326,7 @@ return [
                     'icon_color' => 'green',
                 ],
                 [
-                    'text' => ' Categorias Equipo',
+                    'text' => 'Categorías',
                     'route' => 'categorias',
                     'icon' => 'far fas fa-list',
                     'icon_color' => 'green',
@@ -337,7 +337,7 @@ return [
             'text'    => ' Reservas',
             'icon'    => 'far fas fa-calendar-alt',
             'icon_color' => 'pink',
-            'label' => 5,
+//            'label' => '5',
             'label_color' => 'success',
             'submenu' => [
                 [

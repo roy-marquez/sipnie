@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Inventario;
+namespace App\Http\Controllers\Modulos\Inventario;
 
 use App\Http\Controllers\Controller;
 

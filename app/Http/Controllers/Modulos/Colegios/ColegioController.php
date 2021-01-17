@@ -22,22 +22,23 @@ class ColegioController extends Controller
     /**
      * Muestra el formulario para creación de un colegio.
      *
-     * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        //
+        return view('modulos.colegios.create',[
+            'colegio' => new Colegio
+        ]);
     }
 
     /**
      * Almacena un nuevo colegio en la base de datos.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        Colegio:create(request()->only('title', 'url', 'description'));
+        return redirect()->route('projects.index')
+            ->with('status', 'El proyecto fue creado con éxito');
     }
 
     /**

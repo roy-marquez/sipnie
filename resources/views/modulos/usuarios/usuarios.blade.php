@@ -99,7 +99,7 @@
                 // 'searching'   : false,
                 // 'ordering'    : true,
                 // 'info'        : true,
-                'autoWidth'   : false,
+                'autoWidth'   : true,
                 'responsive'  : true,
                 language       : {
                     url: '/vendor/datatables-plugins/translations/spanish.json'
