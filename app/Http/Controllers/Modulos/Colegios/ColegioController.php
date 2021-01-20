@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Modulos\Colegios;
 
 use App\Models\Colegio;
+use App\Models\Estado_colegio;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -25,26 +26,40 @@ class ColegioController extends Controller
      */
     public function create()
     {
-        return view('modulos.colegios.create',[
-            'colegio' => new Colegio
-        ]);
+        $colegio = new Colegio;
+        $estado_colegio = Estado_colegio::all(['id', 'estado_colegio']);
+//        return view('modulos.colegios.create',[
+//            'colegio' => new Colegio
+//        ]);
+        return view('modulos.colegios.create', compact('colegio', 'estado_colegio', ));
     }
 
     /**
      * Almacena un nuevo colegio en la base de datos.
      *
      */
-    public function store(Request $request)
+//    public function store(Request $request)
+    public function store()
     {
-        Colegio:create(request()->only('title', 'url', 'description'));
-        return redirect()->route('projects.index')
-            ->with('status', 'El proyecto fue creado con éxito');
+        request()->validate([
+            'nombre' => 'required|max:255',
+            'codigo' => 'required|integer|max:9999|regex:/[1-9]{4}/u|unique:App\Models\Colegio,codigo',
+            'estado_colegio' => 'required|integer|max:9|regex:/[1-9]{1}/u',
+        ]);
+
+        Colegio::create([
+            'nombre' => request('nombre'),
+            'codigo' => request('codigo'),
+            'estado_colegio_id' => request('estado_colegio'),
+        ]);
+
+        return redirect()->route('colegios');
     }
 
     /**
-     * Despliega un información de un colegio especifico por medio de su código.
+     * Despliega la información de un colegio especifico por medio de su código.
      *
-     * @param  int  $id
+     * @param  Colegio  $colegio
      */
     public function show(Colegio $colegio)
     {
@@ -56,12 +71,14 @@ class ColegioController extends Controller
     /**
      * Muestra el formulario de edición de un colegio específico.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  Colegio  $colegio
+     *
      */
-    public function edit($id)
+    public function edit(Colegio $colegio)
     {
-        //
+        return view('modulos.colegios.edit',[
+            'colegio' => $colegio
+        ]);
     }
 
     /**

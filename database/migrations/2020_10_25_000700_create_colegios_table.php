@@ -56,8 +56,8 @@ class CreateColegiosTable extends Migration
             $table->unsignedSmallInteger('conectividad_id')->nullable();
             $table->foreign('conectividad_id')->references('id')->on('conectividades')->onDelete('set null');
 
-            $table->timestamp('creado_en')->default(\DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('actualizado_en')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+            $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
 
         // Insertar colegios a la base de datos,

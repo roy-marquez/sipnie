@@ -11024,9 +11024,7 @@ body {
   background-image: url(/images/bg-sipnie.svg?065f07602d1db560942703e25a24a3cd);
   background-repeat: repeat-y;
   background-size: cover;
-  color: #37474f;
   font-family: "Open Sans", sans-serif;
-  font-weight: 400;
   height: 95vh;
   margin: 0;
 }
@@ -11148,13 +11146,5 @@ body {
   max-height: 50px;
   max-width: 50px;
   width: 50px;
-}
-
-.fab {
-  font-size: larger;
-}
-
-.fab:hover {
-  font-size: x-large;
 }
 

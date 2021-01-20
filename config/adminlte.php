@@ -281,7 +281,7 @@ return [
 //                    'can' => 'admin-colegios'
                 ],
                 [
-                    'text' => ' Crear Colegio',
+                    'text' => ' Agregar Colegio',
                     'route'  => 'colegios.create',
                     'icon'    => 'far fas fa-plus-square',
                     'icon_color' => 'cyan',

@@ -2,15 +2,19 @@
 
 @section('title', 'Colegios')
 
-@section('css')
-    <link rel="stylesheet" href="/css/app.css">
-@endsection
+{{--@section('css')--}}
+{{--    <link rel="stylesheet" href="/css/app.css">--}}
+{{--@endsection--}}
 
 @section('content_header')
     <h1 class="header">Colegios</h1>
 @endsection
 
 @section('content')
+<button class="btn btn-success mb-2">
+    <a href="{{ route('colegios.create') }} " class="text-white"><i class="fas fa-plus-circle"></i> Agregar Colegio</a>
+</button>
+
     <div class="card">
 {{--        <div class="card-header">--}}
 {{--            <h1 class="card-title">--}}
@@ -22,69 +26,54 @@
             <table id="dt" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-{{--                    <th>Id</th>--}}
-                    <th >Código</th>
-                    <th>Escudo</th>
-                    <th>Nombre</th>
-{{--                    <th>Clasificación</th>--}}
-                    <th>matricula</th>
+                    <th class="text-center">Escudo</th>
+                    <th>Nombre </th>
+                    <th>Cant. Estudiantes</th>
                     <th>E-mail</th>
-                    <th class="text-truncate">Web</th>
+                    <th>Web</th>
                     <th>Facebook</th>
-{{--                    <th>Director</th>--}}
-{{--                    <th>Teléfono</th>--}}
-{{--                    <th>Distrito</th>--}}
-{{--                    <th>Dirección</th>--}}
-{{--                    <th>DRE</th>--}}
-{{--                    <th>Circuito</th>--}}
-{{--                    <th>Web</th>--}}
-{{--                    <th>Estado</th>--}}
-{{--                    <th>Sipnie.Admin</th>--}}
                 </tr>
                 </thead>
                 <tbody>
                 @forelse($colegios as $colegio)
-                <tr>
-                    <td> <strong> {{ $colegio->codigo }} </strong> </td>
-                    <td>
+                <tr class="align-middle">
+                    <td class="text-center align-middle">
                         <a href="{{ route('colegios.show',$colegio) }}">
-                            <img  class="img-size-50" src="/storage/images/escudos/{{$colegio->escudo_ruta}}" alt="Escudo de {{ $colegio->nombre }} ">
+                            @if($colegio->escudo_ruta != null)
+                                <img  class="img-size-32" src="/storage/images/escudos/{{$colegio->escudo_ruta}}" alt="Escudo de {{ $colegio->nombre }} ">
+                            @else
+                                <img  class="img-size-32" src="/storage/images/escudos/escudo_pendiente.png" alt="Escudo de {{ $colegio->nombre }} no disponible...">
+                            @endif
                         </a>
                     </td>
-{{--                    <td>{{ $colegio->id }}</td>--}}
-                    <td><a href="{{ route('colegios.show',$colegio) }}"> {{ $colegio->nombre }}</a> </td>
-{{--                    <td><a href="#"> {{ $colegio->nombre }}</a> </td>--}}
-{{--                    <td>{{ $colegio->clasificacion_id }}</td>--}}
+                    <td class="align-middle"><a href="{{ route('colegios.show',$colegio) }}"><i class="fas fa-eye"> &nbsp </i>{{ $colegio->nombre }}</a> </td>
                     <td>{{ $colegio->matricula }}</td>
-                    <td><a href="mailto://{{ $colegio->email }}">{{ $colegio->email }}</a></td>
-                    <td><a href="{{ $colegio->web }}" target="_blank"> <i class="fas fa-globe"></i> Ir a la Web</a></td>
-                    <td><a href="{{ $colegio->facebook }}" target="_blank"><i class="fab fa-facebook-square"></i></a></td>
-{{--                    <td>Técnico Académico</td>--}}
-{{--                    <td>948</td>--}}
-{{--                    <td>Roberto Céspedez</td>--}}
-{{--                    <td>24731689</td>--}}
-{{--                    <td>Pital</td>--}}
-{{--                    <td>Barrio Pitalito</td>--}}
-{{--                    <td>San Carlos</td>--}}
-{{--                    <td>5</td>--}}
-{{--                    <td>www.ctpdepital.ed.cr</td>--}}
-{{--                    <td>CTPdePital</td>--}}
-{{--                    <td>activo</td>--}}
-{{--                    <td>'urlescudo'</td>--}}
-{{--                    <td>1</td>--}}
+                    <td>
+                        <a href="mailto://{{ $colegio->email }}">
+                            <i class="fas fa-envelope">&ensp;</i>{{ $colegio->email }}
+                        </a>
+                    </td>
+
+                    <td>@if($colegio->web != null)
+                            <a href="{{ $colegio->web }}" target="_blank"> <i class="fas fa-globe"></i> Ir a la Web</a>
+                        @else
+                            {{ __(config('_msg.no_data')) }}
+                        @endif
+                    </td>
+                    <td>@if($colegio->facebook != null )
+                            <a href="{{ $colegio->facebook }}" target="_blank"><i class="fab fa-facebook"></i> Ir al Facebook</a>
+                        @else
+                            {{ __(config('_msg.no_data')) }}
+                        @endif
+                    </td>
                 </tr>
                 @empty
                     <tr>
-                        <td> sin datos </td>
-                        <td> sin datos </td>
-                        <td> sin datos </td>
-                        <td> sin datos </td>
-                        <td> sin datos </td>
-                        <td> sin datos </td>
-                        <td> sin datos </td>
+                        @for($i=1; $i<=7; $i++)
+                            <td> {{ __(config('_msg.no_data')) }} </td>
+                        @endfor
                     </tr>
                 @endforelse
-
             </table>
         </div>
     </div>

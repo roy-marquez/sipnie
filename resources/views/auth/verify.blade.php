@@ -1,6 +1,7 @@
-@extends('adminlte::auth.register')
+{{--@extends('adminlte::auth.register')--}}
+@extends('layouts.app')
 
-@section('title', 'Verificación')
+@section('title', __('Verificación'))
 
 {{--@section('content')--}}
 {{--<div class="container">--}}

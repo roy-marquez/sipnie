@@ -1,4 +1,5 @@
-@extends('adminlte::auth.passwords.confirm')
+{{--@extends('adminlte::auth.passwords.confirm')--}}
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -13,7 +14,7 @@
                     <form method="POST" action="{{ route('password.confirm') }}">
                         @csrf
 
-                        <div class="form-group row">
+                        <div class="form-group row mt-3">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
@@ -28,13 +29,13 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary btn-block mb-3">
                                     {{ __('Confirm Password') }}
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a class="btn btn-link text-decoration-none" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif

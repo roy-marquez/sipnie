@@ -3,20 +3,20 @@
     <label for="nombre" class="pl-3">
         Nombre del Colegio
     </label>
-    <input class="form-control bg-light border-0 shadow-sm"
+    <input class="form-control bg-light shadow-sm"
            id="nombre"
            type="text"
            name="nombre"
            placeholder="Nombre del colegio..."
-           value="{{ old('title', $colegio->nombre) }}">
+           value="{{ old('nombre', $colegio->nombre) }}">
 </div>
 
 <div class="form-group">
     <label for="url"  class="pl-3">
         Código
     </label>
-    <input class="form-control bg-light border-0 shadow-sm"
-           type="text"
+    <input class="form-control bg-light shadow-sm"
+           type="number" maxlength="4"
            name="codigo"
            placeholder="Código presupuestario..."
            value="{{ old('codigo', $colegio->codigo) }}">
@@ -24,25 +24,19 @@
 
 <div class="form-group">
     <label for="estado_colegio" class="pl-3">Estado del Colegio</label>
-    <select class="form-control" id="estado_colegio">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
+    <select name="estado_colegio" class="form-control bg-light" id="estado_colegio">
+        {{ old('estado_colegio') }}
+        @foreach($estado_colegio as $est_cole)
+            @if(old('estado_colegio')==$est_cole->id)
+            <option value="{{  $est_cole->id }}" selected>{{$est_cole->estado_colegio}}</option>
+            @else
+            <option value="{{  $est_cole->id }}">{{$est_cole->estado_colegio}}</option>
+            @endif
+        @endforeach
     </select>
 </div>
 
-{{--<div class="form-group">--}}
-{{--    <label for="description" class="ml-3">--}}
-{{--        @lang('Description')--}}
-{{--    </label>--}}
-{{--    <textarea class="form-control bg-light shadow-sm"--}}
-{{--              name="description"--}}
-{{--              id="content"  rows="5"--}}
-{{--              placeholder="Breve descripción...">{{ old('description', $project->description) }}</textarea>--}}
-{{--</div>--}}
-<button class="btn btn-primary btn-lg btn-block">
-    {{ $btnText }}
-</button>
+<input type="submit" value="{{ $btnText }}" class="btn btn-primary btn-lg btn-block" />
 <a class="btn btn-link btn-block mb-0"
    href="{{ route( 'colegios' ) }}">
     Cancelar

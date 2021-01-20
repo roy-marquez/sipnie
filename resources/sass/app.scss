@@ -27,9 +27,9 @@ html, body {
     background-image: url('../images/bg-sipnie.svg');
     background-repeat: repeat-y;
     background-size: cover;
-    color: $second-color;
+    //color: $second-color;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    //font-weight: 400;
     height: 95vh;
     margin: 0;
 }
@@ -151,9 +151,9 @@ html, body {
     width: 50px;
 }
 
-.fab {
-   font-size: larger;
-}
-.fab:hover {
-    font-size: x-large;
-}
+//.fab {
+//   font-size: larger;
+//}
+//.fab:hover {
+//    font-size: x-large;
+//}

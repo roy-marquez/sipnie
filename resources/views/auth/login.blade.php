@@ -1,19 +1,13 @@
 @extends('layouts.app')
-{{--@extends('adminlte::auth.login')--}}
 
-@section('title', 'Login')
-
-{{--@section('adminlte_css')--}}
-{{--    <link rel="stylesheet" href="{{ asset('css/app.css') }}">--}}
-{{--@endsection--}}
-
+@section('title', __('Login'))
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card shadow">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header text-bold">{{ __('Login') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -22,8 +16,16 @@
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                            <div class="input-group col-md-6">
+                                <input id="email" type="email"
+                                       class="form-control @error('email') is-invalid @enderror"
+                                       name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+{{--                                Icono de la derecha del campo--}}
+                                <div class="input-group-append">
+                                    <div class="input-group-text rounded-right">
+                                        <span class="fas fa-envelope"></span>
+                                    </div>
+                                </div>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -36,8 +38,16 @@
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                            <div class="input-group col-md-6">
+                                <input id="password" type="password"
+                                       class="form-control @error('password') is-invalid @enderror"
+                                       name="password" required autocomplete="current-password">
+                                {{--Icono de la derecha del campo--}}
+                                <div class="input-group-append ">
+                                    <div class="input-group-text rounded-right">
+                                        <span class="fas fa-lock"></span>
+                                    </div>
+                                </div>
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -50,7 +60,8 @@
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                    <input class="form-check-input" type="checkbox" name="remember"
+                                           id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
                                         {{ __('Remember Me') }}
@@ -60,8 +71,8 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary btn-block">
                                     {{ __('Login') }}
                                 </button>
 

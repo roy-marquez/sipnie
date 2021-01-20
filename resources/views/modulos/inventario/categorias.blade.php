@@ -1,13 +1,6 @@
 @extends('adminlte::page')
 @section('title', 'Categorías')
 
-{{--@section('content_header')--}}
-{{--    <h1>Categorías</h1>--}}
-{{--@stop--}}
-@section('css')
-    /*<link rel="stylesheet" href="/css/app.css">*/
-@endsection
-
 @section('content')
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">

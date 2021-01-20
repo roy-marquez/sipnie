@@ -2,11 +2,13 @@
 
 @section('title', 'Inicio')
 
+@section('css')
+    <link rel="stylesheet" href="/css/app.css">
+@endsection
+
 @section('content_header')
     <h1>Inicio</h1>
 @stop
-
-
 
 @section('content')
     <div id="confirmacion-inicio-sesion" class="container">

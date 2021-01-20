@@ -12,8 +12,8 @@
     "oPaginate": {
         "sFirst":    "Primero",
         "sLast":     "Último",
-        "sNext":     "Siguiente",
-        "sPrevious": "Anterior"
+        "sNext":     "&raquo;",
+        "sPrevious": "&laquo;"
     },
     "oAria": {
         "sSortAscending":  ": Ordenar ascendente",
