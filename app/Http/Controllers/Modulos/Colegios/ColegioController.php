@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Modulos\Colegios;
 
 use App\Models\Colegio;
-use App\Models\Estado_colegio;
+use App\Models\EstadoColegio;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -27,11 +27,11 @@ class ColegioController extends Controller
     public function create()
     {
         $colegio = new Colegio;
-        $estado_colegio = Estado_colegio::all(['id', 'estado_colegio']);
+        $estado_colegio = EstadoColegio::all(['id', 'estado_colegio']);
 //        return view('modulos.colegios.create',[
 //            'colegio' => new Colegio
 //        ]);
-        return view('modulos.colegios.create', compact('colegio', 'estado_colegio', ));
+        return view('modulos.colegios.create', compact('colegio', 'estado_colegio' ));
     }
 
     /**
@@ -76,21 +76,25 @@ class ColegioController extends Controller
      */
     public function edit(Colegio $colegio)
     {
+        $estado_colegio = EstadoColegio::all(['id', 'estado_colegio']);
         return view('modulos.colegios.edit',[
-            'colegio' => $colegio
+            'colegio' => $colegio,
+            'estado_colegio' => $estado_colegio
         ]);
     }
 
     /**
-     * Update the specified resource in storage.
+     * Actualiza el colegio especificado en la base de datos.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Colegio $colegio)
     {
-        //
+        $colegio->update([
+            'nombre' => request('nombre'),
+            'codigo' => request('codigo'),
+            'colegio_estado_id' => request('colegio_estado'),
+        ]);
+        return redirect()-> route('colegios');
     }
 
     /**

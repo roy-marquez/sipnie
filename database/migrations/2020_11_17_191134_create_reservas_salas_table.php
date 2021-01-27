@@ -35,7 +35,7 @@ class CreateReservasSalasTable extends Migration
                 ->comment('Breve descripción de la actividad que se realizará en la sala de innovación');
 
             $table->unsignedTinyInteger('estado_reserva_id')->nullable();
-            $table->foreign('estado_reserva_id')->references('id')->on('estados_reservas')->onUpdate('cascade')->onDelete('set null');
+            $table->foreign('estado_reserva_id')->references('id')->on('estado_reservas')->onUpdate('cascade')->onDelete('set null');
 
             $table->timestamps();
         });

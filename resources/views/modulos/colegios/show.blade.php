@@ -112,6 +112,10 @@
                         @endif
                     </p>
 
+                    <p><strong>Estado del Colegio:</strong>
+                        {{ ($colegio->estado_colegio_id != null ) ? $colegio->estado_colegio_id : __(config('_msg.no_data'))}}
+                    </p>
+
                     <p><strong>Administrador sipnie:</strong>
                         @if($colegio->sipnie_admin_id != null)
                             {{ ($colegio->sipnie_admin_id) }}

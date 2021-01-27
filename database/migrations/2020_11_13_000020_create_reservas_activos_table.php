@@ -23,8 +23,10 @@ class CreateReservasActivosTable extends Migration
             $table->date('fecha_devolucion');
             $table->unsignedSmallInteger('materia_id')->comment('materia en la cuál se asigna la reserva');
             $table->text('actividad')->comment('Se describe el tipo de actividad que van a realizar');
+
             $table->unsignedTinyInteger('reserva_estado_id')->nullable()->default(1);
-            $table->foreign('reserva_estado_id')->references('id')->on('estados_reservas')->onUpdate('cascade')->onDelete('set null');
+            $table->foreign('reserva_estado_id')->references('id')->on('estado_reservas')->onUpdate('cascade')->onDelete('set null');
+
             $table->timestamps();
         });
     }

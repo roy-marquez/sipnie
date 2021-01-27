@@ -20,10 +20,13 @@ class CreateReportesNacionalesTable extends Migration
                 ->onUpdate('cascade')->onDelete('set null');
 
             $table->date('fecha');
-            $table->enum('tipo',['préstamos por colegio', 'préstamos por materia', 'préstamos por categoría'])
-                ->comment('El informe presenta cantidad de prestamos por colegio, materia o categoría');
-            $table->enum('formato', ['oficial', 'informal'])
-                ->comment('El informe puede con cabecera y pie de página (oficial) o sin ellos (informal)');
+//            $table->enum('tipo',['préstamos por colegio', 'préstamos por materia', 'préstamos por categoría'])
+//                ->comment('El informe presenta cantidad de prestamos por colegio, materia o categoría');
+            $table->unsignedTinyInteger('rn_tipo_id');
+            $table->foreign('rn_tipo_id')->references('id')->on('reporte_nacional_tipos');
+//            $table->enum('formato', ['oficial', 'informal'])
+            $table->boolean('formato_oficial')
+                ->comment('El informe puede ir con cabecera y pie de página (formato_oficial) o sin ellos (informal)');
             $table->string('ruta')->nullable();
             $table->string('formato_archivo',5);
 

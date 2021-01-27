@@ -22,8 +22,8 @@ class CreateHorariosTable extends Migration
             $table->foreign('clasificacion_id')->references('id')->on('clasificaciones')->onDelete('set null');
 
             //$table->timestamps();
-            $table->timestamp('creado_en')->default(\DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('actualizado_en')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+            $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
 
         DB::table('horarios')->insert([

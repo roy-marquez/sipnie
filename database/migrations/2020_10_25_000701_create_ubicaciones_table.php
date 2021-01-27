@@ -19,9 +19,11 @@ class CreateUbicacionesTable extends Migration
             $table->foreign('colegio_id')->references('id')->on('colegios')->onDelete('cascade');
             $table->string('ubicacion')->comment('lugar donde se ubicara el item, ej. Aula 1, Lab. 2, etc.');
 
-            $table->timestamp('creado_en')->default(\DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('actualizado_en')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+            $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
+
+        DB::unprepared(file_get_contents(base_path('database/migrations/data/ubicaciones.sql')));
     }
 
     /**

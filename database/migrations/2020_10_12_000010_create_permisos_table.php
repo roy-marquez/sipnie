@@ -16,8 +16,8 @@ class CreatePermisosTable extends Migration
         Schema::create('permisos', function (Blueprint $table) {
             $table->integerIncrements('id');
 
-            $table->unsignedTinyInteger('roles_id')->default();
-            $table->foreign('roles_id')->references('id')->on('roles');
+//            $table->unsignedTinyInteger('roles_id')->default();
+//            $table->foreign('roles_id')->references('id')->on('roles');
 
             $table->string('permiso', 50)
                 ->comment('ej.: agregar_item, modificar_item, eliminar_item');

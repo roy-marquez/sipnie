@@ -20,11 +20,13 @@ class CreateUsosTable extends Migration
             //$table->timestamps();
         });
 
-        DB::table('usos')->insert([
-            ['uso' => 'planta'],
-            ['uso' => 'préstamo'],
-            ['uso' => 'condicionado']
-        ]);
+//        DB::table('usos')->insert([
+//            ['uso' => 'planta'],
+//            ['uso' => 'préstamo'],
+//            ['uso' => 'condicionado']
+//        ]);
+
+        DB::unprepared(file_get_contents(base_path('database/migrations/data/usos.sql')));
     }
 
     /**

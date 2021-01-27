@@ -52,8 +52,9 @@ class CreateItemsTable extends Migration
             $table->date('fecha_entrada')->comment('Fecha de ingreso al inventario');
             $table->date('fecha_baja')->comment('Fecha de baja del inventario (Cambio de estado=baja)');
 
-            $table->unsignedTinyInteger('estado_id')
+            $table->unsignedTinyInteger('estado_item_id')
                 ->comment('Estado lógico del ítem: activo, inactivo, baja');
+            $table->foreign('estado_item_id')->references('id')->on('estado_items');
 
             $table->unsignedInteger('agregado_por')->comment('user_id del usuario agregó el item');
             $table->unsignedInteger('modificado_por')->comment('user_id del usuario modificó el item');
@@ -66,13 +67,13 @@ class CreateItemsTable extends Migration
                 ->comment('tipo=1 es de planta, tipo=2 para préstamo, tipo=3 es condicionado');
             $table->foreign('uso_id')->references('id')->on('usos')->onDelete('set null');
 
-            $table->string('foto_ruta')->nullable()->comment('Foto del articulo');
+            $table->string('foto_ruta')->nullable()->comment('Foto del item');
 
             $table->unsignedInteger('ubicacion_id')->nullable()->comment('id de la ubicación del item: aula, laboratorio, etc.');
             $table->foreign('ubicacion_id')->references('id')->on('ubicaciones')->onUpdate('cascade')->onDelete('set null');
 
-            $table->timestamp('creado_en')->default(\DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('actualizado_en')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+            $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
 
         DB::raw("ALTER TABLE 'items' CHANGE  `item_num`  `item_num` INT( 6 ) UNSIGNED ZEROFILL NOT NULL DEFAULT '1';");

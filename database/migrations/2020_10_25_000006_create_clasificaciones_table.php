@@ -18,12 +18,14 @@ class CreateClasificacionesTable extends Migration
             $table->string('clasificacion', 100)->unique()->comment('Tipo de colegio, ej.: Académico Diurno, Técnico Profesional, Experimental Bilingüe');
         });
 
-        DB::table('clasificaciones')->insert([
-            ['clasificacion' => 'Académico Diurno'],
-            ['clasificacion' => 'Colegio Técnico Profesional (C.T.P)'],
-            ['clasificacion' => 'Experimental Bilingüe'],
-            ['clasificacion' => 'Colegio Artístico']
-        ]);
+//        DB::table('clasificaciones')->insert([
+//            ['clasificacion' => 'Académico Diurno'],
+//            ['clasificacion' => 'Colegio Técnico Profesional (C.T.P)'],
+//            ['clasificacion' => 'Experimental Bilingüe'],
+//            ['clasificacion' => 'Colegio Artístico']
+//        ]);
+
+        DB::unprepared(file_get_contents(base_path('database/migrations/data/clasificaciones.sql')));
     }
 
     /**

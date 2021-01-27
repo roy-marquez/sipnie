@@ -14,7 +14,8 @@
                 @include('modulos.partials.validation-errors')
 
                 <form class="bg-white py-3 px-4 shadow rounded"
-                      method="POST" action="{{ route('colegios') }}">
+                    method="POST" action="{{ route('colegios.update', $colegio) }}">
+                    @method('PATCH')
                     <h1 class="display-4 mb-3">
                         Editar Colegio
                     </h1>

@@ -22,13 +22,23 @@ class CreatePrestamosTable extends Migration
             $table->foreign('reservas_activos_id')->references('id')->on('reservas_activos')->onUpdate('cascade')->onDelete('set null');
 
             $table->unsignedTinyInteger('estado_prestamo_id')->nullable();
-            $table->foreign('estado_prestamo_id')->references('id')->on('estados_prestamos')->onUpdate('cascade')->onDelete('set null');
+            $table->foreign('estado_prestamo_id')->references('id')->on('estado_prestamos')->onUpdate('cascade')->onDelete('set null');
 
-            $table->unsignedBigInteger('funcionario_pnie_id')->nullable();
-            $table->foreign('funcionario_pnie_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('set null');
+//            Entrega del activo
+            $table->unsignedBigInteger('entregado_por')
+                ->comment('Id del funcionario PNIE que entrega el activo. Se extrae automáticamente de la session activa');
+            $table->unsignedBigInteger('entregado_a')
+                ->comment('Id del docente que recibe el activo. Se extrae de la reserva con opción a editar');
+            $table->date('fecha_real_entrega');
+            $table->text('observaciones_entrega')->nullable();
 
-            $table->date('fecha_efectiva_devolucion');
-            $table->text('observaciones');
+//            Devolución del activo
+            $table->unsignedBigInteger('devuelto_a')
+                ->comment('Id del funcionario PNIE que recibe la devolución. Se extrae automáticamente de la session activa');
+            $table->unsignedBigInteger('devuelto_por')
+                ->comment('Id del docente que recibe el activo. Se extrae de la reserva con opción a editar');
+            $table->date('fecha_real_devolucion');
+            $table->text('observaciones_devolucion')->nullable();
 
             $table->timestamps();
         });

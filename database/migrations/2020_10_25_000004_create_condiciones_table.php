@@ -20,12 +20,15 @@ class CreateCondicionesTable extends Migration
             //$table->timestamps();
         });
 
-        DB::table('condiciones')->insert([
-            ['condicion' => 'bueno'],
-            ['condicion' => 'regular'],
-            ['condicion' => 'malo'],
-            ['condicion' => 'desecho']
-        ]);
+//        DB::table('condiciones')->insert([
+//            ['condicion' => 'bueno'],
+//            ['condicion' => 'regular'],
+//            ['condicion' => 'malo'],
+//            ['condicion' => 'desecho']
+//        ]);
+
+        DB::unprepared(file_get_contents(base_path('database/migrations/data/condiciones.sql')));
+
     }
 
     /**

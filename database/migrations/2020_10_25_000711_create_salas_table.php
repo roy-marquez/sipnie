@@ -18,6 +18,7 @@ class CreateSalasTable extends Migration
 
             $table->unsignedSmallInteger('colegio_id')->nullable();
             $table->foreign('colegio_id')->references('id')->on('colegios')->onDelete('set null');
+
             $table->string('nombre', 100)->comment('Nombre con el que se conoce la sala.');
             $table->string('horario')->nullable()
                 ->comment('horario de disponibilidad de la sala: ej.: L-V de 7:00 a 4:00 pm. Es un campo informativo y de restricción');

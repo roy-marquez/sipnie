@@ -27,10 +27,14 @@
     <select name="estado_colegio" class="form-control bg-light" id="estado_colegio">
         {{ old('estado_colegio') }}
         @foreach($estado_colegio as $est_cole)
-            @if(old('estado_colegio')==$est_cole->id)
-            <option value="{{  $est_cole->id }}" selected>{{$est_cole->estado_colegio}}</option>
+            @if(old('estado_colegio') == $est_cole->id )
+                <option value="{{  $est_cole->id }}" selected> {{$est_cole->estado_colegio}}</option>
             @else
-            <option value="{{  $est_cole->id }}">{{$est_cole->estado_colegio}}</option>
+                @if(isset($colegio) && ($colegio->estado_colegio_id == $est_cole->id ) )
+                    <option value="{{ $colegio->estado_colegio_id }}" selected>{{$est_cole->estado_colegio}}</option>
+                @else
+                    <option value="{{  $est_cole->id }}">{{$est_cole->estado_colegio}}</option>
+                @endif
             @endif
         @endforeach
     </select>

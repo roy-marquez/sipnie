@@ -18,8 +18,6 @@ class CreateConectividadesTable extends Migration
             $table->string('tipo_conexion')->comment('Ej: Fibra óptica, Cable Modem, Inalámbrico');
             $table->unsignedSmallInteger('velocidad_max_mbps')->comment('velocidad máxima de descarga en mbps');
 
-            $table->timestamp('creado_en')->default(\DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('actualizado_en')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
 
 

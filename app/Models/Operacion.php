@@ -8,4 +8,8 @@ class Operacion extends Model
 {
     //
     protected $table = 'operaciones';
+
+    public function logs(){
+        return $this->hasMany(Log::Class);
+    }
 }

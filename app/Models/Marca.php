@@ -8,4 +8,9 @@ class Marca extends Model
 {
     //asociar modelo Marca con la tabla 'marcas'
     protected $table = 'marcas';
+
+    public function modelos()
+    {
+        return $this->hasMany(Modelo::Class);
+    }
 }

@@ -18,15 +18,17 @@ class CreateDiasTable extends Migration
             $table->string('dia')->comment('dia de la semana: lunes a domingo');
         });
 
-        DB::table('dias')->insert([
-            ['dia' => 'lunes'],
-            ['dia' => 'martes'],
-            ['dia' => 'miércoles'],
-            ['dia' => 'jueves'],
-            ['dia' => 'viernes'],
-            ['dia' => 'sábado'],
-            ['dia' => 'domingo']
-        ]);
+//        DB::table('dias')->insert([
+//            ['dia' => 'lunes'],
+//            ['dia' => 'martes'],
+//            ['dia' => 'miércoles'],
+//            ['dia' => 'jueves'],
+//            ['dia' => 'viernes'],
+//            ['dia' => 'sábado'],
+//            ['dia' => 'domingo']
+//        ]);
+
+        DB::unprepared(file_get_contents(base_path('database/migrations/data/dias.sql')));
     }
 
     /**

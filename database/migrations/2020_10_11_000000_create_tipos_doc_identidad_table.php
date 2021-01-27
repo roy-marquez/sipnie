@@ -18,12 +18,14 @@ class CreateTiposDocIdentidadTable extends Migration
             $table->string('tipo_doc_identidad', 50);
         });
 
-        DB::table('tipos_doc_identidad')->insert([
-            ['tipo_doc_identidad' => 'cédula'],
-            ['tipo_doc_identidad' => 'pasaporte'],
-            ['tipo_doc_identidad' => 'cédula residencia'],
-            ['tipo_doc_identidad' => 'otro']
-        ]);
+//        DB::table('tipos_doc_identidad')->insert([
+//            ['tipo_doc_identidad' => 'cédula'],
+//            ['tipo_doc_identidad' => 'pasaporte'],
+//            ['tipo_doc_identidad' => 'cédula residencia'],
+//            ['tipo_doc_identidad' => 'otro']
+//        ]);
+
+        DB::unprepared(file_get_contents(base_path('database/migrations/data/tipos_doc_identidad.sql')));
     }
 
     /**

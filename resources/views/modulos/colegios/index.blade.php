@@ -2,10 +2,6 @@
 
 @section('title', 'Colegios')
 
-{{--@section('css')--}}
-{{--    <link rel="stylesheet" href="/css/app.css">--}}
-{{--@endsection--}}
-
 @section('content_header')
     <h1 class="header">Colegios</h1>
 @endsection
@@ -28,6 +24,7 @@
                 <tr>
                     <th class="text-center">Escudo</th>
                     <th>Nombre </th>
+                    <th>Código </th>
                     <th>Cant. Estudiantes</th>
                     <th>E-mail</th>
                     <th>Web</th>
@@ -46,7 +43,18 @@
                             @endif
                         </a>
                     </td>
-                    <td class="align-middle"><a href="{{ route('colegios.show',$colegio) }}"><i class="fas fa-eye"> &nbsp </i>{{ $colegio->nombre }}</a> </td>
+                    <td class="align-middle">
+                        <a href="{{ route('colegios.show',$colegio) }}">
+                            <i class="fas fa-eye"> &nbsp </i>{{ $colegio->nombre }}
+                        </a>
+                    </td>
+
+                    <td class="align-middle">
+                        <a href="{{ route('colegios.show',$colegio) }}">
+                            <i class="fas fa-hashtag"> &nbsp </i>{{ $colegio->codigo }}
+                        </a>
+                    </td>
+
                     <td>{{ $colegio->matricula }}</td>
                     <td>
                         <a href="mailto://{{ $colegio->email }}">

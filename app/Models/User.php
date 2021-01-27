@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'apellido1', 'apellido2', 'email', 'password',
     ];
 
     /**
@@ -50,6 +50,7 @@ class User extends Authenticatable
     //devuelve la descripción (rol) del usuario
     public function adminlte_desc(){
         $roles = [
+            'dev',
             'administrador_pnie',
             'ingeniero_pnie',
             'docente_pnie',

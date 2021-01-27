@@ -6,5 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class EstadoPrestamo extends Model
 {
-    protected $table = 'estados_prestamos';
+    protected $table = 'estado_prestamos';
+
+    public function prestamos()
+    {
+        return hasMany(Prestamo::Class);
+    }
 }

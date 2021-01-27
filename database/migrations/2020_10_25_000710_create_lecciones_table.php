@@ -29,7 +29,7 @@ class CreateLeccionesTable extends Migration
             $table->unsignedTinyInteger('leccion_num');
             $table->time('hora_inicio')->nullable();
             $table->time('hora_fin')->nullable();
-            $table->timestamps();
+            //$table->timestamps();
         });
     }
 

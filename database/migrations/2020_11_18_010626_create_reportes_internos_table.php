@@ -24,10 +24,14 @@ class CreateReportesInternosTable extends Migration
                 ->onUpdate('cascade')->onDelete('set null');
 
             $table->date('fecha');
-            $table->enum('tipo',['inventario', 'préstamos'])
-                ->comment('El informe puede ser de inventario o de préstamos ejecutados');
-            $table->enum('formato', ['oficial', 'informal'])
-                ->comment('El informe puede con cabecera y pie de página (oficial) o sin ellos (informal)');
+//            $table->enum('tipo',['inventario', 'préstamos'])
+//                ->comment('El informe puede ser de inventario o de préstamos ejecutados');
+            $table->unsignedTinyInteger('ri_tipo_id');
+            $table->foreign('ri_tipo_id')->references('id')->on('reporte_interno_tipos');
+
+//            $table->enum('formato', ['oficial', 'informal'])
+            $table->boolean('formato_oficial')
+                ->comment('El informe puede ir con cabecera y pie de página (formato_oficial) o sin ellos (informal)');
             $table->string('ruta')->nullable();
             $table->string('formato_archivo',5);
 
