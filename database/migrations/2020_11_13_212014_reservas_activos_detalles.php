@@ -24,6 +24,8 @@ class ReservasActivosDetalles extends Migration
             $table->unsignedInteger('leccion_id')->comment('lección en que estará reservado el articulo');
             $table->foreign('leccion_id')->references('id')->on('lecciones')->onUpdate('cascade')->onDelete('cascade');
 
+            $table->date('fecha');
+
             $table->timestamps();
         });
     }

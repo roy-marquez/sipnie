@@ -8,4 +8,14 @@ class ReporteNacional extends Model
 {
     //
     protected $table = 'reportes_nacionales';
+
+    public function user()
+    {
+        return $this->belongsTo(User::Class);
+    }
+
+    public function reporteNacionalTipo()
+    {
+        return $this->belongsTo(ReporteNacionalTipo::Class);
+    }
 }

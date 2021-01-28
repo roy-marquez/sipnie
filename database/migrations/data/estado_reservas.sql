@@ -15,12 +15,14 @@
 -- Dumping data for table sipnie_db.estado_reservas: ~3 rows (approximately)
 /*!40000 ALTER TABLE `estado_reservas` DISABLE KEYS */;
 INSERT INTO `estado_reservas` (`id`, `estado_reserva`) VALUES
-	(1, 'revisión'),
-	(2, 'aprobada'),
-	(3, 'rechazada'),
-	(4, 'préstamo-preparado'),
-	(5, 'préstamo-entregado'),
-	(6, 'préstamo-devuelto');
+	(1, 'no-enviada'),
+	(2, 'revisión'),
+	(3, 'aprobada'),
+	(4, 'rechazada'),
+	(5, 'préstamo-preparado'),
+	(6, 'préstamo-entregado'),
+	(7, 'préstamo-devuelto'),
+	(8, 'archivada');
 /*!40000 ALTER TABLE `estado_reservas` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

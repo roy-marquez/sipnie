@@ -20,9 +20,10 @@ class CreateReservasSalasTable extends Migration
             $table->foreign('sala_id')->references('id')->on('salas')
                 ->onUpdate('cascade')->onDelete('set null');
 
-            $table->unsignedBigInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users')
-                ->onUpdate('cascade')->onDelete('set null');
+            $table->unsignedBigInteger('solicitante_id')->nullable()
+                ->comment('usuario que genera la reserva');
+            $table->foreign('solicitante_id')->references('id')
+                ->on('users')->onUpdate('cascade')->onDelete('set null');
 
             $table->date('fecha_solicitud')->comment('fecha en que realiza la solicitud');
             $table->date('fecha_inicio')->comment('fecha de inicio de reserva');
@@ -36,6 +37,11 @@ class CreateReservasSalasTable extends Migration
 
             $table->unsignedTinyInteger('estado_reserva_id')->nullable();
             $table->foreign('estado_reserva_id')->references('id')->on('estado_reservas')->onUpdate('cascade')->onDelete('set null');
+
+            $table->unsignedBigInteger('revisor_id')->nullable()->comment('Funcionario pnie que revisa la reserva');
+            $table->foreign('revisor_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('set null');
+
+            $table->text('notas_revision')->nullable()->comment('Campo para comunicar motivo de rechazo o para dar información adicional');
 
             $table->timestamps();
         });

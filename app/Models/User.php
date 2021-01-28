@@ -64,4 +64,48 @@ class User extends Authenticatable
     public function adminlte_profile_url(){
         return 'perfil/id#';
     }
+
+    public function role(){
+        return $this->belongsTo(Role::Class);
+    }
+
+    public function estadoUsuario()
+    {
+        return $this->belongsTo(EstadoUsuario::Class);
+    }
+
+    public function Colegios()
+    {
+        return $this->belongsToMany(Colegio::Class);
+    }
+
+    public function tipoDocId()
+    {
+        return $this->belongsTo(TipoDocIdentidad::Class);
+    }
+
+    public function reportesInternos()
+    {
+        return $this->hasMany(ReporteInterno::Class);
+    }
+
+    public function reportesNacionales()
+    {
+        return $this->hasMany(ReporteNacional::Class);
+    }
+
+    public function logs()
+    {
+        return $this->hasMany(Log::Class);
+    }
+
+    public function reservasActivos()
+    {
+        return $this->hasMany(ReservaActivo::Class);
+    }
+
+    public function reservasSala()
+    {
+        return $this->hasMany(ReservaSala::Class);
+    }
 }

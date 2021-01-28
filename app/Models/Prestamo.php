@@ -10,4 +10,14 @@ class Prestamo extends Model
     {
         return $this->belongsToMany(ReservaActivo::Class);
     }
+
+    public function colegio()
+    {
+        return $this->belongsTo(Colegio::Class);
+    }
+
+    public function estadoPrestamo()
+    {
+        return $this->belongsTo(EstadoPrestamo::Class);
+    }
 }

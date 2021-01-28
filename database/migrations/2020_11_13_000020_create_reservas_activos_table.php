@@ -15,10 +15,13 @@ class CreateReservasActivosTable extends Migration
     {
         Schema::create('reservas_activos', function (Blueprint $table) {
             $table->integerIncrements('id');
-            $table->unsignedBigInteger('usuario_id')->nullable()->comment('usuario que genera la reserva');
-            $table->foreign('usuario_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('set null');
+
             $table->unsignedSmallInteger('colegio_id')->nullable()->comment('colegio dueño del activo');
             $table->foreign('colegio_id')->references('id')->on('colegios')->onUpdate('cascade')->onDelete('set null');
+
+            $table->unsignedBigInteger('solicitante_id')->nullable()->comment('usuario que genera la reserva');
+            $table->foreign('solicitante_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('set null');
+
             $table->date('fecha_solicitud');
             $table->date('fecha_devolucion');
             $table->unsignedSmallInteger('materia_id')->comment('materia en la cuál se asigna la reserva');
@@ -26,6 +29,11 @@ class CreateReservasActivosTable extends Migration
 
             $table->unsignedTinyInteger('reserva_estado_id')->nullable()->default(1);
             $table->foreign('reserva_estado_id')->references('id')->on('estado_reservas')->onUpdate('cascade')->onDelete('set null');
+
+            $table->unsignedBigInteger('revisor_id')->nullable()->comment('Funcionario pnie que revisa la reserva');
+            $table->foreign('revisor_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('set null');
+
+            $table->text('notas_revision')->nullable()->comment('Campo para comunicar motivo de rechazo o para dar información adicional');
 
             $table->timestamps();
         });
