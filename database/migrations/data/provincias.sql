@@ -22,7 +22,7 @@
 
 -- Dumping data for table select_db.provincias: ~7 rows (approximately)
 /*!40000 ALTER TABLE `provincias` DISABLE KEYS */;
-INSERT INTO `provincias` (`id`, `provincia_nombre`) VALUES
+INSERT INTO `provincias` (`id`, `nombre`) VALUES
 	(1, 'San José'),
 	(2, 'Alajuela'),
 	(3, 'Cartago'),

@@ -14,7 +14,7 @@
 
 -- Dumping data for table sipnie_db.roles: ~7 rows (approximately)
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
-INSERT INTO `roles` (`id`, `role`) VALUES
+INSERT INTO `roles` (`id`, `nombre`) VALUES
 	(1, 'dev'),
 	(2, 'administrador_pnie'),
 	(3, 'ingeniero_pnie'),

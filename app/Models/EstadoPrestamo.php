@@ -10,6 +10,6 @@ class EstadoPrestamo extends Model
 
     public function prestamos()
     {
-        return hasMany(Prestamo::Class);
+        return $this->hasMany(Prestamo::Class);
     }
 }

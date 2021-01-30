@@ -24,7 +24,7 @@
 
                     <p><strong>Clasificación:</strong>
                         @if($colegio->clasificacion_id!=null)
-                            {{ $colegio->clasificacion_id}}
+                            {{ $colegio->clasificacion->nombre}}
                         @else
                             {{ __( config('_msg.no_data') ) }}
                         @endif
@@ -71,15 +71,15 @@
                     </p>
 
                     <p><strong>Provincia:</strong>
-                        {{ ($colegio->provincia_id != null) ? $colegio->provincia_id : __(config('_msg.no_data')) }}
+                        {{ ($colegio->provincia_id != null) ? $colegio->provincia->nombre : __(config('_msg.no_data')) }}
                     </p>
 
                     <p><strong>Cantón:</strong>
-                        {{ ($colegio->canton_id != null) ? $colegio ->canton_id : __(config('_msg.no_data'))}}
+                        {{ ($colegio->canton_id != null) ? $colegio->canton->nombre : __(config('_msg.no_data'))}}
                     </p>
 
                     <p><strong>Distrito:</strong>
-                        {{ ($colegio->distrito_id != null) ? $colegio ->distrito_id : __(config('_msg.no_data'))}}
+                        {{ ($colegio->distrito_id != null) ? $colegio->distrito->nombre : __(config('_msg.no_data'))}}
                     </p>
 
                     <p><strong>Poblado (otras señas):</strong>
@@ -113,17 +113,25 @@
                     </p>
 
                     <p><strong>Estado del Colegio:</strong>
-                        {{ ($colegio->estado_colegio_id != null ) ? $colegio->estado_colegio_id : __(config('_msg.no_data'))}}
+{{--                        {{ ($colegio->estado_colegio_id != null ) ? $colegio->estado_colegio_id : __(config('_msg.no_data'))}}--}}
+                        {{ ($colegio->estado_colegio_id != null ) ? $colegio->estadoColegio->estado : __(config('_msg.no_data'))}}
                     </p>
 
                     <p><strong>Administrador sipnie:</strong>
-                        @if($colegio->sipnie_admin_id != null)
-                            {{ ($colegio->sipnie_admin_id) }}
+                        @if($colegio->users != null)
+{{--                            {{ ($colegio->sipnie_admin_id) }}--}}
+                            {{ $colegio->users->where('id', $colegio->sipnie_admin_id)->first()->name }}
                         @else
                             {{ __( config('msg.no_data')) }}
                         @endif
+
                     </p>
-                    <p><strong>Conectividad a Internet:</strong>  {{ $colegio->conectividad_id}}</p>
+{{--                    <p><strong>Conectividad a Internet:</strong>  {{ $colegio->conectividad_id}}</p>--}}
+                    <p><strong>Conectividad a Internet:</strong>
+{{--                        {{ $colegio->conectividad->conexion}}--}}
+                        {{ ($colegio->conectividad != null ) ? $colegio->conectividad->conexion : __(config('_msg.no_data'))}}
+                    </p>
+
                     <p><strong>Actualizado en:</strong>  {{ $colegio->updated_at}}</p>
                     <button class="btn btn-info mb-2">
                         <a href="{{ route('colegios.edit', $colegio) }}" class="text-white">Editar</a>

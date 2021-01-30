@@ -18,7 +18,7 @@ class CreateDistritosTable extends Migration
                 ->comment('código de distrito, 5 dígitos: 1 de provincia, 2 de cantón y 2 de distrito ');
             $table->unsignedSmallInteger('canton_id');
             $table->foreign('canton_id')->references('id')->on('cantones');
-            $table->string('distrito_nombre', 45);
+            $table->string('nombre', 45);
         });
 
         // Insertar distritos a la base de datos,

@@ -26,6 +26,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 //MODULO DE COLEGIOS
 Route::get('modulos/colegios','Modulos\Colegios\ColegioController@index')->name('colegios'); //LISTA
 Route::get('modulos/colegios/crear','Modulos\Colegios\ColegioController@create')->name('colegios.create'); //LISTA
+Route::get('modulos/colegios/select','Modulos\Colegios\ColegioController@select')->name('colegios.select'); //<-OJO solo para testear
 Route::get('modulos/colegios/{colegio}/editar','Modulos\Colegios\ColegioController@edit')->name('colegios.edit');
 Route::patch('modulos/colegios/{colegio}','Modulos\Colegios\ColegioController@update')->name('colegios.update');
 Route::delete('modulos/colegios/{colegio}','Modulos\Colegios\ColegioController@destroy')->name('colegios.destroy');

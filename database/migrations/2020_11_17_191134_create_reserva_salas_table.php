@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReservasSalasTable extends Migration
+class CreateReservaSalasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateReservasSalasTable extends Migration
      */
     public function up()
     {
-        Schema::create('reservas_salas', function (Blueprint $table) {
+        Schema::create('reserva_salas', function (Blueprint $table) {
             $table->integerIncrements('id');
 
             $table->unsignedSmallInteger('sala_id')->nullable();

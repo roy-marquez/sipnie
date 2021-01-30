@@ -14,16 +14,20 @@
 
 -- Dumping data for table sipnie_db.categorias: ~7 rows (approximately)
 /*!40000 ALTER TABLE `categorias` DISABLE KEYS */;
-INSERT INTO `categorias` (`nombre`, `alias_1`, `alias_2`, `alias_3`) VALUES
-	('computadora', 'pc escritorio', NULL, NULL),
-	('portátil', 'laptop', NULL, NULL),
-	('tableta', 'tablet', NULL, NULL),
-	('proyector', 'video beam', NULL, NULL),
-	('impresora', 'plotter', NULL, NULL),
-	('servidor', 'server', NULL, NULL),
-	('pantalla-tv', 'tv', NULL, NULL),
-	('accesorios', 'complementos', NULL, NULL);
-	('dron', 'drone', NULL, NULL);
+INSERT INTO `categorias` (`nombre`) VALUES
+	('Accesorios'),
+	('Aire'),
+	('Computadoras'),
+	('Drones'),
+	('Energía'),
+	('Herramientas'),
+	('Impresoras'),
+	('Móviles'),
+	('Muebles'),
+	('Partes'),
+	('Periféricos'),
+	('Redes'),
+	('Robótica');
 /*!40000 ALTER TABLE `categorias` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

@@ -14,7 +14,7 @@
 
 -- Dumping data for table sipnie_db.ubicaciones: ~282 rows (approximately)
 /*!40000 ALTER TABLE `ubicaciones` DISABLE KEYS */;
-INSERT INTO `ubicaciones` (`id`, `colegio_id`, `ubicacion`, `created_at`, `updated_at`) VALUES
+INSERT INTO `ubicaciones` (`id`, `colegio_id`, `nombre`, `created_at`, `updated_at`) VALUES
 	(1, 1, 'Sala Innovación 1', '2021-01-27 02:43:56', '2021-01-27 02:43:56'),
 	(2, 2, 'Sala Innovación 1', '2021-01-27 02:43:56', '2021-01-27 02:43:56'),
 	(3, 3, 'Sala Innovación 1', '2021-01-27 02:43:56', '2021-01-27 02:43:56'),

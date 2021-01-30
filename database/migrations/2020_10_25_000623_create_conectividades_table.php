@@ -15,8 +15,8 @@ class CreateConectividadesTable extends Migration
     {
         Schema::create('conectividades', function (Blueprint $table) {
             $table->smallIncrements('id');
-            $table->string('tipo_conexion')->comment('Ej: Fibra óptica, Cable Modem, Inalámbrico');
-            $table->unsignedSmallInteger('velocidad_max_mbps')->comment('velocidad máxima de descarga en mbps');
+            $table->string('conexion')->comment('Ej: Fibra óptica, Cable Modem, Inalámbrico');
+            $table->unsignedSmallInteger('velocidad')->comment('velocidad máxima de descarga en mbps');
 
         });
 

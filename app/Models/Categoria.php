@@ -11,6 +11,11 @@ class Categoria extends Model
 
     public function items()
     {
-        return $this->hasMany(Item::Class);
+        return $this->hasManyThrough(Item::Class, Subcategoria::Class);
+    }
+
+    public function modelos()
+    {
+        return $this->hasManyThrough(Modelo::Class, Subcategoria::Class);
     }
 }

@@ -16,10 +16,14 @@ class CreateModelosTable extends Migration
         Schema::create('modelos', function (Blueprint $table) {
             $table->integerIncrements('id');
 
+            $table->unsignedSmallInteger('subcategoria_id');
+            $table->foreign('subcategoria_id')->references('id')->on('subcategorias');
+
             $table->unsignedSmallInteger('marca_id');
             $table->foreign('marca_id')->references('id')->on('marcas');
 
-            $table->string('modelo',50);
+            $table->string('nombre',50)->unique()
+                ->comment('Codigo alfanumérico o nombre del modelo del articulo ');
 
             $table->string('linea',50)
                 ->comment('Linea comercial de la marca: Por ejemplo una impresora: Marca=Epson, Linea=EcoTank');

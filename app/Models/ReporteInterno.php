@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ReporteInterno extends Model
 {
     //
-    protected $table = 'reportes_internos';
+    protected $table = 'reporte_internos';
 
     public function colegio()
     {

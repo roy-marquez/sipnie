@@ -13,7 +13,7 @@ class CreateReportesInternosTable extends Migration
      */
     public function up()
     {
-        Schema::create('reportes_internos', function (Blueprint $table) {
+        Schema::create('reporte_internos', function (Blueprint $table) {
             $table->id();
 
             $table->unsignedSmallInteger('colegio_id');
@@ -46,6 +46,6 @@ class CreateReportesInternosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reportes_internos');
+        Schema::dropIfExists('reporte_internos');
     }
 }

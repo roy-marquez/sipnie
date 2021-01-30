@@ -15,7 +15,7 @@ class CreateMarcasTable extends Migration
     {
         Schema::create('marcas', function (Blueprint $table) {
             $table->smallIncrements('id');
-            $table->string('marca', 50);
+            $table->string('nombre', 50)->unique();
             $table->string('alias_1', 50)->nullable();
             $table->string('alias_2', 50)->nullable();
             $table->string('alias_3', 50)->nullable();

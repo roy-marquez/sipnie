@@ -15,7 +15,7 @@ class CreateUsosTable extends Migration
     {
         Schema::create('usos', function (Blueprint $table) {
             $table->tinyIncrements('id');
-            $table->string('uso', 30)
+            $table->string('nombre', 30)
                 ->comment('planta=no se prestan, préstamo=disponible para préstamo, condicionado= préstamo bajo condiciones especiales.');
             //$table->timestamps();
         });

@@ -14,21 +14,21 @@
 
 -- Dumping data for table sipnie_db.conectividades: ~0 rows (approximately)
 /*!40000 ALTER TABLE `conectividades` DISABLE KEYS */;
-INSERT INTO `conectividades` (`id`, `tipo_conexion`, `velocidad_max_mbps`) VALUES
+INSERT INTO `conectividades` (`id`, `conexion`, `velocidad`) VALUES
 	(1, 'Indefinida', 0),
-	(2, 'Fibra óptica', 10),
-	(3, 'Fibra óptica', 20),
-	(4, 'Fibra óptica', 45),
-	(5, 'Fibra óptica', 75),
-	(6, 'Fibra óptica', 100),
-	(7, 'Cable módem', 10),
-	(8, 'Cable módem', 20),
-	(9, 'Cable módem', 50),
-	(10, 'Cable módem', 100),
-	(11, 'Inalámbrico', 10),
-	(12, 'Inalámbrico', 20),
-	(13, 'Inalámbrico', 50),
-	(14, 'Inalámbrico', 100);
+	(2, 'Fibra óptica 10', 10),
+	(3, 'Fibra óptica 20', 20),
+	(4, 'Fibra óptica 45', 45),
+	(5, 'Fibra óptica 75', 75),
+	(6, 'Fibra óptica 100', 100),
+	(7, 'Cable módem 10', 10),
+	(8, 'Cable módem 20', 20),
+	(9, 'Cable módem 50', 50),
+	(10, 'Cable módem 100', 100),
+	(11, 'Inalámbrico 10', 10),
+	(12, 'Inalámbrico 20', 20),
+	(13, 'Inalámbrico 20', 50),
+	(14, 'Inalámbrico 100', 100);
 /*!40000 ALTER TABLE `conectividades` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

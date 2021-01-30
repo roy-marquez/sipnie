@@ -15,7 +15,7 @@ class CreateCondicionesTable extends Migration
     {
         Schema::create('condiciones', function (Blueprint $table) {
             $table->tinyIncrements('id');
-            $table->string('condicion', 50)
+            $table->string('nombre', 50)
                 ->comment('condición física del articulo: bueno, regurar, malo, desecho');
             //$table->timestamps();
         });

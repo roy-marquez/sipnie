@@ -17,7 +17,7 @@ class CreateLogsTable extends Migration
             $table->id();
             $table->unsignedInteger('user_id');
 
-            $table->unsignedSmallInteger('operacion_id');
+            $table->unsignedInteger('operacion_id');
             $table->foreign('operacion_id')->references('id')->on('operaciones');
 
             $table->unsignedBigInteger('registro_id')

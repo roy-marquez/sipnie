@@ -14,7 +14,7 @@
 
 -- Dumping data for table sipnie_db.estado_items: ~3 rows (approximately)
 /*!40000 ALTER TABLE `estado_items` DISABLE KEYS */;
-INSERT INTO `estado_items` (`id`, `estado_item`) VALUES
+INSERT INTO `estado_items` (`id`, `estado`) VALUES
 	(1, 'activo'),
 	(2, 'inactivo'),
 	(3, 'baja');

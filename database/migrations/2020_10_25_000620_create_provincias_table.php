@@ -15,7 +15,7 @@ class CreateProvinciasTable extends Migration
     {
         Schema::create('provincias', function (Blueprint $table) {
             $table->unsignedTinyInteger('id' )->primary()->comment('código de provincia de 1 a 7');
-            $table->string('provincia_nombre', 45)->comment('nombre de la provincia');
+            $table->string('nombre', 45)->comment('nombre de la provincia');
         });
 
         // Insertar provincias a la base de datos, requiere la existencia previa de la tabla 'provincias'

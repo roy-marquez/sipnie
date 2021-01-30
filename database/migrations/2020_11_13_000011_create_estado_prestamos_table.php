@@ -15,7 +15,7 @@ class CreateEstadoPrestamosTable extends Migration
     {
         Schema::create('estado_prestamos', function (Blueprint $table) {
             $table->tinyIncrements('id');
-            $table->string('estado_prestamo')
+            $table->string('estado')
                 ->comment('estado del préstamo por ejemplo: "sin iniciar", "en ejecución", "finalizado" ');
         });
 //        DB::table('estados_prestamos')->insert([

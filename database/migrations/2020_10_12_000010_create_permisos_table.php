@@ -19,7 +19,7 @@ class CreatePermisosTable extends Migration
 //            $table->unsignedTinyInteger('roles_id')->default();
 //            $table->foreign('roles_id')->references('id')->on('roles');
 
-            $table->string('permiso', 50)
+            $table->string('nombre', 50)
                 ->comment('ej.: agregar_item, modificar_item, eliminar_item');
             $table->string('descripcion')->nullable();
 
@@ -27,9 +27,9 @@ class CreatePermisosTable extends Migration
         });
 
         DB::table('permisos')->insert([
-            ['permiso' => 'agregar_item','descripcion' => 'el usuario puede agregar un item a la tabla "items"'],
-            ['permiso' => 'modificar_item','descripcion' => 'el usuario puede modificar un item a la tabla "items"'],
-            ['permiso' => 'eliminar_item','descripcion' => 'el usuario puede eliminar un item a la tabla "items"']
+            ['nombre' => 'agregar_item','descripcion' => 'el usuario puede agregar un item a la tabla "items"'],
+            ['nombre' => 'modificar_item','descripcion' => 'el usuario puede modificar un item a la tabla "items"'],
+            ['nombre' => 'eliminar_item','descripcion' => 'el usuario puede eliminar un item a la tabla "items"']
         ]);
     }
 

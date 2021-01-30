@@ -14,7 +14,7 @@
 
 -- Dumping data for table sipnie_db.dias: ~7 rows (approximately)
 /*!40000 ALTER TABLE `dias` DISABLE KEYS */;
-INSERT INTO `dias` (`id`, `dia`) VALUES
+INSERT INTO `dias` (`id`, `nombre`) VALUES
 	(1, 'lunes'),
 	(2, 'martes'),
 	(3, 'miércoles'),

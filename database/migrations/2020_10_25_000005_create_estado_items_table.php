@@ -15,7 +15,7 @@ class CreateEstadoItemsTable extends Migration
     {
         Schema::create('estado_items', function (Blueprint $table) {
             $table->tinyIncrements('id');
-            $table->string('estado_item', 30)->comment('Estado lógico del item, activo o inactivo, baja, etc.');;
+            $table->string('estado', 30)->comment('Estado lógico del item, activo o inactivo, baja, etc.');;
 //            $table->timestamps();
         });
 
@@ -35,6 +35,6 @@ class CreateEstadoItemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('estados');
+        Schema::dropIfExists('estado_items');
     }
 }

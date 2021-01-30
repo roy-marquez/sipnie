@@ -15,7 +15,7 @@ class CreateClasificacionesTable extends Migration
     {
         Schema::create('clasificaciones', function (Blueprint $table) {
             $table->tinyIncrements('id');
-            $table->string('clasificacion', 100)->unique()->comment('Tipo de colegio, ej.: Académico Diurno, Técnico Profesional, Experimental Bilingüe');
+            $table->string('nombre', 100)->unique()->comment('Tipo de colegio, ej.: Académico Diurno, Técnico Profesional, Experimental Bilingüe');
         });
 
 //        DB::table('clasificaciones')->insert([

@@ -13,7 +13,7 @@ class CreateReportesNacionalesTable extends Migration
      */
     public function up()
     {
-        Schema::create('reportes_nacionales', function (Blueprint $table) {
+        Schema::create('reporte_nacionales', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')
@@ -41,6 +41,6 @@ class CreateReportesNacionalesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reportes_nacionales');
+        Schema::dropIfExists('reporte_nacionales');
     }
 }

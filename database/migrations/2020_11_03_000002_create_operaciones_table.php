@@ -14,8 +14,8 @@ class CreateOperacionesTable extends Migration
     public function up()
     {
         Schema::create('operaciones', function (Blueprint $table) {
-            $table->smallIncrements('id');
-            $table->string('operacion')->default('indefinida')
+            $table->integerIncrements('id');
+            $table->string('nombre')->default('indefinida')
                 ->comment('tipo de operación: agregar_item, modificar_item, eliminar_ítem, etc.');
 
             //$table->timestamps();
@@ -24,10 +24,11 @@ class CreateOperacionesTable extends Migration
         });
 
         DB::table('operaciones')->insert([
-            ['operacion' => 'agregar_item'],
-            ['operacion' => 'mostrar_item'],
-            ['operacion' => 'modificar_item'],
-            ['operacion' => 'eliminar_item'],
+            ['nombre' => 'agregar_item'],
+            ['nombre' => 'agregar_item'],
+            ['nombre' => 'mostrar_item'],
+            ['nombre' => 'modificar_item'],
+            ['nombre' => 'eliminar_item'],
         ]);
     }
 

@@ -15,7 +15,7 @@ class CreateEstadoColegiosTable extends Migration
     {
         Schema::create('estado_colegios', function (Blueprint $table) {
             $table->tinyIncrements('id');
-            $table->string('estado_colegio')
+            $table->string('estado')
                 ->comment('estado en que se encuentra el colegio en el sistema, ej.: activo, inactivo.');
 //            $table->timestamps();
         });

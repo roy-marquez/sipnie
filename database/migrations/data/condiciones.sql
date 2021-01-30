@@ -14,7 +14,7 @@
 
 -- Dumping data for table sipnie_db.condiciones: ~4 rows (approximately)
 /*!40000 ALTER TABLE `condiciones` DISABLE KEYS */;
-INSERT INTO `condiciones` (`id`, `condicion`) VALUES
+INSERT INTO `condiciones` (`id`, `nombre`) VALUES
 	(1, 'bueno'),
 	(2, 'regular'),
 	(3, 'malo'),

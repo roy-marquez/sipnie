@@ -17,8 +17,19 @@ class Item extends Model
         return $this->belongsTo(Modelo::Class);
     }
 
+    //RELACION "belongsToThrough"
     public function marca(){
         return $this->modelo->belongsTo(Marca::Class);
+    }
+
+    public function subcategoria()
+    {
+        return $this->belongsTo(Subcategoria::Class);
+    }
+
+    //RELACION "belongsToThrough"
+    public function categoria(){
+        return $this->subcategoria->belongsTo(Categoria::Class);
     }
 
     public function condicion()
@@ -26,14 +37,14 @@ class Item extends Model
         return $this->belongsTo(Condicion::Class);
     }
 
+    public function adquisicion()
+    {
+        return $this->belongsTo(Adquisicion::Class);
+    }
+
     public function estadoItem()
     {
         return $this->belongsTo(EstadoItem::Class);
-    }
-
-    public function categoria()
-    {
-        return $this->belongsTo(Categoria::class );
     }
 
     public function colegio()

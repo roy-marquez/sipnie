@@ -13,7 +13,7 @@
 
 -- Dumping data for table sipnie_db.materias: ~22 rows (approximately)
 /*!40000 ALTER TABLE `materias` DISABLE KEYS */;
-INSERT INTO `materias` ( `materia`) VALUES
+INSERT INTO `materias` ( `nombre`) VALUES
 	('afectividad y sexualidad'),
 	('artes industriales'),
 	('artes plásticas'),

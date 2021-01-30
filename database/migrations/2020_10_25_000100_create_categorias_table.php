@@ -15,10 +15,7 @@ class CreateCategoriasTable extends Migration
     {
         Schema::create('categorias', function (Blueprint $table) {
             $table->tinyIncrements('id');
-            $table->string('nombre', 30);
-            $table->string('alias_1',30)->nullable()->comment('1er nombre alternativo para la categoría');
-            $table->string('alias_2',30)->nullable()->comment('2do nombre alternativo para la categoría');
-            $table->string('alias_3',30)->nullable()->comment('3er nombre alternativo para la categoría');
+            $table->string('nombre', 30)->unique();
             //$table->timestamps();
         });
 

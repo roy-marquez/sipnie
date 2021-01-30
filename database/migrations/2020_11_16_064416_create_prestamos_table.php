@@ -18,8 +18,8 @@ class CreatePrestamosTable extends Migration
             $table->unsignedSmallInteger('colegio_id')->nullable();
             $table->foreign('colegio_id')->references('id')->on('colegios')->onUpdate('cascade')->onDelete('set null');
 
-            $table->unsignedInteger('reservas_activos_id')->nullable();
-            $table->foreign('reservas_activos_id')->references('id')->on('reservas_activos')->onUpdate('cascade')->onDelete('set null');
+            $table->unsignedInteger('reserva_activo_id')->nullable();
+            $table->foreign('reserva_activo_id')->references('id')->on('reservas_activos')->onUpdate('cascade')->onDelete('set null');
 
             $table->unsignedTinyInteger('estado_prestamo_id')->nullable();
             $table->foreign('estado_prestamo_id')->references('id')->on('estado_prestamos')->onUpdate('cascade')->onDelete('set null');

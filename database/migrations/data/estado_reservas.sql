@@ -14,7 +14,7 @@
 
 -- Dumping data for table sipnie_db.estado_reservas: ~3 rows (approximately)
 /*!40000 ALTER TABLE `estado_reservas` DISABLE KEYS */;
-INSERT INTO `estado_reservas` (`id`, `estado_reserva`) VALUES
+INSERT INTO `estado_reservas` (`id`, `estado`) VALUES
 	(1, 'no-enviada'),
 	(2, 'revisión'),
 	(3, 'aprobada'),

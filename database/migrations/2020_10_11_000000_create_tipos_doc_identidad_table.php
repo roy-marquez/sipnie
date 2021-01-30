@@ -15,7 +15,7 @@ class CreateTiposDocIdentidadTable extends Migration
     {
         Schema::create('tipos_doc_identidad', function (Blueprint $table) {
             $table->tinyIncrements('id');
-            $table->string('tipo_doc_identidad', 50);
+            $table->string('nombre', 50);
         });
 
 //        DB::table('tipos_doc_identidad')->insert([

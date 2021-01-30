@@ -13,10 +13,10 @@ class ReservasActivosDetalles extends Migration
      */
     public function up()
     {
-        Schema::create('reservas_activos_detalles', function (Blueprint $table) {
+        Schema::create('reserva_activo_detalles', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('reservas_activos_id');
-            $table->foreign('reservas_activos_id')->references('id')->on('reservas_activos');
+            $table->unsignedInteger('reserva_activo_id');
+            $table->foreign('reserva_activo_id')->references('id')->on('reserva_activos');
 
             $table->unsignedBigInteger('item_id');
             $table->foreign('item_id')->references('id')->on('items')->onUpdate('cascade')->onDelete('cascade');

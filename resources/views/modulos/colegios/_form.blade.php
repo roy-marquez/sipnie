@@ -24,16 +24,16 @@
 
 <div class="form-group">
     <label for="estado_colegio" class="pl-3">Estado del Colegio</label>
-    <select name="estado_colegio" class="form-control bg-light" id="estado_colegio">
+    <select name="estado_colegio_id" class="form-control bg-light" id="estado_colegio_id">
         {{ old('estado_colegio') }}
         @foreach($estado_colegio as $est_cole)
             @if(old('estado_colegio') == $est_cole->id )
-                <option value="{{  $est_cole->id }}" selected> {{$est_cole->estado_colegio}}</option>
+                <option value="{{  $est_cole->id }}" selected> {{$est_cole->estado}}</option>
             @else
                 @if(isset($colegio) && ($colegio->estado_colegio_id == $est_cole->id ) )
-                    <option value="{{ $colegio->estado_colegio_id }}" selected>{{$est_cole->estado_colegio}}</option>
+                    <option value="{{ $colegio->estado_colegio_id }}" selected>{{$est_cole->estado}}</option>
                 @else
-                    <option value="{{  $est_cole->id }}">{{$est_cole->estado_colegio}}</option>
+                    <option value="{{  $est_cole->id }}">{{$est_cole->estado}}</option>
                 @endif
             @endif
         @endforeach

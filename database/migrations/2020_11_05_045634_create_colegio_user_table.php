@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateColegiosUsersTable extends Migration
+class CreateColegioUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateColegiosUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('colegios_users', function (Blueprint $table) {
+        Schema::create('colegio_user', function (Blueprint $table) {
             $table->id();
 
             $table->unsignedBigInteger('user_id');
@@ -24,6 +24,15 @@ class CreateColegiosUsersTable extends Migration
 
             //$table->timestamps();
         });
+
+        //Llenado de la tabla pivote con usuarios default en los 94 colegios.
+        for($cole = 1; $cole <=94; $cole++){
+            for($user = 1; $user <= 7; $user++){
+                DB::table('colegio_user')->insert([
+                    ['user_id' => $user, 'colegio_id' =>  $cole]
+                ]);
+            }
+        }
     }
 
     /**
@@ -33,6 +42,6 @@ class CreateColegiosUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users_colegios');
+        Schema::dropIfExists('colegio_user');
     }
 }

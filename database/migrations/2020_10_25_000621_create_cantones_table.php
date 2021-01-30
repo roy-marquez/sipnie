@@ -18,7 +18,7 @@ class CreateCantonesTable extends Migration
                 ->comment('código de cantón, 3 dígitos: 1 de provincia y 2 de canton');
             $table->unsignedTinyInteger('provincia_id');
             $table->foreign('provincia_id')->references('id')->on('provincias');
-            $table->string('canton_nombre', 45);
+            $table->string('nombre', 45);
         });
 
         // Insertar cantones a la base de datos,

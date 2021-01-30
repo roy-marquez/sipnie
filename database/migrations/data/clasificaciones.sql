@@ -14,7 +14,7 @@
 
 -- Dumping data for table sipnie_db.clasificaciones: ~4 rows (approximately)
 /*!40000 ALTER TABLE `clasificaciones` DISABLE KEYS */;
-INSERT INTO `clasificaciones` (`id`,`clasificacion`) VALUES
+INSERT INTO `clasificaciones` (`id`,`nombre`) VALUES
 	(1, 'Académico Diurno'),
 	(2, 'Colegio Artístico'),
 	(3, 'Colegio Técnico Profesional (C.T.P)'),

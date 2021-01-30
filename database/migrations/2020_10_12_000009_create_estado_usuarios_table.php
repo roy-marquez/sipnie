@@ -15,7 +15,7 @@ class CreateEstadoUsuariosTable extends Migration
     {
         Schema::create('estado_usuarios', function (Blueprint $table) {
             $table->tinyIncrements('id');
-            $table->string('estado_usuario')->comment('Ej. activo, inactivo, suspendido');
+            $table->string('estado')->comment('Ej. activo, inactivo, suspendido');
 //            $table->timestamps();
         });
 
@@ -35,6 +35,6 @@ class CreateEstadoUsuariosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('estados_usuarios');
+        Schema::dropIfExists('estado_usuarios');
     }
 }

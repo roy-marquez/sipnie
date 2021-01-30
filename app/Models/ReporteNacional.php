@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ReporteNacional extends Model
 {
     //
-    protected $table = 'reportes_nacionales';
+    protected $table = 'reporte_nacionales';
 
     public function user()
     {

@@ -18,15 +18,15 @@ class CreateItemsTable extends Migration
             $table->unsignedSmallInteger('colegio_id')->comment('Id de Colegio al que pertenece el ítem');
             $table->foreign('colegio_id')->references('id')->on('colegios');
 
+            $table->unsignedSmallInteger('subcategoria_id')->nullable()->comment('Ejemplo: laptop, tableta, etc.');
+            $table->foreign('subcategoria_id')->references('id')->on('subcategorias')->onDelete('set null');
+
             $table->unsignedInteger('modelo_id')->comment('Modelo del item, referenciado a una marca');
             $table->foreign('modelo_id')->references('id')->on('modelos');
 
-
-            $table->unsignedTinyInteger('categoria_id')->nullable()->comment('Ejemplo: laptop, tableta, etc.');
-            $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('set null');
-
             $table->unsignedSmallInteger('colegio_codigo')
                 ->comment('Código del colegio al que pertenece el ítem');
+            $table->foreign('colegio_codigo')->references('codigo')->on('colegios');
 
             $table->unsignedInteger('item_num')
                 ->comment('Consecutivo interno de items del colegio, min=1, max=999999');
@@ -45,6 +45,9 @@ class CreateItemsTable extends Migration
 
             $table->unsignedSmallInteger('registro_asiento')->nullable()
                 ->comment('Registro:asiento. En libro de actas del colegio');
+
+            $table->unsignedTinyInteger('adquisicion_id');
+            $table->foreign('adquisicion_id')->references('id')->on('adquisiciones');
 
             $table->text('nota')->nullable()
                 ->comment('Observación especial sobre el articulo');

@@ -13,10 +13,10 @@
 
 -- Dumping data for table sipnie_db.materias: ~22 rows (approximately)
 /*!40000 ALTER TABLE `marcas` DISABLE KEYS */;
-INSERT INTO `marcas` ( `marca`, `alias_1`,`alias_2`,`alias_3`) VALUES
+INSERT INTO `marcas` ( `nombre`, `alias_1`,`alias_2`,`alias_3`) VALUES
     ('_INDEFINIDA', null, null, null),
 	('HP','hp','Hewlett-Packard','Hewlett Packard'),
-	('DELL', 'dell', null, null),
+	('DELL', 'Dell', 'dell', null),
 	('ZENITH', null, null, null),
 	('3COM', '3com', null, null),
 	('EPSON', 'Epson', null, null),
@@ -34,13 +34,16 @@ INSERT INTO `marcas` ( `marca`, `alias_1`,`alias_2`,`alias_3`) VALUES
     ('FPC', null, null, null),
     ('NEXXT', 'Nexxt', null, null),
     ('UBIQUITI', 'Ubiquiti', null, null),
-    ('MikroTik', null, null, null),
+    ('MIKROTIK', 'MikroTik', null, null),
     ('TARGUS', null, null, null),
-    ('XTECH', 'Xtech', 'xtech', null),
+    ('XTECH', 'Xtech', 'xtech', 'X-tech'),
     ('DJI', null, null, null),
     ('ZTE', null, null, null),
     ('IOMEGA', 'Iomega', null, null),
     ('ATEK', 'Atek', null, null),
+    ('BROTHER', 'Brother', null, null),
+    ('SAMSUNG', 'Samsung', null, null),
+    ('LENOVO', 'Lenovo', null, null),
     ('TOA', null, null, null);
 /*!40000 ALTER TABLE `materias` ENABLE KEYS */;
 

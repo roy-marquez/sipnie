@@ -15,7 +15,7 @@ class CreateMateriasTable extends Migration
     {
         Schema::create('materias', function (Blueprint $table) {
             $table->smallIncrements('id');
-            $table->string('materia',100)->unique()->comment('nombre de la materia, campo único');
+            $table->string('nombre',100)->unique()->comment('nombre de la materia, campo único');
             //$table->timestamps();
         });
 

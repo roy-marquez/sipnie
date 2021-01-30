@@ -14,6 +14,16 @@ class Modelo extends Model
         return $this->belongsTo(Marca::Class);
     }
 
+    public function subcategoria()
+    {
+        return $this->belongsTo(Subcategoria::Class);
+    }
+
+    public function categoria()
+    {
+        return $this->subcategoria->belongsTo(Categoria::Class);
+    }
+
     public function items()
     {
         return $this->hasMany(Item::Class);

@@ -15,7 +15,7 @@ class CreateDiasTable extends Migration
     {
         Schema::create('dias', function (Blueprint $table) {
             $table->tinyIncrements('id')->comment('identificador del dia de la semana: 1=lunes...7=domingo');
-            $table->string('dia')->comment('dia de la semana: lunes a domingo');
+            $table->string('nombre')->comment('dia de la semana: lunes a domingo');
         });
 
 //        DB::table('dias')->insert([

@@ -17,7 +17,7 @@ class CreateReservaSalaLeccionesTable extends Migration
             $table->id();
 
             $table->unsignedInteger('reserva_sala_id')->nullable();
-            $table->foreign('reserva_sala_id')->references('id')->on('reservas_salas');
+            $table->foreign('reserva_sala_id')->references('id')->on('reserva_salas');
 
             $table->unsignedInteger('leccion_id');
             $table->foreign('leccion_id')->references('id')->on('lecciones');

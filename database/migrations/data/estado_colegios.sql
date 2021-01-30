@@ -12,12 +12,12 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- Dumping data for table sipnie_db.estados_colegios: ~3 rows (approximately)
+-- Dumping data for table sipnie_db.estado_colegios: ~3 rows (approximately)
 /*!40000 ALTER TABLE `estado_colegios` DISABLE KEYS */;
-INSERT INTO `estado_colegios` (`id`, `estado_colegio`) VALUES
-	(1, 'activo'),
+INSERT INTO `estado_colegios` (`id`, `estado`) VALUES
+	(1, 'activo' ),
 	(2, 'inactivo'),
-	(3, 'activo_sin_admin');
+	(3, 'suspendido');
 /*!40000 ALTER TABLE `estado_colegios` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

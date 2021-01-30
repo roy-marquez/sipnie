@@ -14,7 +14,7 @@
 
 -- Dumping data for table sipnie_db.tipos_doc_identidad: ~4 rows (approximately)
 /*!40000 ALTER TABLE `tipos_doc_identidad` DISABLE KEYS */;
-INSERT INTO `tipos_doc_identidad` (`id`, `tipo_doc_identidad`) VALUES
+INSERT INTO `tipos_doc_identidad` (`id`, `nombre`) VALUES
 	(1, 'cédula'),
 	(2, 'pasaporte'),
 	(3, 'cédula residencia'),

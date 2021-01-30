@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ReservaActivo extends Model
 {
-    protected $table = 'reservas_activos';
+    protected $table = 'reserva_activos';
 
     public function materia()
     {

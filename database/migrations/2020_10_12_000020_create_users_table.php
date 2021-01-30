@@ -44,15 +44,17 @@ class CreateUsersTable extends Migration
             $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
 
-        DB::table('users')->insert([
-            ['role_id'=>'1', 'name' => 'dev', 'email' => 'dev@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
-            ['role_id'=>'2', 'name' => 'admin', 'email' => 'admin@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
-            ['role_id'=>'3', 'name' => 'ingeniero.pnie', 'email' => 'ingeniero.pnie@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
-            ['role_id'=>'4', 'name' => 'docente.pnie', 'email' => 'docente.pnie@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
-            ['role_id'=>'5', 'name' => 'docente.cole', 'email' => 'docente.cole@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
-            ['role_id'=>'6', 'name' => 'admin.cole', 'email' => 'admin.cole@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
-            ['role_id'=>'1', 'name' => 'roy', 'email' => 'roy@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
-        ]);
+//        DB::table('users')->insert([
+//            ['role_id'=>'1', 'name' => 'dev', 'email' => 'dev@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
+//            ['role_id'=>'2', 'name' => 'admin', 'email' => 'admin@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
+//            ['role_id'=>'3', 'name' => 'ingeniero.pnie', 'email' => 'ingeniero.pnie@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
+//            ['role_id'=>'4', 'name' => 'docente.pnie', 'email' => 'docente.pnie@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
+//            ['role_id'=>'5', 'name' => 'docente.cole', 'email' => 'docente.cole@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
+//            ['role_id'=>'6', 'name' => 'admin.cole', 'email' => 'admin.cole@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
+//            ['role_id'=>'1', 'name' => 'roy', 'email' => 'roy@sipnie.net', 'password'=> '$2y$10$bLp3m9dXFkIqheidq03w1umx0LtQ7OPSHyDM3W7eZVqk5wL3lLgty'],
+//        ]);
+
+        DB::unprepared(file_get_contents(base_path('database/migrations/data/users.sql')));
     }
 
     /**

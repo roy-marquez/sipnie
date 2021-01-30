@@ -58,7 +58,7 @@ class Colegio extends Model
 
     public function users()
     {
-        return $this->hasMany(User::Class);
+        return $this->belongsToMany(User::Class);
     }
 
     public function usuariosPorReporte()

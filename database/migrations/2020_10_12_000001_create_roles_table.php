@@ -15,7 +15,7 @@ class CreateRolesTable extends Migration
     {
         Schema::create('roles', function (Blueprint $table) {
             $table->tinyIncrements('id');
-            $table->string('role', 50)->default('invitado');
+            $table->string('nombre', 50)->default('invitado');
         });
 
 //        DB::table('roles')->insert([

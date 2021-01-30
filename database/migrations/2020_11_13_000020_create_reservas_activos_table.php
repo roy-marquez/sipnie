@@ -13,7 +13,7 @@ class CreateReservasActivosTable extends Migration
      */
     public function up()
     {
-        Schema::create('reservas_activos', function (Blueprint $table) {
+        Schema::create('reserva_activos', function (Blueprint $table) {
             $table->integerIncrements('id');
 
             $table->unsignedSmallInteger('colegio_id')->nullable()->comment('colegio dueño del activo');

@@ -23,7 +23,7 @@
 
 -- Dumping data for table select_db.distritos: ~0 rows (approximately)
 /*!40000 ALTER TABLE `distritos` DISABLE KEYS */;
-INSERT INTO `distritos` (`id`, `canton_id`, `distrito_nombre`) VALUES
+INSERT INTO `distritos` (`id`, `canton_id`, `nombre`) VALUES
 	(10101, 101, 'Carmen'),
 	(10102, 101, 'Merced'),
 	(10103, 101, 'Hospital'),

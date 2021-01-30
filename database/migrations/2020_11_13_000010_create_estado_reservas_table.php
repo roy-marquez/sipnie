@@ -15,8 +15,8 @@ class CreateEstadoReservasTable extends Migration
     {
         Schema::create('estado_reservas', function (Blueprint $table) {
             $table->tinyIncrements('id');
-            $table->string('estado_reserva')
-                ->comment('estado en que se encuentra la reserva puede por ejemplo: revisión, aprobada, rechazada');
+            $table->string('estado')
+                ->comment('estado en que se encuentra la reserva puede ser por ejemplo: revisión, aprobada, rechazada, etc.');
         });
 
 //        DB::table('estado_reservas')->insert([
@@ -35,6 +35,6 @@ class CreateEstadoReservasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('estados_reservas');
+        Schema::dropIfExists('estado_reservas');
     }
 }
