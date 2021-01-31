@@ -47,7 +47,7 @@ class CreateColegiosTable extends Migration
             $table->string('facebook')->nullable()->comment('dirección de perfil de facebook');
 
             $table->unsignedTinyInteger('estado_colegio_id');
-            $table->foreign('estado_colegio_id')->references('id')->on('estados_colegios');
+            $table->foreign('estado_colegio_id')->references('id')->on('estado_colegios');
 
             $table->string('escudo_ruta')->nullable()->comment('imagen del escudo o estandarte');
             $table->unsignedInteger('sipnie_admin_id')->nullable()

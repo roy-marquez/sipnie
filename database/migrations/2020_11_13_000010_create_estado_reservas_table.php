@@ -25,7 +25,7 @@ class CreateEstadoReservasTable extends Migration
 //            ['estado_reserva' => 'rechazada']
 //        ]);
 
-        DB::unprepared(file_get_contents(base_path('database/migrations/data/estado_prestamos.sql')));
+        DB::unprepared(file_get_contents(base_path('database/migrations/data/estado_reservas.sql')));
     }
 
     /**

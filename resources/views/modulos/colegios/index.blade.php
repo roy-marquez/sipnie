@@ -7,6 +7,10 @@
 @endsection
 
 @section('content')
+    @if(session('status'))
+        {{--    Incluir mensajes de sesión flash--}}
+        @include('modulos.partials.session-status')
+    @endif
 <button class="btn btn-success mb-2">
     <a href="{{ route('colegios.create') }} " class="text-white"><i class="fas fa-plus-circle"></i> Agregar Colegio</a>
 </button>
@@ -55,11 +59,18 @@
                         </a>
                     </td>
 
-                    <td>{{ $colegio->matricula }}</td>
-                    <td>
-                        <a href="mailto://{{ $colegio->email }}">
-                            <i class="fas fa-envelope">&ensp;</i>{{ $colegio->email }}
-                        </a>
+                    <td>@if($colegio->matricula != null)
+                            {{ $colegio->matricula }}
+                        @else
+                            {{ __(config('_msg.no_data')) }}
+                        @endif
+                    </td>
+
+                    <td>@if($colegio->email != null)
+                        <a href="mailto://{{ $colegio->email }}"> <i class="fas fa-envelope">&ensp;</i>{{ $colegio->email }} </a>
+                        @else
+                            {{ __(config('_msg.no_data')) }}
+                        @endif
                     </td>
 
                     <td>@if($colegio->web != null)

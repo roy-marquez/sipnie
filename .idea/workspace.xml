@@ -25,84 +25,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29d368dc-6383-489c-ade9-7d99ec409566" name="Default Changelist" comment="Fin de configuracion de relaciones de los los modelos, y modificaciones a migraciones">
-      <change afterPath="$PROJECT_DIR$/app/Models/Adquisicion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Subcategoria.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000720_create_adquisiciones_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000730_create_subcategorias_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/data/users.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/sipnie_db.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/modulos/colegios/select.blade.php" afterDir="false" />
+    <list default="true" id="29d368dc-6383-489c-ade9-7d99ec409566" name="Default Changelist" comment="Se agregaro tabla de subcategoria se corrigieron relaciones y tabla de categoría.">
+      <change afterPath="$PROJECT_DIR$/resources/views/modulos/partials/session-status.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Modulos/Colegios/ColegioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Modulos/Colegios/ColegioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Categoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Categoria.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Colegio.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Colegio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/EstadoPrestamo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/EstadoPrestamo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Item.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Item.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Modelo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Modelo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ReporteInterno.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ReporteInterno.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ReporteNacional.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ReporteNacional.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ReservaActivo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ReservaActivo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_11_000000_create_tipos_doc_identidad_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_11_000000_create_tipos_doc_identidad_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_12_000001_create_roles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_12_000001_create_roles_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_12_000009_create_estado_usuarios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_12_000009_create_estado_usuarios_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_12_000010_create_permisos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_12_000010_create_permisos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_12_000015_create_permisos_roles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_12_000015_create_permiso_role_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_12_000020_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_12_000020_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000001_create_marcas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000001_create_marcas_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000002_create_modelos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000002_create_modelos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000003_create_usos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000003_create_usos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000004_create_condiciones_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000004_create_condiciones_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000005_create_estado_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000005_create_estado_items_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000006_create_clasificaciones_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000006_create_clasificaciones_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000100_create_categorias_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000100_create_categorias_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000600_create_materias_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000600_create_materias_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000610_create_dias_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000610_create_dias_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000620_create_provincias_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000620_create_provincias_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000621_create_cantones_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000621_create_cantones_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000622_create_distritos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000622_create_distritos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000623_create_conectividades_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000623_create_conectividades_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000624_create_estado_colegios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000624_create_estado_colegios_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000625_create_horarios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000625_create_horarios_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000701_create_ubicaciones_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000701_create_ubicaciones_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000800_create_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000800_create_items_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_204322_create_colegios_materias_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_204322_create_colegio_materia_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_03_000002_create_operaciones_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_03_000002_create_operaciones_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_03_165034_create_logs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_03_165034_create_logs_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_05_045634_create_colegios_Users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_05_045634_create_colegio_user_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000700_create_colegios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000700_create_colegios_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_13_000010_create_estado_reservas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_13_000010_create_estado_reservas_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_13_000011_create_estado_prestamos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_13_000011_create_estado_prestamos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_13_000020_create_reservas_activos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_13_000020_create_reservas_activos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_13_212014_reservas_activos_detalles.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_13_212014_reservas_activos_detalles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_16_064416_create_prestamos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_16_064416_create_prestamos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_17_191134_create_reservas_salas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_17_191134_create_reserva_salas_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_17_191450_create_reserva_sala_lecciones_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_17_191450_create_reserva_sala_lecciones_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_18_010626_create_reportes_internos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_18_010626_create_reportes_internos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_18_010804_create_reportes_nacionales_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_18_010804_create_reportes_nacionales_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/data/cantones.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/cantones.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/data/categorias.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/categorias.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/data/clasificaciones.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/clasificaciones.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/data/colegios.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/colegios.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/data/condiciones.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/condiciones.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/data/conectividades.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/conectividades.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/data/dias.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/dias.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/data/distritos.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/distritos.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/data/estado_colegios.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/estado_colegios.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/data/estado_items.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/estado_items.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/data/estado_prestamos.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/estado_prestamos.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/data/estado_reservas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/estado_reservas.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/data/estado_usuarios.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/estado_usuarios.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/data/marcas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/marcas.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/data/materias.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/materias.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/data/provincias.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/provincias.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/data/roles.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/roles.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/data/tipos_doc_identidad.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/tipos_doc_identidad.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/data/ubicaciones.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/ubicaciones.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/data/usos.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/usos.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/modulos/colegios/_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/colegios/_form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/modulos/colegios/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/colegios/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/modulos/colegios/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/colegios/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/modulos/colegios/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/colegios/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +189,7 @@
     <property name="DatabaseDriversLRU" value="mysql.8&#10;mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/migrations/data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/modulos/partials" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -269,11 +201,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\sipnie\resources\views\modulos\partials" />
       <recent name="C:\laragon\www\sipnie\database\migrations\data" />
       <recent name="C:\laragon\www\sipnie\database\migrations" />
       <recent name="C:\laragon\www\sipnie\storage\app\public\images\escudos" />
       <recent name="C:\laragon\www\sipnie\resources\views\modulos\colegios" />
-      <recent name="C:\laragon\www\sipnie\resources\views\modulos\partials" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\sipnie\database\migrations\data" />
@@ -371,7 +303,8 @@
       <workItem from="1611744314359" duration="738000" />
       <workItem from="1611802424386" duration="22491000" />
       <workItem from="1611878668122" duration="19435000" />
-      <workItem from="1611970886757" duration="16720000" />
+      <workItem from="1611970886757" duration="17462000" />
+      <workItem from="1612047886140" duration="18216000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1603181361459</created>
@@ -499,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611820529647</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Se agregaro tabla de subcategoria se corrigieron relaciones y tabla de categoría.">
+      <created>1611998025483</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1611998025483</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -536,6 +476,7 @@
     <MESSAGE value="Mensajes desde configuracion: 'no_data' y not_found" />
     <MESSAGE value="Avance en configuracion de relaciones de los los modelos, y modificaciones a migraciones" />
     <MESSAGE value="Fin de configuracion de relaciones de los los modelos, y modificaciones a migraciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fin de configuracion de relaciones de los los modelos, y modificaciones a migraciones" />
+    <MESSAGE value="Se agregaro tabla de subcategoria se corrigieron relaciones y tabla de categoría." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregaro tabla de subcategoria se corrigieron relaciones y tabla de categoría." />
   </component>
 </project>

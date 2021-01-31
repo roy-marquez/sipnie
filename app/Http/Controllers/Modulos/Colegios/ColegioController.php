@@ -7,6 +7,7 @@ use App\Models\EstadoColegio;
 use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ColegioController extends Controller
 {
@@ -16,8 +17,10 @@ class ColegioController extends Controller
      */
     public function index()
     {
+        $colegios = Colegio::all()->sortByDesc('updated_at');
         return view('modulos.colegios.index', [
-            'colegios' => Colegio::all()
+//            'colegios' => Colegio::all()
+            'colegios' => $colegios
         ]);
 //        return Colegio::all();
     }
@@ -28,11 +31,11 @@ class ColegioController extends Controller
     public function create()
     {
         $colegio = new Colegio;
-        $estado_colegio = EstadoColegio::all(['id', 'estado']);
+        $estado_colegios = EstadoColegio::all(['id', 'estado']);
 //        return view('modulos.colegios.create',[
 //            'colegio' => new Colegio
 //        ]);
-        return view('modulos.colegios.create', compact('colegio', 'estado_colegio' ));
+        return view('modulos.colegios.create', compact('colegio', 'estado_colegios' ));
     }
 
     /**
@@ -54,7 +57,8 @@ class ColegioController extends Controller
             'estado_colegio_id' => request('estado_colegio_id'),
         ]);
 
-        return redirect()->route('colegios');
+        return redirect()->route('colegios')
+            ->with('status', 'El Colegio fue agregado con éxito');
     }
 
     /**
@@ -65,9 +69,10 @@ class ColegioController extends Controller
     public function show(Colegio $colegio)
     {
         return view('modulos.colegios.show', [
-            'colegio' => $colegio
+            'colegio' => $colegio,
         ]);
     }
+
 
     /**
      * Muestra el formulario de edición de un colegio específico.
@@ -77,10 +82,10 @@ class ColegioController extends Controller
      */
     public function edit(Colegio $colegio)
     {
-        $estado_colegio = EstadoColegio::all(['id', 'estado']);
+        $estado_colegios = EstadoColegio::all(['id', 'estado']);
         return view('modulos.colegios.edit',[
             'colegio' => $colegio,
-            'estado_colegio' => $estado_colegio
+            'estado_colegios' => $estado_colegios
         ]);
     }
 
@@ -90,12 +95,19 @@ class ColegioController extends Controller
      */
     public function update(Colegio $colegio)
     {
+//        dd(request());
+        request()->validate([
+            'nombre' => 'required|max:255',
+            'codigo' => 'required|integer|max:9999|regex:/[1-9]{4}/u',
+            'estado_colegio_id' => 'required|integer|max:9|regex:/[1-9]{1}/u',
+        ]);
+
         $colegio->update([
             'nombre' => request('nombre'),
             'codigo' => request('codigo'),
-            'colegio_estado_id' => request('colegio_estado'),
+            'estado_colegio_id' => request('estado_colegio_id'),
         ]);
-        return redirect()-> route('colegios');
+        return redirect()-> route('colegios')->with('status', 'El Colegio fue editado con satisfactoriamente.');
     }
 
     /**

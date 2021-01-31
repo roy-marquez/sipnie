@@ -88,7 +88,7 @@
 
 
                     <p><strong>Dirección Regional MEP:</strong>
-                        {{ ($colegio->dre != null ) ? $colegio->localizacion : __(config('_msg.no_data'))}}
+                        {{ ($colegio->dre != null ) ? $colegio->dre : __(config('_msg.no_data'))}}
                     </p>
 
 
@@ -118,15 +118,13 @@
                     </p>
 
                     <p><strong>Administrador sipnie:</strong>
-                        @if($colegio->users != null)
-{{--                            {{ ($colegio->sipnie_admin_id) }}--}}
-                            {{ $colegio->users->where('id', $colegio->sipnie_admin_id)->first()->name }}
+                        @if($colegio->sipnie_admin_id == null OR $colegio->users == null OR $colegio->users =='')
+                            {{ __(config('_msg.no_data')) }}
                         @else
-                            {{ __( config('msg.no_data')) }}
+                            {{ $colegio->users->where('id', $colegio->sipnie_admin_id)->first()->name }}
                         @endif
-
                     </p>
-{{--                    <p><strong>Conectividad a Internet:</strong>  {{ $colegio->conectividad_id}}</p>--}}
+
                     <p><strong>Conectividad a Internet:</strong>
 {{--                        {{ $colegio->conectividad->conexion}}--}}
                         {{ ($colegio->conectividad != null ) ? $colegio->conectividad->conexion : __(config('_msg.no_data'))}}

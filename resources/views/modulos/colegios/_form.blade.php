@@ -23,26 +23,25 @@
 </div>
 
 <div class="form-group">
-    <label for="estado_colegio" class="pl-3">Estado del Colegio</label>
+    <label for="estado_colegio_id" class="pl-3">Estado del Colegio</label>
     <select name="estado_colegio_id" class="form-control bg-light" id="estado_colegio_id">
-        {{ old('estado_colegio') }}
-        @foreach($estado_colegio as $est_cole)
-            @if(old('estado_colegio') == $est_cole->id )
-                <option value="{{  $est_cole->id }}" selected> {{$est_cole->estado}}</option>
+{{--        {{ old('estado_colegio_id') }}--}}
+        @foreach($estado_colegios as $estado_colegio)
+            @if(old('estado_colegio_id') == $estado_colegio->id )
+                <option value="{{  $estado_colegio->id }}" selected> {{$estado_colegio->estado}}</option>
             @else
-                @if(isset($colegio) && ($colegio->estado_colegio_id == $est_cole->id ) )
-                    <option value="{{ $colegio->estado_colegio_id }}" selected>{{$est_cole->estado}}</option>
+                @if(isset($colegio) && ($colegio->estado_colegio_id == $estado_colegio->id ) )
+                    <option value="{{ $estado_colegio->id }}" selected>{{$estado_colegio->estado}}</option>
                 @else
-                    <option value="{{  $est_cole->id }}">{{$est_cole->estado}}</option>
+                    <option value="{{  $estado_colegio->id }}">{{$estado_colegio->estado}}</option>
                 @endif
             @endif
         @endforeach
     </select>
 </div>
 
-<input type="submit" value="{{ $btnText }}" class="btn btn-primary btn-lg btn-block" />
-<a class="btn btn-link btn-block mb-0"
-   href="{{ route( 'colegios' ) }}">
-    Cancelar
+<input type="submit" value="{{ $btnText }}" class="btn btn-success btn-block" />
+<a href="{{ route( 'colegios' ) }}" class="btn btn-link btn-block mb-0 btn-outline-light">
+    <span class=""> Cancelar </span>
 </a>
 

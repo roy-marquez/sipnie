@@ -2,10 +2,6 @@
 
 @section('title', 'Colegios')
 
-@section('content_header')
-    <h1 class="header">Agregar Colegio</h1>
-@stop
-
 @section('content')
     <div class="container">
         <div class="row">
@@ -16,7 +12,7 @@
                 <form class="bg-white py-3 px-4 shadow rounded"
                       method="POST" action="{{ route('colegios') }}">
                     <h1 class="display-4 mb-3">
-                        Crear Colegio
+                        Agregar Colegio
                     </h1>
                     <hr>
                     @include('modulos.colegios._form', ['btnText' => 'Crear'])
