@@ -39,12 +39,26 @@ Route::get('/usuarios/usuarios', function () {
 })->name('usuarios');
 
 //MODULO DE INVENTARIO
-Route::get('/modulos/inventario/inventario', function () {
-    return view('modulos.inventario.inventario');
-})->name('inventario');
+//Route::get('/modulos/inventario/inventario', function () { return view('modulos.inventario.inventario'); })->name('inventario');
+//ITEMS
+Route::get('modulos/inventario/items','Modulos\Inventario\items\ItemController@index')->name('items.index');
+Route::get('modulos/inventario/items/crear','Modulos\Inventario\items\ItemController@create')->name('items.create');
+Route::get('modulos/inventario/items/{item}/editar','Modulos\Inventario\items\ItemController@edit')->name('items.edit');
+Route::patch('modulos/inventario/items/{item}','Modulos\Inventario\items\ItemController@update')->name('items.update');
+Route::delete('modulos/inventario/items/{item}','Modulos\Inventario\items\ItemController@destroy')->name('items.destroy');
+Route::post('modulos/inventario/items','Modulos\Inventario\items\ItemController@store')->name('items.store');
+Route::get('modulos/inventario/items/{item}','Modulos\Inventario\items\ItemController@show')->name('items.show');
 
-Route::get('modulos/inventario/categorias','Modulos\Inventario\CategoriaController@categorias')
-    ->name('categorias');
+//CATEGORIAS
+//Route::get('modulos/inventario/categorias','Modulos\Inventario\CategoriaController@categorias')
+//    ->name('categorias');
+Route::get('modulos/inventario/categorias','Modulos\Inventario\categorias\CategoriaController@index')->name('categorias.index');
+Route::get('modulos/inventario/categorias/crear','Modulos\Inventario\categorias\CategoriaController@create')->name('categorias.create');
+Route::get('modulos/inventario/categorias/{categoria}/editar','Modulos\Inventario\categorias\CategoriaController@edit')->name('categorias.edit');
+Route::patch('modulos/inventario/categorias/{categoria}','Modulos\Inventario\categorias\CategoriaController@update')->name('categorias.update');
+Route::delete('modulos/inventario/categorias/{categoria}','Modulos\Inventario\categorias\CategoriaController@destroy')->name('categorias.destroy');
+Route::post('modulos/inventario/categorias','Modulos\Inventario\categorias\CategoriaController@store')->name('categorias.store');
+Route::get('modulos/inventario/categorias/{categorias}','Modulos\Inventario\categorias\CategoriaController@show')->name('categorias.show');
 
 //MODULO DE RESERVAS
 Route::get('/reservas', function () {

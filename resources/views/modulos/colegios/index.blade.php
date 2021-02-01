@@ -2,26 +2,24 @@
 
 @section('title', 'Colegios')
 
-@section('content_header')
-    <h1 class="header">Colegios</h1>
-@endsection
-
 @section('content')
     @if(session('status'))
         {{--    Incluir mensajes de sesión flash--}}
         @include('modulos.partials.session-status')
     @endif
-<button class="btn btn-success mb-2">
-    <a href="{{ route('colegios.create') }} " class="text-white"><i class="fas fa-plus-circle"></i> Agregar Colegio</a>
-</button>
+
+
 
     <div class="card">
-{{--        <div class="card-header">--}}
-{{--            <h1 class="card-title">--}}
-{{--                Tabla de Colegios--}}
-{{--            </h1>--}}
-{{--        </div>--}}
-
+        <div class="d-flex justify-content-between align-items-center mt-3 mx-3">
+            <h2 class="text-secondary">
+                Colegios
+            </h2>
+            <button class="btn btn-success">
+                <a href="{{ route('colegios.create') }} " class="text-white"><i class="fas fa-plus-circle mr-2"> </i>Agregar</a>
+            </button>
+        </div>
+        <hr>
         <div class="card-body">
             <table id="dt" class="table table-bordered table-striped">
                 <thead>
@@ -99,6 +97,15 @@
 @endsection
 
 @section('js')
+    @if(session('eliminar')=='ok')
+        <script>
+            Swal.fire(
+                '¡Eliminado!',
+                'El Colegio fue eliminado satisfactoriamente',
+                'success'
+            )
+        </script>
+    @endif
 {{--    <script>--}}
 {{--        Swal.fire(--}}
 {{--            'Colegios!',--}}

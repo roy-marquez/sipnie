@@ -11,11 +11,11 @@
 
                 <form class="bg-white py-3 px-4 shadow rounded"
                       method="POST" action="{{ route('colegios') }}">
-                    <h1 class="display-4 mb-3">
+                    <h2 class="text-secondary mb-3">
                         Agregar Colegio
-                    </h1>
+                    </h2>
                     <hr>
-                    @include('modulos.colegios._form', ['btnText' => 'Crear'])
+                    @include('modulos.colegios._form', ['btnText' => 'Agregar'])
                     {{--        <button> @lang('create') </button>--}}
                 </form>
             </div>
@@ -24,11 +24,11 @@
 @endsection
 
 @section('js')
-    <script>
-        Swal.fire(
-            'Vamos a Agregar un nuevo Cole!',
-            'es fácil!',
-            'success'
-        )
-    </script>
+{{--    <script>--}}
+{{--        Swal.fire(--}}
+{{--            'Agregar un nuevo Cole!',--}}
+{{--            'Es fácil!, Pero revisa muy bien el Código Presupuestario',--}}
+{{--            'success'--}}
+{{--        )--}}
+{{--    </script>--}}
 @stop

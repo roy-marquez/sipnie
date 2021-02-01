@@ -2,16 +2,22 @@
 
 @section('title', $colegio->nombre)
 
-@section('content_header')
-    <h1>Ficha del Colegio</h1>
-@endsection
+@if(session('status'))
+    {{--    Incluir mensajes de sesión flash--}}
+    @include('modulos.partials.session-status')
+@endif
+
+{{--@section('content_header')--}}
+{{--    <h1>Ficha del Colegio</h1>--}}
+{{--@endsection--}}
 
 @section('content')
+
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-10 col-lg-8 mx-auto">
+            <div class="col-12 col-sm-10 col-lg-6 mx-auto">
                 <div class="bg-white shadow p-4 rounded">
-                    <h2 class="text-secondary"> {{ $colegio->nombre }} </h2>
+                    <h2 class="text-secondary">{{ $colegio->nombre }} </h2>
                     <hr>
                     @if($colegio->escudo_ruta !=null)
                         <img class="img-fluid mx-auto d-block" src="/storage/images/escudos/{{$colegio->escudo_ruta}}" alt="Escudo de {{ $colegio->nombre }}">
@@ -131,12 +137,46 @@
                     </p>
 
                     <p><strong>Actualizado en:</strong>  {{ $colegio->updated_at}}</p>
-                    <button class="btn btn-info mb-2">
+
+                    <button class="btn btn-info">
                         <a href="{{ route('colegios.edit', $colegio) }}" class="text-white">Editar</a>
                     </button>
+{{--                    <button class="btn btn-outline-danger mb-2">--}}
+{{--                        <a href="#" onclick="document.getElementById('delete-project').submit()" class="btn-outline-danger form-eliminar">--}}
+{{--                        <a href="#" id="btn-eliminar" class="btn-outline-danger">--}}
+{{--                            <i class="fas fa-trash fa-lg"></i> Eliminar--}}
+{{--                        </a>--}}
+{{--                    </button>--}}
+                    <form class="d-inline form-eliminar"
+                          id="delete-project"
+                          method="POST"
+                          action="{{ route('colegios.destroy', $colegio) }}">
+                        @csrf @method('DELETE')
+                        <button type="submit" class="btn btn-danger"> Eliminar</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+@endsection
 
+@section('js')
+    <script>
+        $('.form-eliminar').submit(function(e){
+            e.preventDefault();
+                Swal.fire({
+                    title: '¿Esta seguro de eliminarlo?',
+                    text: "¡Esta acción no se puede revertir!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: '¡Si, Eliminar!'
+                }).then((result) => {
+                    if (result.value) {
+                        this.submit();
+                    }
+                })
+        });
+    </script>
 @endsection

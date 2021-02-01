@@ -315,7 +315,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Administrar Equipos',
-                    'route' => 'inventario',
+                    'route' => 'items.index',
                     'icon'  => 'far fas fa-laptop-house',
                     'icon_color' => 'green',
                 ],
@@ -327,7 +327,7 @@ return [
                 ],
                 [
                     'text' => 'Categorías',
-                    'route' => 'categorias',
+                    'route' => 'categorias.index',
                     'icon' => 'far fas fa-list',
                     'icon_color' => 'green',
                 ],
@@ -511,7 +511,7 @@ return [
             ],
         ],
         'Sweetalert2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',

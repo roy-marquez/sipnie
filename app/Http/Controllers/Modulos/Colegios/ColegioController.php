@@ -19,10 +19,8 @@ class ColegioController extends Controller
     {
         $colegios = Colegio::all()->sortByDesc('updated_at');
         return view('modulos.colegios.index', [
-//            'colegios' => Colegio::all()
             'colegios' => $colegios
         ]);
-//        return Colegio::all();
     }
     /**
      * Muestra el formulario para creación de un colegio.
@@ -32,9 +30,6 @@ class ColegioController extends Controller
     {
         $colegio = new Colegio;
         $estado_colegios = EstadoColegio::all(['id', 'estado']);
-//        return view('modulos.colegios.create',[
-//            'colegio' => new Colegio
-//        ]);
         return view('modulos.colegios.create', compact('colegio', 'estado_colegios' ));
     }
 
@@ -107,18 +102,20 @@ class ColegioController extends Controller
             'codigo' => request('codigo'),
             'estado_colegio_id' => request('estado_colegio_id'),
         ]);
-        return redirect()-> route('colegios')->with('status', 'El Colegio fue editado con satisfactoriamente.');
+
+        $cole = DB::table('colegios')->where('codigo', request('codigo'))->first();
+        return redirect()-> route('colegios.show', $cole->codigo)->with('status', 'El colegio fue editado satisfactoriamente.');
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Elimina el colegio especifico de la base de datos.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Colegio $colegio)
     {
-        //
+        $colegio->delete();
+//        return redirect()->route('colegios')->with('status', 'El colegio fue eliminado satisfactoriamente');
+        return redirect()->route('colegios')->with('eliminar', 'ok');
     }
 
     public function select(){

@@ -43,5 +43,5 @@
 
 @section('js')
 {{--    configuracion de datatable--}}
-    @include('modulos/partials/datatables-config')
+    @include('modulos.partials.datatables-config')
 @stop

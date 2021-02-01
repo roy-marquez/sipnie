@@ -82,5 +82,5 @@
 @endsection
 
 @section('js')
-    @include('modulos/partials/datatables-config')
+    @include('modulos.partials.datatables-config')
 @endsection

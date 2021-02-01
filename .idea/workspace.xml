@@ -25,16 +25,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29d368dc-6383-489c-ade9-7d99ec409566" name="Default Changelist" comment="Se agregaro tabla de subcategoria se corrigieron relaciones y tabla de categoría.">
-      <change afterPath="$PROJECT_DIR$/resources/views/modulos/partials/session-status.blade.php" afterDir="false" />
+    <list default="true" id="29d368dc-6383-489c-ade9-7d99ec409566" name="Default Changelist" comment="Solución a bug en Edit de Colegios">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Modulos/Inventario/ItemController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Modulos/Colegios/ColegioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Modulos/Colegios/ColegioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000700_create_colegios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000700_create_colegios_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_13_000010_create_estado_reservas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_13_000010_create_estado_reservas_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/modulos/colegios/_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/colegios/_form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminlte.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/modulos/colegios/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/colegios/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/modulos/colegios/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/colegios/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/modulos/colegios/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/colegios/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/modulos/colegios/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/colegios/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/modulos/inventario/categorias.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/inventario/categorias/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/modulos/inventario/inventario.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/inventario/Items/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/modulos/partials/datatables-config.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/partials/datatables-config.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +193,7 @@
     <property name="DatabaseDriversLRU" value="mysql.8&#10;mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/modulos/partials" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../app" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -208,11 +212,11 @@
       <recent name="C:\laragon\www\sipnie\resources\views\modulos\colegios" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\sipnie\resources\views\modulos\inventario\Items" />
+      <recent name="C:\laragon\www\sipnie\resources\views\modulos\inventario\categorias" />
       <recent name="C:\laragon\www\sipnie\database\migrations\data" />
       <recent name="C:\laragon\www\sipnie\app\Models" />
       <recent name="C:\laragon\www\sipnie\app\Http\Controllers\Modulos" />
-      <recent name="C:\laragon\www\sipnie\storage\app\public\images" />
-      <recent name="C:\laragon\www\sipnie\app\Console\Commands" />
     </key>
   </component>
   <component name="RunManager">
@@ -305,6 +309,8 @@
       <workItem from="1611878668122" duration="19435000" />
       <workItem from="1611970886757" duration="17462000" />
       <workItem from="1612047886140" duration="18216000" />
+      <workItem from="1612087298924" duration="380000" />
+      <workItem from="1612137376236" duration="27817000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1603181361459</created>
@@ -439,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611998025483</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Solución a bug en Edit de Colegios">
+      <created>1612087611851</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1612087611851</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,6 +490,7 @@
     <MESSAGE value="Avance en configuracion de relaciones de los los modelos, y modificaciones a migraciones" />
     <MESSAGE value="Fin de configuracion de relaciones de los los modelos, y modificaciones a migraciones" />
     <MESSAGE value="Se agregaro tabla de subcategoria se corrigieron relaciones y tabla de categoría." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agregaro tabla de subcategoria se corrigieron relaciones y tabla de categoría." />
+    <MESSAGE value="Solución a bug en Edit de Colegios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solución a bug en Edit de Colegios" />
   </component>
 </project>

@@ -2,10 +2,6 @@
 
 @section('title', 'Colegios')
 
-@section('content_header')
-    <h1 class="header">Editar Colegio</h1>
-@stop
-
 @section('content')
     <div class="container">
         <div class="row">
@@ -16,9 +12,9 @@
                 <form class="bg-white py-3 px-4 shadow rounded"
                     method="POST" action="{{ route('colegios.update', $colegio) }}">
                     @method('PATCH')
-                    <h1 class="display-4 mb-3">
+                    <h2 class="text-seconday mb-3">
                         Editar Colegio
-                    </h1>
+                    </h2>
                     <hr>
                     @include('modulos.colegios._form', ['btnText' => 'Guardar'])
                     {{--        <button> @lang('create') </button>--}}
@@ -30,8 +26,8 @@
 @section('js')
     <script>
         Swal.fire(
-            'Vamos a Editar un nuevo Cole!',
-            'es fácil!',
+            '¡Vamos a Editar un Cole!',
+            'Es fácil!',
             'success'
         )
     </script>
