@@ -15,7 +15,7 @@ class Subcategoria extends Model
         return $this->hasMany(Item::Class);
     }
 
-    public function modelos(){
-        return $this->hasMany(Modelo::Class);
-    }
+//    public function modelos(){
+//        return $this->hasMany(Modelo::Class);
+//    }
 }

@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="/css/app.css">
 @endsection
 
-@section('content_header')
-    <h1>Inicio</h1>
-@stop
+{{--@section('content_header')--}}
+{{--    <h1>Inicio</h1>--}}
+{{--@stop--}}
 
 @section('content')
-    <div id="confirmacion-inicio-sesion" class="container">
+{{--    <div id="confirmacion-inicio-sesion" class="container">--}}
 {{--        <div class="row justify-content-center">--}}
 {{--            <div class="col-md-8">--}}
 {{--                <div class="card">--}}
@@ -29,7 +29,7 @@
 {{--                </div>--}}
 {{--            </div>--}}
 {{--        </div>--}}
-    </div>
+{{--    </div>--}}
 
     <div class="container">
         <div class="row justify-content-center">
@@ -53,11 +53,10 @@
                             la población estudiantil. Usualmente consta de un Ingeniero Analista de Sistemas y
                             un docente de Informática Educativa. (Consejo Superior de Educación, 2006).
                         </p>
-                        <p> A enero de 2020 suman un total de 94 colegios los participantes del programa. El
-                            listado completo de estas instituciones educativas se puede observar en los Anexos
-                            del informe, en el Anexo 1. Laboratorios para la enseñanza de informática,
-                            laboratorios para la enseñanza de inglés conversacional, tabletas, pantallas LED,
-                            drones, entre otros, forman parte del equipamiento físico facilitado por el programa.
+                        <p> A enero de 2020 suman un total de 94 colegios los participantes del programa.
+                            Laboratorios para la enseñanza de informática, laboratorios para la enseñanza
+                            de inglés conversacional, tabletas, pantallas LED, drones, entre otros, forman
+                            parte del equipamiento físico facilitado por el programa.
                         </p>
                         <p> El PNIE gira recursos a las Juntas Administrativas de cada Colegio y estas bajo las
                             directrices y recomendaciones del PNIE en coordinación con su personal y la
@@ -70,6 +69,14 @@
                             resguardo y sean utilizados en diversas e innovadoras actividades de aprendizaje.
                             Que hayan sido previamente coordinadas con el profesor de informática educativa.
                         </p>
+
+                        <p> SIPNIE (Sistema de Información del Programa Nacional de Informatica Educativa) es una
+                            aplicación web que pretende estandarizar y optimizar la gestión de los
+                            inventarios de activos en cada uno de colegios del programa.
+                        </p>
+
+
+
                     </div>
                 </div>
             </div>

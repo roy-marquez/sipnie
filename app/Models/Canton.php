@@ -9,6 +9,8 @@ class Canton extends Model
     //asociar modelo Canton con la tabla 'cantones'
     protected $table = 'cantones';
 
+    public $timestamps = false;
+
     public function provincia(){
         return $this->belongsTo(Provincia::Class );
     }

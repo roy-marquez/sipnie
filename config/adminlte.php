@@ -331,6 +331,12 @@ return [
                     'icon' => 'far fas fa-list',
                     'icon_color' => 'green',
                 ],
+                [
+                    'text' => 'Modelos',
+                    'route' => 'modelos.index',
+                    'icon' => 'far fas fa-file-invoice',
+                    'icon_color' => 'green',
+                ],
             ],
         ],
         [

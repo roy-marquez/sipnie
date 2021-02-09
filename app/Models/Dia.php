@@ -9,6 +9,8 @@ class Dia extends Model
     //asociar modelo Canton con la tabla 'dias'
     protected $table = 'dias';
 
+    public $timestamps = false;
+
     public function lecciones()
     {
         return $this->hasMany(Leccion::Class);

@@ -25,9 +25,6 @@ class CreateModelosTable extends Migration
             $table->string('nombre',50)->unique()
                 ->comment('Codigo alfanumérico o nombre del modelo del articulo ');
 
-            $table->string('linea',50)
-                ->comment('Linea comercial de la marca: Por ejemplo una impresora: Marca=Epson, Linea=EcoTank');
-
             $table->text('descripcion')->nullable()
                 ->comment('características adicionales, ficha técnica, referencias manuales, etc.');
             $table->timestamps();

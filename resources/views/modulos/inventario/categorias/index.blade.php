@@ -5,7 +5,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route('home') }}">Sipnie</a></li>
-            <li class="breadcrumb-item"><a href="{{ route('inventario') }}">Inventario</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('items.index') }}">Inventario</a></li>
             <li class="breadcrumb-item active" aria-current="page">Categorías</li>
         </ol>
     </nav>
@@ -19,15 +19,15 @@
             <table id="dt" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-{{--                    <th>Id</th>--}}
+                    <th>Id</th>
                     <th>Nombre</th>
                 </tr>
                 </thead>
                 <tbody>
                 @foreach($categorias as $categoria)
                     <tr>
-{{--                        <td>{{ $categoria->id }}</td>--}}
-                        <td><a href="/?categoria_id={{ $categoria->id }}">{{ $categoria->nombre }}</a></td>
+                        <td>{{ $categoria->id }}</td>
+                        <td><a href="/home?categoria_id={{ $categoria->id }}">{{ $categoria->nombre }}</a></td>
                     </tr>
                 @endforeach
 {{--                <tfoot>--}}

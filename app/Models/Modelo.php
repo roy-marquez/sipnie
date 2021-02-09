@@ -9,6 +9,8 @@ class Modelo extends Model
     //asociar modelo Modelo con la tabla 'modelos'
     protected $table = 'modelos';
 
+    protected $fillable= ['subcategoria_id', 'marca_id', 'nombre', 'descripcion'];
+
     public function marca()
     {
         return $this->belongsTo(Marca::Class);

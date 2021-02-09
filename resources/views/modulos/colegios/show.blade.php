@@ -2,17 +2,12 @@
 
 @section('title', $colegio->nombre)
 
-@if(session('status'))
-    {{--    Incluir mensajes de sesión flash--}}
-    @include('modulos.partials.session-status')
-@endif
-
-{{--@section('content_header')--}}
-{{--    <h1>Ficha del Colegio</h1>--}}
-{{--@endsection--}}
-
 @section('content')
-
+    @if( session('status'))
+        mensaje de estatus = {{ session('status') }}
+        {{--    Incluir mensajes de sesión flash--}}
+        @include('modulos.partials.session-status')
+    @endif
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-10 col-lg-6 mx-auto">
@@ -147,7 +142,7 @@
 {{--                            <i class="fas fa-trash fa-lg"></i> Eliminar--}}
 {{--                        </a>--}}
 {{--                    </button>--}}
-                    <form class="d-inline form-eliminar"
+                    <form class="d-inline confirmar-eliminar"
                           id="delete-project"
                           method="POST"
                           action="{{ route('colegios.destroy', $colegio) }}">
@@ -161,22 +156,6 @@
 @endsection
 
 @section('js')
-    <script>
-        $('.form-eliminar').submit(function(e){
-            e.preventDefault();
-                Swal.fire({
-                    title: '¿Esta seguro de eliminarlo?',
-                    text: "¡Esta acción no se puede revertir!",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: '¡Si, Eliminar!'
-                }).then((result) => {
-                    if (result.value) {
-                        this.submit();
-                    }
-                })
-        });
-    </script>
+{{--    script de configuracion de alerta de confirmacion de borrado--}}
+    @include('modulos.partials.swal-conf-delete')
 @endsection

@@ -9,6 +9,8 @@ class Categoria extends Model
     //asociar modelo Categoria con la tabla 'categorias'
     protected $table = 'categorias';
 
+    public $timestamps = false;
+
     public function items()
     {
         return $this->hasManyThrough(Item::Class, Subcategoria::Class);

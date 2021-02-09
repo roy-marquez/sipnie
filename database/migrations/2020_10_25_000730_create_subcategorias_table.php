@@ -25,6 +25,7 @@ class CreateSubcategoriasTable extends Migration
             $table->string('alias_3',30)->nullable()->comment('3er nombre alternativo para la subcategoría');
         });
 
+        DB::unprepared(file_get_contents(base_path('database/migrations/data/subcategorias.sql')));
 
     }
 

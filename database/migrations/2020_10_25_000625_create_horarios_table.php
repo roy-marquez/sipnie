@@ -28,8 +28,8 @@ class CreateHorariosTable extends Migration
 
         DB::table('horarios')->insert([
             ['nombre' => 'Académico_1', 'descripcion' => 'Opción por default, horario para colegios académicos de 12 lecciones de 40 minutos', 'clasificacion_id' => 1],
-            ['nombre' => 'CTP_académico_1', 'descripcion' => 'Horario para CTP en jornada académica de 12 lecciones de 40 minutos', 'clasificacion_id' => 2],
-            ['nombre' => 'CTP_especialidad_1', 'descripcion' => 'Horario para CTP en jornada Especialidad/Tecnología de 12 lecciones de 60 minutos', 'clasificacion_id' => 2],
+            ['nombre' => 'CTP_académico_1', 'descripcion' => 'Horario para CTP en jornada académica de 12 lecciones de 40 minutos', 'clasificacion_id' => 3],
+            ['nombre' => 'CTP_especialidad_1', 'descripcion' => 'Horario para CTP en jornada Especialidad/Tecnología de 12 lecciones de 60 minutos', 'clasificacion_id' => 3],
             ['nombre' => 'Exp_Bilingüe_1', 'descripcion' => 'horario para colegios experimientales biligües, de 12 lecciones de 40 minutos', 'clasificacion_id' => 3],
         ]);
     }

@@ -9,8 +9,8 @@ use Illuminate\Http\Request;
 
 class CategoriaController extends Controller
 {
-    public function categorias(){
+    public function index(){
         $categorias = Categoria::all();
-        return view('modulos.inventario.categorias', compact('categorias'));
+        return view('modulos.inventario.categorias.index', compact('categorias'));
     }
 }

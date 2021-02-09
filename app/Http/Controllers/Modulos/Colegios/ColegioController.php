@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\Colegios\SaveColegioRequest;
 
 class ColegioController extends Controller
 {
@@ -38,20 +39,9 @@ class ColegioController extends Controller
      *
      */
 //    public function store(Request $request)
-    public function store()
+    public function store(SaveColegioRequest $request)
     {
-        request()->validate([
-            'nombre' => 'required|max:255',
-            'codigo' => 'required|integer|max:9999|regex:/[1-9]{4}/u|unique:App\Models\Colegio,codigo',
-            'estado_colegio_id' => 'required|integer|max:9|regex:/[1-9]{1}/u',
-        ]);
-
-        Colegio::create([
-            'nombre' => request('nombre'),
-            'codigo' => request('codigo'),
-            'estado_colegio_id' => request('estado_colegio_id'),
-        ]);
-
+        Colegio::create($request->validated());
         return redirect()->route('colegios')
             ->with('status', 'El Colegio fue agregado con éxito');
     }

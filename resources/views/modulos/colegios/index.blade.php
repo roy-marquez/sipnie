@@ -8,8 +8,6 @@
         @include('modulos.partials.session-status')
     @endif
 
-
-
     <div class="card">
         <div class="d-flex justify-content-between align-items-center mt-3 mx-3">
             <h2 class="text-secondary">

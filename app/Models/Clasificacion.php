@@ -9,6 +9,8 @@ class Clasificacion extends Model
     //asociar modelo Clasificación con la tabla 'clasificaciones'
     protected $table = 'clasificaciones';
 
+    public $timestamps = false;
+
     public function colegios(){
         return $this->hasMany(Colegio::class);
     }

@@ -18,10 +18,10 @@ class CreateItemsTable extends Migration
             $table->unsignedSmallInteger('colegio_id')->comment('Id de Colegio al que pertenece el ítem');
             $table->foreign('colegio_id')->references('id')->on('colegios');
 
-            $table->unsignedSmallInteger('subcategoria_id')->nullable()->comment('Ejemplo: laptop, tableta, etc.');
-            $table->foreign('subcategoria_id')->references('id')->on('subcategorias')->onDelete('set null');
+            $table->unsignedSmallInteger('subcategoria_id')->comment('Ejemplo: laptop, tableta, etc.');
+            $table->foreign('subcategoria_id')->references('id')->on('subcategorias');
 
-            $table->unsignedInteger('modelo_id')->comment('Modelo del item, referenciado a una marca');
+            $table->unsignedInteger('modelo_id')->nullable()->comment('Modelo del item, referenciado a una marca');
             $table->foreign('modelo_id')->references('id')->on('modelos');
 
             $table->unsignedSmallInteger('colegio_codigo')

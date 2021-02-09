@@ -44,7 +44,10 @@ INSERT INTO `marcas` ( `nombre`, `alias_1`,`alias_2`,`alias_3`) VALUES
     ('BROTHER', 'Brother', null, null),
     ('SAMSUNG', 'Samsung', null, null),
     ('LENOVO', 'Lenovo', null, null),
-    ('TOA', null, null, null);
+    ('TOA', null, null, null),
+    ('VEGA', null, null, null),
+    ('GENIUS', 'Genius', null, null),
+    ('JP', null, null, null);
 /*!40000 ALTER TABLE `materias` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

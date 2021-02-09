@@ -26,6 +26,7 @@ INSERT INTO `categorias` (`nombre`) VALUES
 	('Muebles'),
 	('Partes'),
 	('Periféricos'),
+	('Proyección'),
 	('Redes'),
 	('Robótica');
 /*!40000 ALTER TABLE `categorias` ENABLE KEYS */;

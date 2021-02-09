@@ -18,7 +18,7 @@ class Horario extends Model
 
     public function lecciones()
     {
-        return $this->hasMany(Lecciones::Class);
+        return $this->hasMany(Leccion::Class);
     }
 
 

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateColegiosHorariosTable extends Migration
+class CreateColegioHorarioTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateColegiosHorariosTable extends Migration
      */
     public function up()
     {
-        Schema::create('colegios_horarios', function (Blueprint $table) {
-            $table->tinyIncrements('id');
+        Schema::create('colegio_horario', function (Blueprint $table) {
+            $table->smallIncrements('id');
 
             $table->unsignedSmallInteger('colegio_id');
             $table->foreign('colegio_id')->references('id')->on('colegios')
@@ -23,7 +23,6 @@ class CreateColegiosHorariosTable extends Migration
             $table->unsignedTinyInteger('horario_id');
             $table->foreign('horario_id')->references('id')->on('horarios')
                 ->onDelete('cascade')->onUpdate('cascade');
-
         });
     }
 
@@ -35,6 +34,6 @@ class CreateColegiosHorariosTable extends Migration
     public function down()
     {
         //
-        Schema::dropIfExists('colegios_horarios');
+        Schema::dropIfExists('colegio_horario');
     }
 }

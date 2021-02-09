@@ -9,6 +9,8 @@ class Distrito extends Model
     //asociar modelo Canton con la tabla 'dias'
     protected $table = 'distritos';
 
+    public $timestamps = false;
+
     public function canton()
     {
         return $this->belongsTo(Canton::Class);

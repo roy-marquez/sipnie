@@ -2,79 +2,77 @@
 
 @section('title', 'Colegios')
 
-@section('content_header')
-    <h1 class="header">Inventario</h1>
-@stop
-
 @section('content')
-    <div class="card">
-        <div class="card-header">
-            <h1 class="card-title">
-                Inventario
-            </h1>
-        </div>
+    @if(session('status'))
+        {{--    Incluir mensajes de sesión flash--}}
+        @include('modulos.partials.session-status')
+    @endif
 
+    <div class="card">
+        <div class="d-flex justify-content-between align-items-center mt-3 mx-3">
+            <h2 class="text-secondary">
+                Inventario
+            </h2>
+            <button class="btn btn-success">
+                <a href="{{ route('colegios.create') }} " class="text-white"><i class="fas fa-plus-circle mr-2"> </i>Agregar</a>
+            </button>
+        </div>
+        <hr>
         <div class="card-body">
             <table id="dt" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Nombre</th>
-                    <th>Alias</th>
-                    <th>Código</th>
-                    <th>Tipo</th>
-                    <th>matricula</th>
-                    <th>Director</th>
-                    <th>Teléfono</th>
-                    <th>Distrito</th>
-                    <th>Dirección</th>
-                    <th>DRE</th>
-                    <th>Circuito</th>
-                    <th>Web</th>
-                    <th>Facebook</th>
+                    <th>#.Colegio</th>
+                    <th>#.Item</th>
+                    <th>Placa</th>
+                    <th>Categoría</th>
+                    <th>Subcategoría</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Serie</th>
+                    <th>Descripción</th>
+                    <th>Nota</th>
                     <th>Estado</th>
-                    <th>Escudo</th>
-                    <th>Sipnie.Admin</th>
+                    <th>Adquisición</th>
+                    <th>Condición</th>
+                    <th>Uso</th>
+                    <th>Ubicación</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Técnico Profesional de Pital</td>
-                    <td>CTP Pital</td>
-                    <td>4180</td>
-                    <td>Técnico Académico</td>
-                    <td>948</td>
-                    <td>Roberto Céspedez</td>
-                    <td>24731689</td>
-                    <td>Pital</td>
-                    <td>Barrio Pitalito</td>
-                    <td>San Carlos</td>
-                    <td>5</td>
-                    <td>www.ctpdepital.ed.cr</td>
-                    <td>CTPdePital</td>
+                    <td>5533</td>
+                    <td>0234</td>
+                    <td>5533-0234</td>
+                    <td>Computadoras</td>
+                    <td>Portátil</td>
+                    <td>Lenovo</td>
+                    <td>Lenovo V330</td>
+                    <td>2473GR26AS1689</td>
+                    <td>Una portátil muy chiva</td>
+                    <td>Mi nota personal</td>
                     <td>activo</td>
-                    <td>'urlescudo'</td>
-                    <td>1</td>
+                    <td>PNIE</td>
+                    <td>bueno</td>
+                    <td>planta</td>
+                    <td>Sala Innovación 1</td>
                 </tr>
                 <tr>
-                    <td>2</td>
-                    <td>Liceo de los Angeles</td>
-                    <td>Lic.Angeles</td>
-                    <td>5302</td>
-                    <td>Académico</td>
-                    <td>252</td>
-                    <td>Johanna Perez M</td>
-                    <td>24041060</td>
-                    <td>Pital</td>
-                    <td>Barrio Pitalito</td>
-                    <td>San Carlos</td>
-                    <td>5</td>
-                    <td>n/a</td>
-                    <td>liceolosangelespital</td>
-                    <td>activo</td>
-                    <td>'urlescudo'</td>
-                    <td>2</td>
+                    <td>5533</td>
+                    <td>0233</td>
+                    <td>5533-0233</td>
+                    <td>Computadoras</td>
+                    <td>Portátil</td>
+                    <td>Lenovo</td>
+                    <td>Lenovo V330</td>
+                    <td>2473GR26AS17852</td>
+                    <td>Una portatil muy chiva</td>
+                    <td>Nota personal distinta</td>
+                    <td>inactivo</td>
+                    <td>PNIE</td>
+                    <td>malo</td>
+                    <td>préstamo</td>
+                    <td>Sala Innovación 1</td>
                 </tr>
             </table>
         </div>

@@ -8,6 +8,8 @@ class EstadoReserva extends Model
 {
     protected $table = 'estado_reservas';
 
+    public $timestamps = false;
+
     public function reservasActivos()
     {
         return $this->hasMany(ReservaActivo::Class);
