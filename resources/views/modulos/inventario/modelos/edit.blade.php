@@ -2,6 +2,10 @@
 
 @section('title', 'Modelos')
 
+@section('css')
+    @livewireStyles
+@stop
+
 @section('content')
 {{--    @if(session('status'))--}}
 {{--        --}}{{--    Incluir mensajes de sesión flash--}}
@@ -47,5 +51,8 @@
             </div>
         </div>
     </div>
-
 @endsection
+
+@section('js')
+    @livewireScripts
+@stop

@@ -25,7 +25,7 @@ INSERT INTO `subcategorias` (`id`, `categoria_id`, `nombre`, `alias_1`, `alias_2
 	(9, 3, 'Portátil', 'Laptop', '', ''),
 	(10, 3, 'MiniPC', '', '', ''),
 	(11, 3, 'Servidor', 'Server', '', ''),
-	(12, 4, 'Drone', 'Dron', '', ''),
+	(12, 4, 'Dron', 'Drone', '', ''),
 	(13, 5, 'Extensión Eléctrica', '', '', ''),
 	(14, 5, 'Regleta', 'Toma', '', ''),
 	(15, 5, 'Regulador Voltaje', 'Regulador', '', ''),

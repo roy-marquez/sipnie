@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>PHP</ID>
+  <OriginalElement>\App\Models\Item</OriginalElement>
+  <nodes>
+    <node x="1548.0" y="0.0">\Illuminate\Contracts\Support\Jsonable</node>
+    <node x="1543.75" y="236.0">\App\Models\Modelo</node>
+    <node x="836.0000000000001" y="0.0">\ArrayAccess</node>
+    <node x="1410.75" y="236.0">\App\Models\Condicion</node>
+    <node x="1859.0" y="0.0">\Illuminate\Contracts\Support\Arrayable</node>
+    <node x="1180.75" y="236.0">\App\Models\Marca</node>
+    <node x="1114.25" y="133.0">\Illuminate\Database\Eloquent\Model</node>
+    <node x="799.7500000000001" y="236.0">\App\Models\Subcategoria</node>
+    <node x="1277.75" y="236.0">\App\Models\Categoria</node>
+    <node x="1047.75" y="236.0">\App\Models\Ubicacion</node>
+    <node x="1672.0" y="0.0">\Illuminate\Contracts\Queue\QueueableEntity</node>
+    <node x="685.0000000000001" y="0.0">\Illuminate\Contracts\Routing\UrlRoutable</node>
+    <node x="959.7500000000001" y="236.0">\App\Models\Item</node>
+    <node x="1156.0" y="0.0">\JsonSerializable</node>
+    <node x="657.7500000000001" y="236.0">\App\Models\EstadoItem</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="\App\Models\Item" target="\Illuminate\Database\Eloquent\Model">
+      <point x="0.0" y="-16.5" />
+      <point x="993.7500000000001" y="206.0" />
+      <point x="1138.3125" y="206.0" />
+      <point x="-14.4375" y="16.5" />
+    </edge>
+    <edge source="\App\Models\Condicion" target="\Illuminate\Database\Eloquent\Model">
+      <point x="0.0" y="-16.5" />
+      <point x="1467.25" y="196.0" />
+      <point x="1176.8125" y="196.0" />
+      <point x="24.0625" y="16.5" />
+    </edge>
+    <edge source="\App\Models\Modelo" target="\Illuminate\Database\Eloquent\Model">
+      <point x="0.0" y="-16.5" />
+      <point x="1586.75" y="186.0" />
+      <point x="1186.4375" y="186.0" />
+      <point x="33.6875" y="16.5" />
+    </edge>
+    <edge source="\App\Models\Marca" target="\Illuminate\Database\Eloquent\Model">
+      <point x="0.0" y="-16.5" />
+      <point x="1219.25" y="216.0" />
+      <point x="1157.5625" y="216.0" />
+      <point x="4.8125" y="16.5" />
+    </edge>
+    <edge source="\Illuminate\Database\Eloquent\Model" target="\Illuminate\Contracts\Support\Arrayable">
+      <point x="24.75" y="-16.5" />
+      <point x="1177.5" y="93.0" />
+      <point x="1915.5" y="93.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="\Illuminate\Database\Eloquent\Model" target="\Illuminate\Contracts\Routing\UrlRoutable">
+      <point x="-13.75" y="-16.5" />
+      <point x="1139.0" y="73.0" />
+      <point x="750.5000000000001" y="73.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="\Illuminate\Database\Eloquent\Model" target="\Illuminate\Contracts\Queue\QueueableEntity">
+      <point x="19.25" y="-16.5" />
+      <point x="1172.0" y="83.0" />
+      <point x="1755.5" y="83.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="\App\Models\EstadoItem" target="\Illuminate\Database\Eloquent\Model">
+      <point x="0.0" y="-16.5" />
+      <point x="718.7500000000001" y="186.0" />
+      <point x="1119.0625" y="186.0" />
+      <point x="-33.6875" y="16.5" />
+    </edge>
+    <edge source="\Illuminate\Database\Eloquent\Model" target="\ArrayAccess">
+      <point x="-8.25" y="-16.5" />
+      <point x="1144.5" y="63.0" />
+      <point x="901.5000000000001" y="63.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="\Illuminate\Database\Eloquent\Model" target="\Illuminate\Contracts\Support\Jsonable">
+      <point x="13.75" y="-16.5" />
+      <point x="1166.5" y="73.0" />
+      <point x="1600.0" y="73.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="\Illuminate\Database\Eloquent\Model" target="\JsonSerializable">
+      <point x="2.75" y="-16.5" />
+      <point x="1155.5" y="53.0" />
+      <point x="1244.0" y="53.0" />
+      <point x="0.0" y="16.5" />
+    </edge>
+    <edge source="\App\Models\Categoria" target="\Illuminate\Database\Eloquent\Model">
+      <point x="0.0" y="-16.5" />
+      <point x="1334.25" y="206.0" />
+      <point x="1167.1875" y="206.0" />
+      <point x="14.4375" y="16.5" />
+    </edge>
+    <edge source="\App\Models\Ubicacion" target="\Illuminate\Database\Eloquent\Model">
+      <point x="0.0" y="-16.5" />
+      <point x="1104.25" y="216.0" />
+      <point x="1147.9375" y="216.0" />
+      <point x="-4.8125" y="16.5" />
+    </edge>
+    <edge source="\App\Models\Subcategoria" target="\Illuminate\Database\Eloquent\Model">
+      <point x="0.0" y="-16.5" />
+      <point x="869.7500000000001" y="196.0" />
+      <point x="1128.6875" y="196.0" />
+      <point x="-24.0625" y="16.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="1314.5" y="134.5" />
+  <SelectedNodes>
+    <node>\App\Models\EstadoItem</node>
+  </SelectedNodes>
+  <Categories />
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

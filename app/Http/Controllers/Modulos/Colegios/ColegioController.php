@@ -105,7 +105,7 @@ class ColegioController extends Controller
     {
         $colegio->delete();
 //        return redirect()->route('colegios')->with('status', 'El colegio fue eliminado satisfactoriamente');
-        return redirect()->route('colegios')->with('eliminar', 'ok');
+        return redirect()->route('colegios')->with('deleted', true);
     }
 
     public function select(){

@@ -25,60 +25,58 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29d368dc-6383-489c-ade9-7d99ec409566" name="Default Changelist" comment="Finalización CRUD Colegio, implementacion de SweetAlert2">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Modulos/Inventario/ModeloController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Colegios/SaveColegioRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Inventario/StoreModeloRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Inventario/UpdateModeloRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/data/subcategorias.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/modulos/inventario/Items/_form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/modulos/inventario/Items/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/modulos/inventario/modelos/_form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/modulos/inventario/modelos/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/modulos/inventario/modelos/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/modulos/inventario/modelos/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/modulos/inventario/modelos/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/modulos/partials/swal-conf-delete.blade.php" afterDir="false" />
+    <list default="true" id="29d368dc-6383-489c-ade9-7d99ec409566" name="Default Changelist" comment="Avance en CRUD de Inventario">
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/CategoriaSubcategoria.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/ColegioUbicacion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Counter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/MarcaModelo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Inventario/StoreItemRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Item.uml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/livewire.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/data/modelos.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/categoria-subcategoria.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/colegio-ubicacion.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/counter.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/marca-modelo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sipnie.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sipnie.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Modulos/Colegios/ColegioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Modulos/Colegios/ColegioController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Modulos/Inventario/CategoriaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Modulos/Inventario/CategoriaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Modulos/Inventario/ItemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Modulos/Inventario/ItemController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Adquisicion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Adquisicion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Canton.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Canton.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Categoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Categoria.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Clasificacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Clasificacion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Condicion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Condicion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Conectividad.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Conectividad.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Dia.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Dia.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Distrito.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Distrito.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/EstadoColegio.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/EstadoColegio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/EstadoItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/EstadoItem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/EstadoPrestamo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/EstadoPrestamo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/EstadoReserva.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/EstadoReserva.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/EstadoUsuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/EstadoUsuario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Horario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Horario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Leccion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Leccion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Modelo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Modelo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Operacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Operacion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Subcategoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Subcategoria.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/adminlte.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminlte.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000002_create_modelos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000002_create_modelos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000625_create_horarios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000625_create_horarios_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000730_create_subcategorias_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000730_create_subcategorias_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000701_create_ubicaciones_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000701_create_ubicaciones_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_25_000800_create_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_25_000800_create_items_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_03_063922_create_colegios_horarios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_03_063922_create_colegio_horario_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_13_212014_reservas_activos_detalles.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_13_212014_create_reservas_activos_detalles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/data/categorias.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/categorias.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/data/estado_colegios.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/estado_colegios.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/data/estado_items.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/estado_items.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/data/estado_prestamos.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/estado_prestamos.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/data/estado_reservas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/estado_reservas.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/data/estado_usuarios.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/estado_usuarios.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/data/marcas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/marcas.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/data/subcategorias.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/subcategorias.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/data/tipos_doc_identidad.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/tipos_doc_identidad.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/data/usos.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/data/usos.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/modulos/colegios/_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/colegios/_form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/modulos/colegios/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/colegios/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/modulos/colegios/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/colegios/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/modulos/colegios/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/colegios/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/modulos/inventario/Items/_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/inventario/Items/_form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/modulos/inventario/Items/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/inventario/Items/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/modulos/inventario/Items/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/inventario/Items/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/modulos/inventario/categorias/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/inventario/categorias/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/modulos/partials/session-status.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/partials/session-status.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/modulos/inventario/modelos/_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/inventario/modelos/_form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/modulos/inventario/modelos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/inventario/modelos/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/modulos/inventario/modelos/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/inventario/modelos/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/modulos/inventario/modelos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/inventario/modelos/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/modulos/inventario/modelos/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modulos/inventario/modelos/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,6 +211,7 @@
       <path value="$PROJECT_DIR$/vendor/facade/ignition" />
       <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
       <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
     </include_path>
   </component>
   <component name="ProblemsViewState">
@@ -235,13 +234,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/modulos/inventario/Items" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="sql.rename.search.for.storage.occurrences" value="true" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -254,10 +253,10 @@
       <recent name="C:\laragon\www\sipnie\database\migrations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\sipnie\resources\views\modulos\inventario" />
       <recent name="C:\laragon\www\sipnie\app\Http\Requests\Inventario" />
-      <recent name="C:\laragon\www\sipnie\app\Http\Requests\Colegios" />
       <recent name="C:\laragon\www\sipnie\database\migrations\data" />
+      <recent name="C:\laragon\www\sipnie\resources\views\modulos\inventario" />
+      <recent name="C:\laragon\www\sipnie\app\Http\Requests\Colegios" />
       <recent name="C:\laragon\www\sipnie\resources\views\modulos\inventario\Items" />
     </key>
   </component>
@@ -360,6 +359,28 @@
       <workItem from="1612483547211" duration="16500000" />
       <workItem from="1612586324339" duration="7315000" />
       <workItem from="1612714823258" duration="31803000" />
+      <workItem from="1612890986808" duration="153000" />
+      <workItem from="1613075504783" duration="2905000" />
+      <workItem from="1613096293828" duration="7715000" />
+      <workItem from="1613150222946" duration="18883000" />
+      <workItem from="1613194562530" duration="7407000" />
+      <workItem from="1613371554456" duration="3694000" />
+      <workItem from="1613428636398" duration="14142000" />
+      <workItem from="1613505274014" duration="11554000" />
+      <workItem from="1613585528433" duration="2541000" />
+      <workItem from="1613808775690" duration="647000" />
+      <workItem from="1614037469910" duration="6672000" />
+      <workItem from="1614107803145" duration="4392000" />
+      <workItem from="1614123721342" duration="10481000" />
+      <workItem from="1614142559293" duration="1528000" />
+      <workItem from="1614192000927" duration="9363000" />
+      <workItem from="1614634521193" duration="599000" />
+      <workItem from="1614635135493" duration="7385000" />
+      <workItem from="1614796515530" duration="8129000" />
+      <workItem from="1614903978043" duration="606000" />
+      <workItem from="1614919266470" duration="1482000" />
+      <workItem from="1615093956230" duration="848000" />
+      <workItem from="1615253166901" duration="3265000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1603181361459</created>
@@ -508,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612176736384</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Avance en CRUD de Inventario">
+      <created>1612891050820</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1612891050820</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,6 +576,11 @@
     <MESSAGE value="Se agregaro tabla de subcategoria se corrigieron relaciones y tabla de categoría." />
     <MESSAGE value="Solución a bug en Edit de Colegios" />
     <MESSAGE value="Finalización CRUD Colegio, implementacion de SweetAlert2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalización CRUD Colegio, implementacion de SweetAlert2" />
+    <MESSAGE value="Avance en CRUD de Inventario" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avance en CRUD de Inventario" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

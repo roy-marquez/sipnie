@@ -11,31 +11,28 @@
     </nav>
     <div class="card shadow">
         <div class="card-header">
-{{--            <h1 class="text-capitalize">--}}
                 Categorías
-{{--            </h1>--}}
         </div>
         <div class="card-body">
             <table id="dt" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Nombre</th>
+                    <th>Categoría</th>
+                    <th>Subcategorías</th>
                 </tr>
                 </thead>
                 <tbody>
                 @foreach($categorias as $categoria)
                     <tr>
-                        <td>{{ $categoria->id }}</td>
-                        <td><a href="/home?categoria_id={{ $categoria->id }}">{{ $categoria->nombre }}</a></td>
+{{--                        <td><a href="/modulos/categorias/{{$categoria->id }}/editar">{{ $categoria->nombre }}</a></td>--}}
+                        <td><a href="#">{{ $categoria->nombre }}</a></td>
+                        <td>
+                            @foreach($categoria->subcategorias as $subcategoria)
+                            <a href="#">{{ $subcategoria->nombre }}</a>{{ !$loop->last ? ',' : '' }}&nbsp
+                            @endforeach
+                        </td>
                     </tr>
                 @endforeach
-{{--                <tfoot>--}}
-{{--                <tr>--}}
-{{--                    <th>Id</th>--}}
-{{--                    <th>Nombre</th>--}}
-{{--                </tr>--}}
-{{--                </tfoot>--}}
             </table>
         </div>
     </div>

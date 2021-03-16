@@ -14,7 +14,7 @@
                 Inventario
             </h2>
             <button class="btn btn-success">
-                <a href="{{ route('colegios.create') }} " class="text-white"><i class="fas fa-plus-circle mr-2"> </i>Agregar</a>
+                <a href="{{ route('items.create') }} " class="text-white"><i class="fas fa-plus-circle mr-2"> </i>Agregar</a>
             </button>
         </div>
         <hr>
@@ -40,40 +40,36 @@
                 </tr>
                 </thead>
                 <tbody>
+                @forelse($items as $item)
                 <tr>
-                    <td>5533</td>
-                    <td>0234</td>
-                    <td>5533-0234</td>
-                    <td>Computadoras</td>
-                    <td>Portátil</td>
-                    <td>Lenovo</td>
-                    <td>Lenovo V330</td>
-                    <td>2473GR26AS1689</td>
-                    <td>Una portátil muy chiva</td>
-                    <td>Mi nota personal</td>
-                    <td>activo</td>
-                    <td>PNIE</td>
-                    <td>bueno</td>
-                    <td>planta</td>
-                    <td>Sala Innovación 1</td>
+                    <td>{{$item->colegio_codigo}}</td>
+                    <td>{{$item->item_num}}</td>
+                    <td>{{$item->placa}}</td>
+                    <td>{{ $item->categoria_id }}</td>
+                    <td>{{ $item->subcategoria_id }}</td>
+                    <td>{{ $item->marca->nombre }}</td>
+                    <td>{{ $item->modelo->nombre }}</td>
+                    <td>{{ $item->serie  }}</td>
+                    <td> @if($item->modelo->descripcion != null)
+                            {{ $item->modelo->descripcion }}
+                        @else
+                            {{ __(config('_msg.no_data')) }}
+                        @endif
+                    </td>
+                    <td>{{ $item->nota }}</td>
+                    <td>{{ $item->estado_item->estado }}</td>
+                    <td>{{ $item->adquisicion->nombre }}</td>
+                    <td>{{ $item->condicion->nombre }}</td>
+                    <td>{{ $item->uso->nombre }}</td>
+                    <td>{{ $item->ubicacion->nombre }}</td>
                 </tr>
-                <tr>
-                    <td>5533</td>
-                    <td>0233</td>
-                    <td>5533-0233</td>
-                    <td>Computadoras</td>
-                    <td>Portátil</td>
-                    <td>Lenovo</td>
-                    <td>Lenovo V330</td>
-                    <td>2473GR26AS17852</td>
-                    <td>Una portatil muy chiva</td>
-                    <td>Nota personal distinta</td>
-                    <td>inactivo</td>
-                    <td>PNIE</td>
-                    <td>malo</td>
-                    <td>préstamo</td>
-                    <td>Sala Innovación 1</td>
-                </tr>
+                @empty
+                    <tr>
+                        @for($i=1; $i<=15; $i++)
+                            <td> {{ __(config('_msg.no_data')) }} </td>
+                        @endfor
+                    </tr>
+                @endforelse
             </table>
         </div>
     </div>

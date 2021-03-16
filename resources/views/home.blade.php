@@ -3,34 +3,11 @@
 @section('title', 'Inicio')
 
 @section('css')
-    <link rel="stylesheet" href="/css/app.css">
+{{--    <link rel="stylesheet" href="*/{{ asset('/css/app.css')}}">--}}
+{{--    <link rel="stylesheet" href="{{ asset('/vendor/pace-progress/themes/green/pace-theme-center-simple.css') }}">--}}
 @endsection
 
-{{--@section('content_header')--}}
-{{--    <h1>Inicio</h1>--}}
-{{--@stop--}}
-
 @section('content')
-{{--    <div id="confirmacion-inicio-sesion" class="container">--}}
-{{--        <div class="row justify-content-center">--}}
-{{--            <div class="col-md-8">--}}
-{{--                <div class="card">--}}
-{{--                    <div class="card-header">{{ __('Dashboard') }}</div>--}}
-
-{{--                    <div class="card-body">--}}
-{{--                        @if (session('status'))--}}
-{{--                            <div class="alert alert-success" role="alert">--}}
-{{--                                {{ session('status') }}--}}
-{{--                            </div>--}}
-{{--                        @endif--}}
-
-{{--                        {{ __('You are logged in!') }}--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -74,9 +51,6 @@
                             aplicación web que pretende estandarizar y optimizar la gestión de los
                             inventarios de activos en cada uno de colegios del programa.
                         </p>
-
-
-
                     </div>
                 </div>
             </div>

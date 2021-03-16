@@ -15,9 +15,9 @@
 -- Dumping data for table sipnie_db.estado_colegios: ~3 rows (approximately)
 /*!40000 ALTER TABLE `estado_colegios` DISABLE KEYS */;
 INSERT INTO `estado_colegios` (`id`, `estado`) VALUES
-	(1, 'activo' ),
-	(2, 'inactivo'),
-	(3, 'suspendido');
+	(1, 'Activo' ),
+	(2, 'Inactivo'),
+	(3, 'Suspendido');
 /*!40000 ALTER TABLE `estado_colegios` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

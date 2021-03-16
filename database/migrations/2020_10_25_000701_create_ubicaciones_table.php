@@ -15,8 +15,13 @@ class CreateUbicacionesTable extends Migration
     {
         Schema::create('ubicaciones', function (Blueprint $table) {
             $table->integerIncrements('id');
-            $table->unsignedSmallInteger('colegio_id');
-            $table->foreign('colegio_id')->references('id')->on('colegios')->onDelete('cascade');
+
+//            $table->unsignedSmallInteger('colegio_id');
+//            $table->foreign('colegio_id')->references('id')->on('colegios')->onDelete('cascade');
+
+            $table->unsignedSmallInteger('colegio_codigo');
+            $table->foreign('colegio_codigo')->references('codigo')->on('colegios')->onDelete('cascade');
+
             $table->string('nombre')->comment('lugar donde se ubicara el item, ej. Aula 1, Lab. 2, etc.');
 
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));

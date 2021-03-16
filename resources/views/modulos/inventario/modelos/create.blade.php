@@ -2,10 +2,10 @@
 
 @section('title', 'Modelos')
 
-{{--@section('css')--}}
-{{--    /*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">*/--}}
-{{--@endsection--}}
 
+@section('css')
+    @livewireStyles
+@stop
 
 @section('content')
 {{--    @if(session('status'))--}}
@@ -60,5 +60,8 @@
             </div>
         </div>
     </div>
-
 @endsection
+
+@section('js')
+    @livewireScripts
+@stop

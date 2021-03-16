@@ -54,23 +54,27 @@
                             {{ __( config('_msg.no_data') ) }}
                         @endif
                     </p>
-
-                    <button class="btn btn-info">
-                        <a href="{{ route('modelos.edit', $modelo) }}" class="text-white">Editar</a>
-                    </button>
-{{--                    <button class="btn btn-outline-danger mb-2">--}}
-{{--                        <a href="#" onclick="document.getElementById('delete-project').submit()" class="btn-outline-danger form-eliminar">--}}
-{{--                        <a href="#" id="btn-eliminar" class="btn-outline-danger">--}}
-{{--                            <i class="fas fa-trash fa-lg"></i> Eliminar--}}
-{{--                        </a>--}}
-{{--                    </button>--}}
-                    <form class="d-inline confirmar-eliminar"
-                          id="delete-project"
-                          method="POST"
-                          action="{{ route('modelos.destroy', $modelo) }}">
-                        @csrf @method('DELETE')
-                        <button type="submit" class="btn btn-danger"> Eliminar</button>
-                    </form>
+                    <div >
+                        <button class="btn btn-info col-3">
+                            <a href="{{ route('modelos.edit', $modelo) }}" class="text-white">Editar</a>
+                        </button>
+    {{--                    <button class="btn btn-outline-danger mb-2">--}}
+    {{--                        <a href="#" onclick="document.getElementById('delete-project').submit()" class="btn-outline-danger form-eliminar">--}}
+    {{--                        <a href="#" id="btn-eliminar" class="btn-outline-danger">--}}
+    {{--                            <i class="fas fa-trash fa-lg"></i> Eliminar--}}
+    {{--                        </a>--}}
+    {{--                    </button>--}}
+                        <form class="d-inline confirmar-eliminar"
+                              id="delete-project"
+                              method="POST"
+                              action="{{ route('modelos.destroy', $modelo) }}">
+                            @csrf @method('DELETE')
+                            <button type="submit" class="btn btn-danger col-3"> Eliminar</button>
+                        </form>
+                        <button class="btn btn-success col-3">
+                            <a href="{{ route('modelos.index') }}" class="text-white">Volver</a>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

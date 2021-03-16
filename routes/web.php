@@ -40,13 +40,14 @@ Route::get('/usuarios/usuarios', function () {
 
 //MODULO DE INVENTARIO
 //Route::get('/modulos/inventario/inventario', function () { return view('modulos.inventario.inventario'); })->name('inventario');
+
 //ITEMS
 Route::get('modulos/inventario/items','Modulos\Inventario\ItemController@index')->name('items.index');
-//Route::get('modulos/inventario/items/crear','Modulos\Inventario\ItemController@create')->name('items.create');
+Route::get('modulos/inventario/items/crear','Modulos\Inventario\ItemController@create')->name('items.create');
 //Route::get('modulos/inventario/items/{item}/editar','Modulos\Inventario\ItemController@edit')->name('items.edit');
 //Route::patch('modulos/inventario/items/{item}','Modulos\Inventario\ItemController@update')->name('items.update');
 //Route::delete('modulos/inventario/items/{item}','Modulos\Inventario\ItemController@destroy')->name('items.destroy');
-//Route::post('modulos/inventario/items','Modulos\Inventario\ItemController@store')->name('items.store');
+Route::post('modulos/inventario/items','Modulos\Inventario\ItemController@store')->name('items.store');
 //Route::get('modulos/inventario/items/{item}','Modulos\Inventario\ItemController@show')->name('items.show');
 
 //CATEGORIAS
@@ -59,14 +60,15 @@ Route::get('modulos/inventario/categorias','Modulos\Inventario\CategoriaControll
 //Route::get('modulos/inventario/categorias/{categorias}','Modulos\Inventario\categorias\CategoriaController@show')->name('categorias.show');
 
 //MODELOS
-Route::get('modulos/inventario/modelos','Modulos\Inventario\ModeloController@index')->name('modelos.index');
-Route::get('modulos/inventario/modelos/crear','Modulos\Inventario\ModeloController@create')->name('modelos.create');
-Route::get('modulos/inventario/modelos/{modelo}/editar','Modulos\Inventario\ModeloController@edit')->name('modelos.edit');
-Route::patch('modulos/inventario/modelos/{modelo}','Modulos\Inventario\ModeloController@update')->name('modelos.update');
-Route::delete('modulos/inventario/modelos/{modelo}','Modulos\Inventario\ModeloController@destroy')->name('modelos.destroy');
-Route::post('modulos/inventario/modelos','Modulos\Inventario\ModeloController@store')->name('modelos.store');
-Route::get('modulos/inventario/modelos/{modelo}','Modulos\Inventario\ModeloController@show')->name('modelos.show');
-
+Route::prefix('modulos/inventario')->name('modelos.')->group(function(){
+    Route::get('/modelos','Modulos\Inventario\ModeloController@index')->name('index');
+    Route::get('/modelos/crear','Modulos\Inventario\ModeloController@create')->name('create');
+    Route::get('/modelos/{modelo}/editar','Modulos\Inventario\ModeloController@edit')->name('edit');
+    Route::patch('/modelos/{modelo}','Modulos\Inventario\ModeloController@update')->name('update');
+    Route::delete('/modelos/{modelo}','Modulos\Inventario\ModeloController@destroy')->name('destroy');
+    Route::post('/modelos','Modulos\Inventario\ModeloController@store')->name('store');
+    Route::get('/modelos/{modelo}','Modulos\Inventario\ModeloController@show')->name('show');
+});
 
 //MODULO DE RESERVAS
 Route::get('/reservas', function () {

@@ -21,6 +21,9 @@ class CreateItemsTable extends Migration
             $table->unsignedSmallInteger('subcategoria_id')->comment('Ejemplo: laptop, tableta, etc.');
             $table->foreign('subcategoria_id')->references('id')->on('subcategorias');
 
+            $table->unsignedSmallInteger('marca_id')->nullable()->comment('Marca del item');
+            $table->foreign('marca_id')->references('id')->on('marcas');
+
             $table->unsignedInteger('modelo_id')->nullable()->comment('Modelo del item, referenciado a una marca');
             $table->foreign('modelo_id')->references('id')->on('modelos');
 
@@ -46,21 +49,26 @@ class CreateItemsTable extends Migration
             $table->unsignedSmallInteger('registro_asiento')->nullable()
                 ->comment('Registro:asiento. En libro de actas del colegio');
 
-            $table->unsignedTinyInteger('adquisicion_id');
+            $table->unsignedTinyInteger('adquisicion_id')->nullable()
+                ->comment('Origen adquisitivo del item');
             $table->foreign('adquisicion_id')->references('id')->on('adquisiciones');
 
             $table->text('nota')->nullable()
                 ->comment('Observación especial sobre el articulo');
 
-            $table->date('fecha_entrada')->comment('Fecha de ingreso al inventario');
-            $table->date('fecha_baja')->comment('Fecha de baja del inventario (Cambio de estado=baja)');
+            $table->date('fecha_entrada')->nullable()
+                ->comment('Fecha de ingreso al inventario');
+            $table->date('fecha_baja')->nullable()
+                ->comment('Fecha de baja del inventario (Cambio de estado=baja)');
 
             $table->unsignedTinyInteger('estado_item_id')
                 ->comment('Estado lógico del ítem: activo, inactivo, baja');
             $table->foreign('estado_item_id')->references('id')->on('estado_items');
 
-            $table->unsignedInteger('agregado_por')->comment('user_id del usuario agregó el item');
-            $table->unsignedInteger('modificado_por')->comment('user_id del usuario modificó el item');
+            $table->unsignedInteger('agregado_por')->nullable()
+                ->comment('user_id del usuario agregó el item');
+            $table->unsignedInteger('modificado_por')->nullable()
+                ->comment('user_id del usuario modificó el item');
 
             $table->unsignedTinyInteger('condicion_id')->nullable()
                 ->comment('Estado físico del ítem: bueno, regular, malo, desecho.');

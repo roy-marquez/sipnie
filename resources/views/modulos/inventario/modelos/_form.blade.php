@@ -1,44 +1,45 @@
 @csrf
 
+@livewire('categoria-subcategoria', ['selectedSubcategoria' => 1 ])
 {{--CATEGORIA--}}
-<div class="form-group">
-    <label for="categoria_id" class="pl-3">Categoría(*)</label>
-    <select name="categoria_id" class="form-control bg-light" id="categoia_id">
-        @foreach($categorias as $categoria)
-            @if(old('categoria_id') == $categoria->id )
-                <option value="{{  $categoria->id }}" selected> {{$categoria->nombre}}</option>
-            @else
-                @if(isset($modelo) )
-                    @if($modelo->categoria_id == $categoria->id)
-                        <option value="{{ $categoria->id }}" selected>{{$categoria->nombre}}</option>
-                    @else
-                        <option value="{{ $categoria->id }}">{{ $categoria->nombre }}</option>
-                    @endif
-                @endif
-            @endif
-        @endforeach
-    </select>
-</div>
+{{--<div class="form-group">--}}
+{{--    <label for="categoria_id" class="pl-3">Categoría(*)</label>--}}
+{{--    <select name="categoria_id" class="form-control bg-light" id="categoia_id">--}}
+{{--        @foreach($categorias as $categoria)--}}
+{{--            @if(old('categoria_id') == $categoria->id )--}}
+{{--                <option value="{{  $categoria->id }}" selected> {{$categoria->nombre}}</option>--}}
+{{--            @else--}}
+{{--                @if(isset($modelo) )--}}
+{{--                    @if($modelo->categoria_id == $categoria->id)--}}
+{{--                        <option value="{{ $categoria->id }}" selected>{{$categoria->nombre}}</option>--}}
+{{--                    @else--}}
+{{--                        <option value="{{ $categoria->id }}">{{ $categoria->nombre }}</option>--}}
+{{--                    @endif--}}
+{{--                @endif--}}
+{{--            @endif--}}
+{{--        @endforeach--}}
+{{--    </select>--}}
+{{--</div>--}}
 
 {{--SUBCATEGORIA--}}
-<div class="form-group">
-    <label for="subcategoria_id" class="pl-3">Subcategoría(*)</label>
-    <select name="subcategoria_id" class="form-control bg-light" id="subcategoia_id">
-        @foreach($subcategorias as $subcategoria)
-            @if(old('subcategoria_id') == $subcategoria->id )
-                <option value="{{  $subcategoria->id }}" selected> {{$subcategoria->nombre}}</option>
-            @else
-                @if(isset($modelo) )
-                    @if($modelo->subcategoria_id == $subcategoria->id)
-                        <option value="{{ $subcategoria->id }}" selected>{{$subcategoria->nombre}}</option>
-                    @else
-                        <option value="{{ $subcategoria->id }}">{{ $subcategoria->nombre }}</option>
-                    @endif
-                @endif
-            @endif
-        @endforeach
-    </select>
-</div>
+{{--<div class="form-group">--}}
+{{--    <label for="subcategoria_id" class="pl-3">Subcategoría(*)</label>--}}
+{{--    <select name="subcategoria_id" class="form-control bg-light" id="subcategoia_id">--}}
+{{--        @foreach($subcategorias as $subcategoria)--}}
+{{--            @if(old('subcategoria_id') == $subcategoria->id )--}}
+{{--                <option value="{{  $subcategoria->id }}" selected> {{$subcategoria->nombre}}</option>--}}
+{{--            @else--}}
+{{--                @if(isset($modelo) )--}}
+{{--                    @if($modelo->subcategoria_id == $subcategoria->id)--}}
+{{--                        <option value="{{ $subcategoria->id }}" selected>{{$subcategoria->nombre}}</option>--}}
+{{--                    @else--}}
+{{--                        <option value="{{ $subcategoria->id }}">{{ $subcategoria->nombre }}</option>--}}
+{{--                    @endif--}}
+{{--                @endif--}}
+{{--            @endif--}}
+{{--        @endforeach--}}
+{{--    </select>--}}
+{{--</div>--}}
 
 {{--MARCA--}}
 <div class="form-group">

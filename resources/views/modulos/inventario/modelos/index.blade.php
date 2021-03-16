@@ -76,14 +76,14 @@
 
                     <td class="align-middle">
                         <a href="{{ route('modelos.show',$modelo) }}">
-                            <i class="fas fa-hashtag"> &nbsp </i>{{ $modelo->nombre}}
+                            {{ $modelo->nombre}}
                         </a>
                     </td>
 
                     <td class="align-middle">
                         <a href="{{ route('modelos.show',$modelo) }}">
 {{--                            <i class="fas fa-hashtag"> &nbsp </i>{{ $modelo->descripcion}}--}}
-                            <i class="fas fa-hashtag"> &nbsp </i>{{ Str::of($modelo->descripcion)->words(10, ' >>>')  }}
+                            {{ Str::of($modelo->descripcion)->words(10, ' >>>')  }}
                         </a>
 
                     </td>
@@ -100,11 +100,11 @@
 </div>
 @endsection
 @section('js')
-    @if(session('eliminar')=='ok')
+    @if(session('deleted'))
         <script>
             Swal.fire(
                 '¡Eliminado!',
-                'El elemento fue eliminado satisfactoriamente',
+                'El modelo fue eliminado satisfactoriamente',
                 'success'
             )
         </script>

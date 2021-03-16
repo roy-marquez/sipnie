@@ -95,7 +95,7 @@
 @endsection
 
 @section('js')
-    @if(session('eliminar')=='ok')
+    @if(session('eliminar'))
         <script>
             Swal.fire(
                 '¡Eliminado!',
@@ -104,13 +104,8 @@
             )
         </script>
     @endif
-{{--    <script>--}}
-{{--        Swal.fire(--}}
-{{--            'Colegios!',--}}
-{{--            'Un módulo cool cool cool!',--}}
-{{--            'success'--}}
-{{--        )--}}
-{{--    </script>--}}
+
+    {{--    Configuracion de datatable--}}
     @include('modulos/partials/datatables-config')
 
 @endsection

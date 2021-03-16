@@ -321,7 +321,7 @@ return [
                 ],
                 [
                     'text' => ' Agregar Equipo',
-                    'url'  => '#',
+                    'route'  => 'items.create',
                     'icon' => 'far fas fa-laptop-medical',
                     'icon_color' => 'green',
                 ],

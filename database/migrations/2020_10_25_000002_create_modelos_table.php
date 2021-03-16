@@ -29,6 +29,10 @@ class CreateModelosTable extends Migration
                 ->comment('características adicionales, ficha técnica, referencias manuales, etc.');
             $table->timestamps();
         });
+
+        // Insertar modelos a la base de datos,
+        // requiere la existencia previa de las tabla 'modelos'
+        DB::unprepared(file_get_contents(base_path('database/migrations/data/modelos.sql')));
     }
 
     /**

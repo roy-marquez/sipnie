@@ -20,4 +20,10 @@ class Categoria extends Model
     {
         return $this->hasManyThrough(Modelo::Class, Subcategoria::Class);
     }
+
+    public function subcategorias()
+    {
+        return $this->hasMany(Subcategoria::Class);
+    }
+
 }

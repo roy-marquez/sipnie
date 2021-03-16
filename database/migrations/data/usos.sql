@@ -15,9 +15,9 @@
 -- Dumping data for table sipnie_db.usos: ~3 rows (approximately)
 /*!40000 ALTER TABLE `usos` DISABLE KEYS */;
 INSERT INTO `usos` (`id`, `nombre`) VALUES
-	(1, 'planta'),
-	(2, 'préstamo'),
-	(3, 'condicionado');
+	(1, 'Planta'),
+	(2, 'Préstamo'),
+	(3, 'Condicionado');
 /*!40000 ALTER TABLE `usos` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
